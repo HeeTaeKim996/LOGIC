@@ -158,9 +158,9 @@ int main()
 	umap.insert(pair<int, int>(3, 4));
 
 	auto it = umap.find(1);
-	printf("%d : %d \n", it->key, it->value);
+	printf("%d : %d \n", it->first, it->second);
 	auto it1 = umap.find(3);
-	printf("%d : %d \n", it1->key, it1->value);
+	printf("%d : %d \n", it1->first, it1->second);
 	
 
 #endif

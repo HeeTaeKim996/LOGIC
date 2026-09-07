@@ -9,16 +9,16 @@ template<typename Key>
 class Hash
 {
 public:
-	static sizeType hash(const Key& key, sizeType bucketCount);
+	static size_t hash(const Key& key);
 
 };
 
 template<typename Key>
-inline sizeType Hash<Key>::hash(const Key& key, sizeType bucketCount)
+inline size_t Hash<Key>::hash(const Key& key)
 {
 	if constexpr (std::is_same_v<Key, int>)
 	{
-		return key % bucketCount;
+		return key;
 	}
 
 	return 0;
