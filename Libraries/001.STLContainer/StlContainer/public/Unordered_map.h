@@ -1,32 +1,49 @@
 
 #include "SizeType.h"
-#include "Hash.h"
+//#include "Hash.h"
 
 
 #include <string>
+#include "Std.h"
 
-template<typename Key, typename Value>
+
+
+
+
+/*
+	■ 정리
+	- 해시함수는 std::hash<..> 사용
+	- 체이닝은 폐쇄(Separate, Closed) 체이닝. 단방향 LinkedList 로 구현하되, DummyHead 를 사용하여,
+	  A 버켓의 꼬리가 B버켓의 헤드가 되는 구조로, 모든 노드를 연결
+*/
+
+
+
+
+
+
+
+template<typename Key, typename Value, typename Hash>
 class Unordered_map_iterator;
 
 
-template<typename Key, typename Value>
+// Hash = std:hash<Key> : Key 가 기본타입이면, 해시 함수가 자동 할당됨
+template<typename Key, typename Value, typename Hash = std::hash<Key>>
 class Unordered_map
 {
 public:
-	using iterator = Unordered_map_iterator<Key, Value>;
+	using iterator = Unordered_map_iterator<Key, Value, Hash>;
 
 
 private:
-	friend class Unordered_map_iterator<Key, Value>;
+	friend class Unordered_map_iterator<Key, Value, Hash>;
 
 	struct Node
 	{
 		Node() {} // 더미 헤드를 위한 기본 생성자
 
 		Node(const Key& inKey, const Value& inValue, size_t inHash)
-			: data(inKey, inValue), hash(inHash)
-		{
-		}
+			: data(inKey, inValue), hash(inHash) {}
 
 		std::pair<Key, Value> data;
 		size_t hash;
@@ -35,7 +52,7 @@ private:
 
 
 public:
-	Unordered_map();
+	Unordered_map(const Hash& hash = Hash());
 	~Unordered_map();
 
 public:
@@ -43,27 +60,30 @@ public:
 	sizeType size() const noexcept { return _size; }
 
 
-
+	iterator begin() { return iterator(_dummyHead.next); }
 	iterator end() { return iterator(nullptr); }
 
 
 public:
 	std::pair<iterator, bool> insert(const std::pair<Key, Value>& kv);
+	std::pair<iterator, bool> insert_or_assign(const std::pair<Key, Value>& kv);
 
 	void clear();
+
+	iterator find(const Key& key);
+
 	Value& operator[](const Key& key);
 	Value& operator[](Key&& key);
 
 
 		
 	
-	iterator find(const Key& key);
+
 	sizeType erase(const Key& key); // bool 로 해도 되지만, stl 에서 저렇게 사용함
 
 
 private:
 	void resize();
-
 	Node* createNode(const Key& key, const Value& value, const size_t inHash);
 	void deleteNode(Node* deleted);
 
@@ -77,24 +97,26 @@ private:
 	// 아래 insert 함수를 보면 _dummyHead 의 역할이 잘 나온다. 더미헤드의 역할을 간략히 설명하면,
 	// 임시로 _buckets[index] 의 머리 역할을 하며, A 버켓의 꼬리를 B버켓의 머리로 연결해주는 역할을 한다
 	// 자세한 역할은 insert를 보며 이해하자
+
+	Hash _hash;
 };
 
 
 
-template<typename Key, typename Value>
-inline Unordered_map<Key, Value>::Unordered_map()
+
+template<typename Key, typename Value, typename Hash>
+inline Unordered_map<Key, Value, Hash>::Unordered_map(const Hash& hash)
+	: _hash(hash), _size(0)
 {
 #define INIT_BUCKET_COUNT 8
 
 	_bucketCount = INIT_BUCKET_COUNT;
-	_buckets = new Node* [_bucketCount] {};
-	_size = 0;
+	_buckets = new Node * [_bucketCount] {};
 	_dummyHead.next = nullptr;
-
 }
 
-template<typename Key, typename Value>
-inline Unordered_map<Key, Value>::~Unordered_map()
+template<typename Key, typename Value, typename Hash>
+inline Unordered_map<Key, Value, Hash>::~Unordered_map()
 {
 	Node* curr = _dummyHead.next;
 	while (curr != nullptr)
@@ -111,15 +133,13 @@ inline Unordered_map<Key, Value>::~Unordered_map()
 
 
 
-template<typename Key, typename Value>
-inline std::pair<Unordered_map_iterator<Key, Value>, bool> Unordered_map<Key, Value>
+template<typename Key, typename Value, typename Hash>
+inline std::pair<Unordered_map_iterator<Key, Value, Hash>, bool> Unordered_map<Key, Value, Hash>
 	::insert(const std::pair<Key, Value>& kv)
 {
 	const auto& [key, value] = kv;
-	//size_t hash = Hash_temp<Key>::hash(key);
 
-	size_t hash = Hash::instance()->getHash32(
-		static_cast<const void*>(&key), sizeof(sizeType));
+	size_t hash = _hash(key);
 	
 	sizeType index = hash % _bucketCount;
 
@@ -191,39 +211,107 @@ inline std::pair<Unordered_map_iterator<Key, Value>, bool> Unordered_map<Key, Va
 	return { iterator(created), true };
 }
 
-
-
-
-
-template<typename Key, typename Value>
-inline Value& Unordered_map<Key, Value>::operator[](const Key& key)
+template<typename Key, typename Value, typename Hash>
+inline std::pair<Unordered_map_iterator<Key, Value, Hash>, bool> Unordered_map<Key, Value, Hash>
+	::insert_or_assign(const std::pair<Key, Value>& kv)
 {
-	//size_t hash = Hash_temp<Key>::hash(key);
+	// 아래 주석 내용 하나 빼고는 insert 와 모두 동일하다. 코드 분석할 필요 없다. isnert 랑 똑같다 보면 된다
 
-	size_t hash = Hash::instance()->getHash32(
-		static_cast<const void*>(&key), sizeof(sizeType));
+	const auto& [key, value] = kv;
+
+	size_t hash = _hash(key);
 
 	sizeType index = hash % _bucketCount;
 
+	if (_buckets[index] != nullptr)
+	{
+		Node* curr = _buckets[index]->next;
+		while (curr != nullptr && curr->hash % _bucketCount == index)
+		{
+			if (curr->data.first == key)
+			{
+				// insert 와의 유일한 차이는 아래 curr->data.second = kv.second; 가 추가된 것 뿐
+				curr->data.second = kv.second;
+				return { iterator(curr), false };
+			}
+
+			curr = curr->next;
+		}
+	}
+
+
+	if (_size + 1 > _bucketCount)
+	{
+		resize();
+		index = hash % _bucketCount;
+	}
+
+	Node* created = createNode(key, value, hash);
+
+
+
 	if (_buckets[index] == nullptr)
 	{
+		created->next = _dummyHead.next;
+		_dummyHead.next = created;
+		_buckets[index] = &_dummyHead;
 
+		if (created->next != nullptr)
+		{
+			sizeType nextIndex = created->next->hash % _bucketCount;
+			_buckets[nextIndex] = created;
+		}
 	}
+	else
+	{
+		created->next = _buckets[index]->next;
+		_buckets[index]->next = created;
+	}
+
+
+	return { iterator(created), true };
 }
 
-template<typename Key, typename Value>
-inline Value& Unordered_map<Key, Value>::operator[](Key&& key)
+
+
+
+
+template<typename Key, typename Value, typename Hash>
+inline void Unordered_map<Key, Value, Hash>::clear()
 {
-	// TODO: insert return statement here
+	Node* curr = _dummyHead.next;
+	while (curr != nullptr)
+	{
+		Node* deleted = curr;
+		curr = curr->next;
+		delete deleted;
+	}
+
+	for (int i = 0; i < _bucketCount; i++)
+	{
+		_buckets[i] = nullptr;
+	}
+	_size = 0;
+	_dummyHead.next = nullptr;
 }
 
-template<typename Key, typename Value>
-inline Unordered_map_iterator<Key, Value> Unordered_map<Key, Value>::find(const Key& key)
-{
-	//size_t hash = Hash_temp<Key>::hash(key);
 
-	size_t hash = Hash::instance()->getHash32(
-		static_cast<const void*>(&key), sizeof(sizeType));
+
+
+
+
+
+
+
+
+
+
+
+
+template<typename Key, typename Value, typename Hash>
+inline Unordered_map_iterator<Key, Value, Hash> Unordered_map<Key, Value, Hash>::find(const Key& key)
+{
+	size_t hash = _hash(key);
 
 	sizeType index = hash % _bucketCount;
 
@@ -237,21 +325,114 @@ inline Unordered_map_iterator<Key, Value> Unordered_map<Key, Value>::find(const 
 		if (curr->hash % _bucketCount != index) break;
 
 		if (curr->data.first == key) return iterator(curr);
-		
+
 		curr = curr->next;
 	}
-	
+
 
 	return end();
 }
 
-template<typename Key, typename Value>
-inline sizeType Unordered_map<Key, Value>::erase(const Key& key)
+
+template<typename Key, typename Value, typename Hash>
+inline Value& Unordered_map<Key, Value, Hash>::operator[](const Key& key)
+{
+	size_t hash = _hash(key);
+
+	sizeType index = hash % _bucketCount;
+
+
+	Node* created;
+	if (_buckets[index] == nullptr)
+	{
+		created = createNode(key, Value(), hash);
+
+		created->next = _dummyHead.next;
+		_dummyHead.next = created;
+
+		_buckets[index] = &_dummyHead;
+
+		if (created->next != nullptr)
+		{
+			_buckets[created->next->hash % _bucketCount] = created;
+		}
+
+		return created->data.second;
+	}
+
+
+	Node* curr = _buckets[index]->next;
+	while (curr != nullptr)
+	{
+		if (curr->hash % _bucketCount != index) break;
+
+		if (curr->data.first == key) return curr->data.second;
+
+		curr = curr->next;
+	}
+
+	created = createNode(key, Value(), hash);
+	created->next = _buckets[index]->next;
+	_buckets[index]->next = created;
+
+	return created->data.second;
+}
+
+template<typename Key, typename Value, typename Hash>
+inline Value& Unordered_map<Key, Value,Hash>::operator[](Key&& key)
+{
+	// 위 [] 와 유일한 차이점은 마지막 key 를 Std::move 시킨 것 뿐
+
+	size_t hash = _hash(key);
+
+	sizeType index = hash % _bucketCount;
+
+
+	Node* created;
+	if (_buckets[index] == nullptr)
+	{
+		created = createNode(key, Value(), hash);
+
+		created->next = _dummyHead.next;
+		_dummyHead.next = created;
+
+		_buckets[index] = &_dummyHead;
+
+		if (created->next != nullptr)
+		{
+			_buckets[created->next->hash % _bucketCount] = created;
+		}
+
+		return created->data.second;
+	}
+
+
+	Node* curr = _buckets[index]->next;
+	while (curr != nullptr)
+	{
+		if (curr->hash % _bucketCount != index) break;
+
+		if (curr->data.first == key) return curr->data.second;
+
+		curr = curr->next;
+	}
+
+	created = createNode(Std::move(key), Value(), hash);
+	created->next = _buckets[index]->next;
+	_buckets[index]->next = created;
+
+	return created->data.second;
+
+}
+
+
+
+template<typename Key, typename Value, typename Hash>
+inline sizeType Unordered_map<Key, Value, Hash>::erase(const Key& key)
 {
 	//size_t hash = Hash_temp<Key>::hash(key);
 
-	size_t hash = Hash::instance()->getHash32(
-		static_cast<const void*>(&key), sizeof(sizeType));
+	size_t hash = _hash(key);
 
 
 	sizeType index = hash % _bucketCount;
@@ -299,8 +480,8 @@ inline sizeType Unordered_map<Key, Value>::erase(const Key& key)
 	return 0;
 }
 
-template<typename Key, typename Value>
-inline void Unordered_map<Key, Value>::resize()
+template<typename Key, typename Value, typename Hash>
+inline void Unordered_map<Key, Value, Hash>::resize()
 {
 
 	sizeType newBucketCount = _bucketCount * 2;
@@ -343,16 +524,16 @@ inline void Unordered_map<Key, Value>::resize()
 	_bucketCount = newBucketCount;
 }
 
-template<typename Key, typename Value>
-inline typename Unordered_map<Key, Value>::Node* Unordered_map<Key, Value>::createNode
+template<typename Key, typename Value, typename Hash>
+inline typename Unordered_map<Key, Value, Hash>::Node* Unordered_map<Key, Value, Hash>::createNode
 	(const Key& key, const Value& value, const size_t inHash)
 {
 	_size++;
 	return new Node(key, value, inHash);
 }
 
-template<typename Key, typename Value>
-inline void Unordered_map<Key, Value>::deleteNode(Node* deleted)
+template<typename Key, typename Value, typename Hash>
+inline void Unordered_map<Key, Value, Hash>::deleteNode(Node* deleted)
 {
 	delete deleted;
 	_size--;
@@ -383,7 +564,7 @@ inline void Unordered_map<Key, Value>::deleteNode(Node* deleted)
 
 
 
-template<typename Key, typename Value>
+template<typename Key, typename Value, typename Hash>
 class Unordered_map_iterator
 {
 	using Map = Unordered_map < Key, Value>;
@@ -412,6 +593,11 @@ public:
 	inline bool operator != (const Unordered_map_iterator& other) const
 	{
 		return _node != other._node;
+	}
+
+	inline bool operator == (const Unordered_map_iterator& other) const
+	{
+		return _node == other._node;
 	}
 
 private:

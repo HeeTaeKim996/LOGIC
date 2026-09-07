@@ -1,11 +1,1 @@
-﻿  main.cpp
-C:\Users\ttiig\source\repos\LOGIC\Algorithm\Algorithm\Sort.h(460,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-  (compiling source file '/main.cpp')
-  
-C:\Users\ttiig\source\repos\LOGIC\Algorithm\Algorithm\Sort.h(518,8): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-  (compiling source file '/main.cpp')
-  
-C:\Users\ttiig\source\repos\LOGIC\Algorithm\Algorithm\main.cpp(29,20): warning C4018: '<': signed/unsigned mismatch
-  (compiling source file '/main.cpp')
-  
-  Algorithm.vcxproj -> C:\Users\ttiig\source\repos\LOGIC\Algorithm\Algorithm\out\x64\Debug\Algorithm.exe
+﻿  Algorithm.vcxproj -> C:\Users\ttiig\source\repos\LOGIC\Algorithm\Algorithm\out\x64\Debug\Algorithm.exe

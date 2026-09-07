@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Algorithm\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9162A95E-1650-4B92-8BF2-C71AC52F5FC5}|Algorithm\\Algorithm.vcxproj|C:\\Users\\ttiig\\source\\repos\\LOGIC\\Algorithm\\Algorithm\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9162A95E-1650-4B92-8BF2-C71AC52F5FC5}|Algorithm\\Algorithm.vcxproj|solutionrelative:Algorithm\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9162A95E-1650-4B92-8BF2-C71AC52F5FC5}|Algorithm\\Algorithm.vcxproj|C:\\Users\\ttiig\\source\\repos\\LOGIC\\Algorithm\\Algorithm\\3.2.Trie.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{9162A95E-1650-4B92-8BF2-C71AC52F5FC5}|Algorithm\\Algorithm.vcxproj|solutionrelative:Algorithm\\3.2.Trie.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9162A95E-1650-4B92-8BF2-C71AC52F5FC5}|Algorithm\\Algorithm.vcxproj|C:\\Users\\ttiig\\source\\repos\\LOGIC\\Algorithm\\Algorithm\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9162A95E-1650-4B92-8BF2-C71AC52F5FC5}|Algorithm\\Algorithm.vcxproj|solutionrelative:Algorithm\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9162A95E-1650-4B92-8BF2-C71AC52F5FC5}|Algorithm\\Algorithm.vcxproj|C:\\Users\\ttiig\\source\\repos\\LOGIC\\Algorithm\\Algorithm\\pch.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -326,7 +326,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Algorithm\\Algorithm\\main.cpp",
               "RelativeDocumentMoniker": "Algorithm\\main.cpp",
@@ -1017,13 +1017,13 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "3.2.Trie.cpp",
               "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Algorithm\\Algorithm\\3.2.Trie.cpp",
               "RelativeDocumentMoniker": "Algorithm\\3.2.Trie.cpp",
               "ToolTip": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Algorithm\\Algorithm\\3.2.Trie.cpp",
               "RelativeToolTip": "Algorithm\\3.2.Trie.cpp",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAUwCMAAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAUwCUAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-09-02T08:27:03.709Z",
               "EditorCaption": ""

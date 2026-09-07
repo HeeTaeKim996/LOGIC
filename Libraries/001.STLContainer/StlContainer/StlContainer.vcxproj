@@ -19,7 +19,6 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="public\Hash.h" />
     <ClInclude Include="public\IteratorTemplate.h" />
     <ClInclude Include="public\Mem.h" />
     <ClInclude Include="public\Priority_queue.h" />
@@ -30,18 +29,12 @@
     <ClInclude Include="Temp.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="private\Hash.cpp" />
     <ClCompile Include="private\main.cpp" />
     <ClCompile Include="private\Mem.cpp" />
     <ClCompile Include="private\Priority_queue.cpp" />
     <ClCompile Include="private\Std.cpp" />
     <ClCompile Include="private\Unordered_map.cpp" />
     <ClCompile Include="private\Vector.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\002.Hash\Hash\Hash.vcxproj">
-      <Project>{3a70aa51-a43e-4b87-b834-ff955d1e04c9}</Project>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
@@ -66,13 +59,13 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>

@@ -153,16 +153,204 @@ int main()
 
 
 #if 1 // Unordered_map
+
+	printf("========== Unordered_map Test ==========\n\n");
+
 	Unordered_map<int, int> umap;
-	umap.insert(pair<int, int>(1, 2));
-	umap.insert(pair<int, int>(3, 4));
 
-	auto it = umap.find(1);
-	printf("%d : %d \n", it->first, it->second);
-	auto it1 = umap.find(3);
-	printf("%d : %d \n", it1->first, it1->second);
-	
 
+	// ========================================
+	// 1. insert 테스트
+	// ========================================
+	printf("[1. insert]\n");
+
+	auto result1 = umap.insert(pair<int, int>(1, 2));
+	printf("insert(1, 2) : success = %d\n", result1.second);
+
+	auto result2 = umap.insert(pair<int, int>(3, 4));
+	printf("insert(3, 4) : success = %d\n", result2.second);
+
+	// 중복 키 삽입
+	auto result3 = umap.insert(pair<int, int>(1, 999));
+	printf("insert(1, 999) : success = %d\n", result3.second);
+
+	printf("size : %d\n\n", (int)umap.size()); // size : 2나와야 함
+
+
+	// ========================================
+	// 2. operator[] 테스트
+	// ========================================
+	printf("[2. operator[]]\n");
+
+	// 기존 키 값 변경
+	umap[1] = 7;
+
+	// 존재하지 않는 키 생성
+	umap[5] = 6;
+
+	printf("umap[1] : %d\n", umap[1]);
+	printf("umap[3] : %d\n", umap[3]);
+	printf("umap[5] : %d\n\n", umap[5]);
+
+
+	// ========================================
+	// 3. find 테스트
+	// ========================================
+	printf("[3. find]\n");
+
+	auto it1 = umap.find(1);
+
+	if (it1 != umap.end())
+	{
+		printf("find(1) : %d : %d\n",
+			it1->first,
+			it1->second);
+	}
+	else
+	{
+		printf("find(1) : Not Found\n");
+	}
+
+
+	auto it2 = umap.find(3);
+
+	if (it2 != umap.end())
+	{
+		printf("find(3) : %d : %d\n",
+			it2->first,
+			it2->second);
+	}
+	else
+	{
+		printf("find(3) : Not Found\n");
+	}
+
+
+	auto it3 = umap.find(999);
+
+	if (it3 != umap.end())
+	{
+		printf("find(999) : %d : %d\n",
+			it3->first,
+			it3->second);
+	}
+	else
+	{
+		printf("find(999) : Not Found\n");
+	}
+
+	printf("\n");
+
+
+	// ========================================
+	// 4. 전체 순회 테스트
+	// ========================================
+	printf("[4. iterator]\n");
+
+	for (auto it = umap.begin();
+		it != umap.end();
+		++it)
+	{
+		printf("%d : %d\n",
+			it->first,
+			it->second);
+	}
+
+	printf("\n");
+
+
+	// ========================================
+	// 5. erase 테스트
+	// ========================================
+	printf("[5. erase]\n");
+
+	printf("erase(3) : %d\n",
+		(int)umap.erase(3));
+
+	printf("erase(999) : %d\n",
+		(int)umap.erase(999));
+
+	auto erasedIt = umap.find(3);
+
+	if (erasedIt == umap.end())
+	{
+		printf("find(3) after erase : Not Found\n");
+	}
+
+	printf("size : %d\n\n",
+		(int)umap.size());
+
+
+	// ========================================
+	// 6. resize 테스트
+	// ========================================
+	printf("[6. resize]\n");
+
+	for (int i = 10; i < 30; i++)
+	{
+		umap.insert(pair<int, int>(i, i * 10));
+	}
+
+	bool allFound = true;
+
+	for (int i = 10; i < 30; i++)
+	{
+		auto it = umap.find(i);
+
+		if (it == umap.end())
+		{
+			printf("ERROR : %d Not Found\n", i);
+			allFound = false;
+		}
+		else if (it->second != i * 10)
+		{
+			printf("ERROR : %d Value Error\n", i);
+			allFound = false;
+		}
+	}
+
+	printf("resize test : %s\n\n",
+		allFound ? "SUCCESS" : "FAILED");
+
+
+	// ========================================
+	// 7. clear 테스트
+	// ========================================
+	printf("[7. clear]\n");
+
+	umap.clear();
+
+	printf("empty : %d\n",
+		umap.empty());
+
+	printf("size : %d\n",
+		(int)umap.size());
+
+	printf("begin == end : %d\n",
+		umap.begin() == umap.end());
+
+
+	// ========================================
+	// 8. clear 이후 재사용 테스트
+	// ========================================
+	printf("\n[8. reuse after clear]\n");
+
+	umap.insert(pair<int, int>(100, 200));
+
+	auto it = umap.find(100);
+
+	if (it != umap.end())
+	{
+		printf("%d : %d\n",
+			it->first,
+			it->second);
+	}
+	else
+	{
+		printf("ERROR : reuse failed\n");
+	}
+
+	printf("\n========== Test End ==========\n");
 
 #endif
 
