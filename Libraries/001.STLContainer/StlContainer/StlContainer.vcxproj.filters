@@ -14,6 +14,9 @@
     <Filter Include="Source Files\IteratorTemplate">
       <UniqueIdentifier>{0bcc4df2-6328-478e-a79a-eb2a7439166a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\containers\Unordered_map">
+      <UniqueIdentifier>{8d0b2fee-a32e-4f7c-b5b7-5cde7fd52397}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="public\Mem.h">
@@ -34,6 +37,13 @@
     <ClInclude Include="public\Priority_queue.h">
       <Filter>Source Files\containers</Filter>
     </ClInclude>
+    <ClInclude Include="Temp.h" />
+    <ClInclude Include="public\Unordered_map.h">
+      <Filter>Source Files\containers\Unordered_map</Filter>
+    </ClInclude>
+    <ClInclude Include="public\hash.h">
+      <Filter>Source Files\containers\Unordered_map</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="private\main.cpp">
@@ -50,6 +60,12 @@
     </ClCompile>
     <ClCompile Include="private\Priority_queue.cpp">
       <Filter>Source Files\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="private\Unordered_map.cpp">
+      <Filter>Source Files\containers\Unordered_map</Filter>
+    </ClCompile>
+    <ClCompile Include="private\hash.cpp">
+      <Filter>Source Files\containers\Unordered_map</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

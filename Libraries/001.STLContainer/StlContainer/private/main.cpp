@@ -6,6 +6,8 @@
 #include <queue>
 #include "Priority_queue.h"
 #include <functional>
+#include <unordered_map>
+#include "Unordered_map.h"
 
 using namespace std;
 
@@ -59,7 +61,7 @@ int main()
 #endif
 
 
-#if 1 // Test Priority_queue
+#if 0 // Test Priority_queue
 
 	Priority_queue<int> pq;
 	pq.push(1);
@@ -146,6 +148,20 @@ int main()
 		printf("(%d, %d) ", top.y, top.x);
 		pq4.pop();
 	}
+
+#endif
+
+
+#if 1 // Unordered_map
+	Unordered_map<int, int> umap;
+	umap.insert(pair<int, int>(1, 2));
+	umap.insert(pair<int, int>(3, 4));
+
+	auto it = umap.find(1);
+	printf("%d : %d \n", it->key, it->value);
+	auto it1 = umap.find(3);
+	printf("%d : %d \n", it1->key, it1->value);
+	
 
 #endif
 }

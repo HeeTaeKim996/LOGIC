@@ -19,18 +19,23 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="public\hash.h" />
     <ClInclude Include="public\IteratorTemplate.h" />
     <ClInclude Include="public\Mem.h" />
     <ClInclude Include="public\Priority_queue.h" />
     <ClInclude Include="public\SizeType.h" />
     <ClInclude Include="public\Std.h" />
+    <ClInclude Include="public\Unordered_map.h" />
     <ClInclude Include="public\Vector.h" />
+    <ClInclude Include="Temp.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="private\hash.cpp" />
     <ClCompile Include="private\main.cpp" />
     <ClCompile Include="private\Mem.cpp" />
     <ClCompile Include="private\Priority_queue.cpp" />
     <ClCompile Include="private\Std.cpp" />
+    <ClCompile Include="private\Unordered_map.cpp" />
     <ClCompile Include="private\Vector.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
