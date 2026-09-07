@@ -9,6 +9,9 @@
 #include "use_vector.h"
 #include "use_priority_queue.h"
 
+#include "Unordered_map.h"
+
+
 int main()
 {
 	//Search::test();
@@ -39,6 +42,16 @@ int main()
 		printf("%d, ", top);
 		pq.pop();
 	}
+
+
+	printf("\nUMAP test\n");
+	Unordered_map<int, int> umap;
+	umap.insert({ 1, 2});
+	umap.insert({ 3, 4 });
+	auto it = umap.find(1);
+	printf("t1 : %d -> %d \n", it->first, it->second);
+	auto it2 = umap.find(3);
+	printf("t1 : %d -> %d \n", it2->first, it2->second);
 }
 
 

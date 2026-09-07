@@ -1,7 +1,7 @@
 
 #include "SizeType.h"
+#include "Hash.h"
 
-#include "hash.h"
 
 #include <string>
 
@@ -48,7 +48,7 @@ public:
 
 
 public:
-	pair<iterator, bool> insert(const pair<Key, Value>& kv);
+	std::pair<iterator, bool> insert(const std::pair<Key, Value>& kv);
 
 	void clear();
 	Value& operator[](const Key& key);
@@ -116,7 +116,11 @@ inline std::pair<Unordered_map_iterator<Key, Value>, bool> Unordered_map<Key, Va
 	::insert(const std::pair<Key, Value>& kv)
 {
 	const auto& [key, value] = kv;
-	size_t hash = Hash<Key>::hash(key);
+	//size_t hash = Hash_temp<Key>::hash(key);
+
+	size_t hash = Hash::instance()->getHash32(
+		static_cast<const void*>(&key), sizeof(sizeType));
+	
 	sizeType index = hash % _bucketCount;
 
 
@@ -194,7 +198,11 @@ inline std::pair<Unordered_map_iterator<Key, Value>, bool> Unordered_map<Key, Va
 template<typename Key, typename Value>
 inline Value& Unordered_map<Key, Value>::operator[](const Key& key)
 {
-	size_t hash = Hash<Key>::hash(key);
+	//size_t hash = Hash_temp<Key>::hash(key);
+
+	size_t hash = Hash::instance()->getHash32(
+		static_cast<const void*>(&key), sizeof(sizeType));
+
 	sizeType index = hash % _bucketCount;
 
 	if (_buckets[index] == nullptr)
@@ -212,7 +220,11 @@ inline Value& Unordered_map<Key, Value>::operator[](Key&& key)
 template<typename Key, typename Value>
 inline Unordered_map_iterator<Key, Value> Unordered_map<Key, Value>::find(const Key& key)
 {
-	size_t hash = Hash<Key>::hash(key);
+	//size_t hash = Hash_temp<Key>::hash(key);
+
+	size_t hash = Hash::instance()->getHash32(
+		static_cast<const void*>(&key), sizeof(sizeType));
+
 	sizeType index = hash % _bucketCount;
 
 	if (_buckets[index] == nullptr) return end();
@@ -236,7 +248,12 @@ inline Unordered_map_iterator<Key, Value> Unordered_map<Key, Value>::find(const 
 template<typename Key, typename Value>
 inline sizeType Unordered_map<Key, Value>::erase(const Key& key)
 {
-	size_t hash = Hash<Key>::hash(key);
+	//size_t hash = Hash_temp<Key>::hash(key);
+
+	size_t hash = Hash::instance()->getHash32(
+		static_cast<const void*>(&key), sizeof(sizeType));
+
+
 	sizeType index = hash % _bucketCount;
 
 	if (_buckets[index] == nullptr) return 0;

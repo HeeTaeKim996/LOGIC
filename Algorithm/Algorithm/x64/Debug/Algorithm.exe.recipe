@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Users\ttiig\source\repos\LOGIC\Algorithm\x64\Debug\Algorithm.exe</FullPath>
+      <FullPath>C:\Users\ttiig\source\repos\LOGIC\Algorithm\Algorithm\out\x64\Debug\Algorithm.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

@@ -61,4 +61,5 @@ void Trie::test()
 	debugSearch(str1.c_str());
 	debugSearch(str2.c_str());
 	debugSearch(str3.c_str());
+
 }

@@ -1,4 +1,10 @@
-﻿  Unordered_map.cpp
+﻿  Hash.cpp
   main.cpp
+  Mem.cpp
+  Priority_queue.cpp
+  Std.cpp
+  Unordered_map.cpp
+  Vector.cpp
   Generating Code...
-  StlContainer.vcxproj -> C:\Users\ttiig\source\repos\LOGIC\Libraries\001.STLContainer\StlContainer\out\x64\Debug\StlContainer.exe
+     Creating library C:\Users\ttiig\source\repos\LOGIC\Libraries\001.STLContainer\StlContainer\out\x64\Debug\StlContainer.lib and object C:\Users\ttiig\source\repos\LOGIC\Libraries\001.STLContainer\StlContainer\out\x64\Debug\StlContainer.exp
+  StlContainer.vcxproj -> C:\Users\ttiig\source\repos\LOGIC\Libraries\001.STLContainer\StlContainer\out\x64\Debug\StlContainer.dll

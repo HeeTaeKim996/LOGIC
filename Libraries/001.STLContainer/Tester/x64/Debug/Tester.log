@@ -1,4 +1,2 @@
 ﻿  main.cpp
-C:\Users\ttiig\source\repos\LOGIC\Libraries\001.STLContainer\Tester\main.cpp(20,20): warning C4018: '<': signed/unsigned mismatch
-C:\Users\ttiig\source\repos\LOGIC\Libraries\001.STLContainer\Tester\main.cpp(52,20): warning C4018: '<': signed/unsigned mismatch
   Tester.vcxproj -> C:\Users\ttiig\source\repos\LOGIC\Libraries\001.STLContainer\x64\Debug\Tester.exe
