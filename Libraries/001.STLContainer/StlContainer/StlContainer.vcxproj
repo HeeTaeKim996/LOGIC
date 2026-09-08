@@ -28,16 +28,9 @@
     <ClInclude Include="public\Unordered_map.h" />
     <ClInclude Include="public\Unordered_set.h" />
     <ClInclude Include="public\Vector.h" />
-    <ClInclude Include="Temp.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="private\HashTable.cpp" />
     <ClCompile Include="private\main.cpp" />
-    <ClCompile Include="private\Mem.cpp" />
-    <ClCompile Include="private\Priority_queue.cpp" />
-    <ClCompile Include="private\Std.cpp" />
-    <ClCompile Include="private\Unordered_map.cpp" />
-    <ClCompile Include="private\Vector.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

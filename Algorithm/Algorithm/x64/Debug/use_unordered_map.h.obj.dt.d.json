@@ -1,0 +1,12 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\ttiig\\source\\repos\\logic\\algorithm\\algorithm\\use_unordered_map.h",
+        "ProvidedModule": "",
+        "Includes": [
+            "c:\\users\\ttiig\\source\\repos\\logic\\algorithm\\algorithm\\001.stlcontainer_allset.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

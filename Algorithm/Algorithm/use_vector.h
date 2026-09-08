@@ -1,9 +1,9 @@
 #pragma once
 
-#include "001.STLContainer_AllSet.h"
+#include "use/001.STLContainer_AllSet.h"
 
 #ifdef FLAG_USE_CUSTOM_LIBRARY
-#include "Vector.h"
+#include "public/Vector.h"
 #define vector Vector
 #else
 #include <vector>

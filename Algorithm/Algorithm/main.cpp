@@ -6,11 +6,12 @@
 #include "3.1.StringMatch.h"
 #include "3.2.Trie.h"
 
-#include "use_vector.h"
-#include "use_priority_queue.h"
+#include "use/use_vector.h"
+#include "use/use_priority_queue.h"
 
-#include "Unordered_map.h"
+#include "use/use_unordered_map.h"
 
+#include "use/use_unordered_set.h"
 
 int main()
 {
@@ -45,13 +46,28 @@ int main()
 
 
 	printf("\nUMAP test\n");
-	Unordered_map<int, int> umap;
+	unordered_map<int, int> umap;
 	umap.insert({ 1, 2});
 	umap.insert({ 3, 4 });
 	auto it = umap.find(1);
 	printf("t1 : %d -> %d \n", it->first, it->second);
 	auto it2 = umap.find(3);
 	printf("t1 : %d -> %d \n", it2->first, it2->second);
+
+	printf("\n USET test\n");
+	unordered_set<int> uset;
+	uset.insert(1);
+	uset.insert(3);
+	auto it3 = uset.find(1);
+	if (it3 != uset.end())
+	{
+		printf("Found : %d\n", *it3);
+	}
+	auto it4 = uset.find(999);
+	if (it4 == uset.end())
+	{
+		printf("Not Found\n");
+	}
 }
 
 

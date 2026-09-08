@@ -37,7 +37,6 @@
     <ClInclude Include="public\Priority_queue.h">
       <Filter>Source Files\containers</Filter>
     </ClInclude>
-    <ClInclude Include="Temp.h" />
     <ClInclude Include="public\Unordered_map.h">
       <Filter>Source Files\containers\HashTable</Filter>
     </ClInclude>
@@ -51,24 +50,6 @@
   <ItemGroup>
     <ClCompile Include="private\main.cpp">
       <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="private\Mem.cpp">
-      <Filter>Source Files\common</Filter>
-    </ClCompile>
-    <ClCompile Include="private\Std.cpp">
-      <Filter>Source Files\common</Filter>
-    </ClCompile>
-    <ClCompile Include="private\Vector.cpp">
-      <Filter>Source Files\containers</Filter>
-    </ClCompile>
-    <ClCompile Include="private\Priority_queue.cpp">
-      <Filter>Source Files\containers</Filter>
-    </ClCompile>
-    <ClCompile Include="private\Unordered_map.cpp">
-      <Filter>Source Files\containers\HashTable</Filter>
-    </ClCompile>
-    <ClCompile Include="private\HashTable.cpp">
-      <Filter>Source Files\containers\HashTable</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

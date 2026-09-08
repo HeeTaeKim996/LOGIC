@@ -1,9 +1,9 @@
 #pragma once
 
-#include "001.STLContainer_AllSet.h"
+#include "use/001.STLContainer_AllSet.h"
 
 #ifdef FLAG_USE_CUSTOM_LIBRARY
-#include "Priority_queue.h"
+#include "public/Priority_queue.h"
 #define priority_queue Priority_queue
 #else
 #include <queue>

@@ -58,7 +58,7 @@ int main()
 	{
 		printf("%d, ", temps[i].i);
 	}
-#endif
+#endif // ========== Vec Test ==========
 
 
 #if 0 // Test Priority_queue
@@ -149,7 +149,7 @@ int main()
 		pq4.pop();
 	}
 
-#endif
+#endif // ========== Priority_queue Test ==========
 
 
 #if 0 // Unordered_map
@@ -352,7 +352,7 @@ int main()
 
 	printf("\n========== Test End ==========\n");
 
-#endif
+#endif // ========== Unordered_map Test ==========
 
 #if 1 // Unordered_set
 
