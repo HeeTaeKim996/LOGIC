@@ -558,7 +558,9 @@ public:
 	HashTableIterator(Node* node) : _node(node) {}
 
 public:
-	const T* operator -> () { return &(_node->data); }
+	T* operator -> () { return &(_node->data); }
+	T& operator *() { return _node->data; }
+
 
 	inline HashTableIterator& operator ++ ()
 	{

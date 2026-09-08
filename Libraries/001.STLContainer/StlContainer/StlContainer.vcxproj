@@ -26,6 +26,7 @@
     <ClInclude Include="public\SizeType.h" />
     <ClInclude Include="public\Std.h" />
     <ClInclude Include="public\Unordered_map.h" />
+    <ClInclude Include="public\Unordered_set.h" />
     <ClInclude Include="public\Vector.h" />
     <ClInclude Include="Temp.h" />
   </ItemGroup>

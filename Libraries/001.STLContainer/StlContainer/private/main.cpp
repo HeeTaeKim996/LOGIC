@@ -8,7 +8,7 @@
 #include <functional>
 #include <unordered_map>
 #include "Unordered_map.h"
-
+#include "Unordered_set.h"
 using namespace std;
 
 int main()
@@ -152,7 +152,7 @@ int main()
 #endif
 
 
-#if 1 // Unordered_map
+#if 0 // Unordered_map
 
 	printf("========== Unordered_map Test ==========\n\n");
 
@@ -354,7 +354,183 @@ int main()
 
 #endif
 
-	
+#if 1 // Unordered_set
 
+	printf("========== Unordered_set Test ==========\n\n");
+
+	Unordered_set<int> uset;
+
+
+	// ========================================
+	// 1. insert 테스트
+	// ========================================
+	printf("[1. insert]\n");
+
+	auto result1 = uset.insert(1);
+	printf("insert(1) : success = %d\n", result1.second);
+
+	auto result2 = uset.insert(3);
+	printf("insert(3) : success = %d\n", result2.second);
+
+	// 중복 삽입
+	auto result3 = uset.insert(1);
+	printf("insert(1) duplicate : success = %d\n", result3.second);
+
+	printf("size : %d\n\n", (int)uset.size());
+
+
+	// ========================================
+	// 2. find 테스트
+	// ========================================
+	printf("[2. find]\n");
+
+	auto it1 = uset.find(1);
+
+	if (it1 != uset.end())
+	{
+		printf("find(1) : %d\n", *it1);
+	}
+	else
+	{
+		printf("find(1) : Not Found\n");
+	}
+
+
+	auto it2 = uset.find(3);
+
+	if (it2 != uset.end())
+	{
+		printf("find(3) : %d\n", *it2);
+	}
+	else
+	{
+		printf("find(3) : Not Found\n");
+	}
+
+
+	auto it3 = uset.find(999);
+
+	if (it3 != uset.end())
+	{
+		printf("find(999) : %d\n", *it3);
+	}
+	else
+	{
+		printf("find(999) : Not Found\n");
+	}
+
+	printf("\n");
+
+
+	// ========================================
+	// 3. 전체 순회 테스트
+	// ========================================
+	printf("[3. iterator]\n");
+
+	for (auto it = uset.begin();
+		it != uset.end();
+		++it)
+	{
+		printf("%d\n", *it);
+	}
+
+	printf("\n");
+
+
+	// ========================================
+	// 4. erase 테스트
+	// ========================================
+	printf("[4. erase]\n");
+
+	printf("erase(3) : %d\n",
+		(int)uset.erase(3));
+
+	printf("erase(999) : %d\n",
+		(int)uset.erase(999));
+
+
+	auto erasedIt = uset.find(3);
+
+	if (erasedIt == uset.end())
+	{
+		printf("find(3) after erase : Not Found\n");
+	}
+
+	printf("size : %d\n\n",
+		(int)uset.size());
+
+
+	// ========================================
+	// 5. resize 테스트
+	// ========================================
+	printf("[5. resize]\n");
+
+	for (int i = 10; i < 60; i++)
+	{
+		uset.insert(i);
+	}
+
+
+	bool allFound = true;
+
+	for (int i = 10; i < 60; i++)
+	{
+		auto it = uset.find(i);
+
+		if (it == uset.end())
+		{
+			printf("ERROR : %d Not Found\n", i);
+			allFound = false;
+		}
+		else if (*it != i)
+		{
+			printf("ERROR : %d Value Error\n", i);
+			allFound = false;
+		}
+	}
+
+	printf("resize test : %s\n\n",
+		allFound ? "SUCCESS" : "FAILED");
+
+
+	// ========================================
+	// 6. clear 테스트
+	// ========================================
+	printf("[6. clear]\n");
+
+	uset.clear();
+
+	printf("empty : %d\n",
+		uset.empty());
+
+	printf("size : %d\n",
+		(int)uset.size());
+
+	printf("begin == end : %d\n",
+		uset.begin() == uset.end());
+
+
+	// ========================================
+	// 7. clear 이후 재사용 테스트
+	// ========================================
+	printf("\n[7. reuse after clear]\n");
+
+	uset.insert(100);
+
+	auto reuseIt = uset.find(100);
+
+	if (reuseIt != uset.end())
+	{
+		printf("find(100) : %d\n", *reuseIt);
+	}
+	else
+	{
+		printf("ERROR : reuse failed\n");
+	}
+
+
+	printf("\n========== Test End ==========\n");
+
+#endif // ========== Unordered_set Test ==========
 }
 

@@ -44,6 +44,9 @@
     <ClInclude Include="public\HashTable.h">
       <Filter>Source Files\containers\HashTable</Filter>
     </ClInclude>
+    <ClInclude Include="public\Unordered_set.h">
+      <Filter>Source Files\containers\HashTable</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="private\main.cpp">
