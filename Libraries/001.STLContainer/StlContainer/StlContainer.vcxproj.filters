@@ -17,6 +17,12 @@
     <Filter Include="Source Files\containers\HashTable">
       <UniqueIdentifier>{8d0b2fee-a32e-4f7c-b5b7-5cde7fd52397}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\containers\Vector">
+      <UniqueIdentifier>{63a17e05-29bc-47a2-8ea6-cad01ab9cd80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\containers\RedBlackTree">
+      <UniqueIdentifier>{70dbc1b3-fd69-4529-bbab-9136171381c2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="public\Mem.h">
@@ -25,17 +31,11 @@
     <ClInclude Include="public\Std.h">
       <Filter>Source Files\common</Filter>
     </ClInclude>
-    <ClInclude Include="public\Vector.h">
-      <Filter>Source Files\containers</Filter>
-    </ClInclude>
     <ClInclude Include="public\IteratorTemplate.h">
       <Filter>Source Files\IteratorTemplate</Filter>
     </ClInclude>
     <ClInclude Include="public\SizeType.h">
       <Filter>Source Files\common</Filter>
-    </ClInclude>
-    <ClInclude Include="public\Priority_queue.h">
-      <Filter>Source Files\containers</Filter>
     </ClInclude>
     <ClInclude Include="public\Unordered_map.h">
       <Filter>Source Files\containers\HashTable</Filter>
@@ -45,6 +45,15 @@
     </ClInclude>
     <ClInclude Include="public\Unordered_set.h">
       <Filter>Source Files\containers\HashTable</Filter>
+    </ClInclude>
+    <ClInclude Include="public\Priority_queue.h">
+      <Filter>Source Files\containers\Vector</Filter>
+    </ClInclude>
+    <ClInclude Include="public\Vector.h">
+      <Filter>Source Files\containers\Vector</Filter>
+    </ClInclude>
+    <ClInclude Include="public\RedBlackTree.h">
+      <Filter>Source Files\containers\RedBlackTree</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -35,7 +35,7 @@ private:
 
 
 public:
-	// 생성자-소멸자는 만들지 않는다. _table 의 생성자-소멸자에서 모두 자동 처리됨
+	// 생성자-소멸자는 특별한 경우가 아니면 만들지 않는다. _table 의 생성자-소멸자에서 모두 자동 처리됨
 	
 public:
 	bool empty() const noexcept { return _table.empty(); }

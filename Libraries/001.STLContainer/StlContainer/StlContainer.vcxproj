@@ -23,6 +23,7 @@
     <ClInclude Include="public\IteratorTemplate.h" />
     <ClInclude Include="public\Mem.h" />
     <ClInclude Include="public\Priority_queue.h" />
+    <ClInclude Include="public\RedBlackTree.h" />
     <ClInclude Include="public\SizeType.h" />
     <ClInclude Include="public\Std.h" />
     <ClInclude Include="public\Unordered_map.h" />
