@@ -14,7 +14,7 @@
     <Filter Include="Source Files\IteratorTemplate">
       <UniqueIdentifier>{0bcc4df2-6328-478e-a79a-eb2a7439166a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\containers\Unordered_map">
+    <Filter Include="Source Files\containers\HashTable">
       <UniqueIdentifier>{8d0b2fee-a32e-4f7c-b5b7-5cde7fd52397}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -39,7 +39,10 @@
     </ClInclude>
     <ClInclude Include="Temp.h" />
     <ClInclude Include="public\Unordered_map.h">
-      <Filter>Source Files\containers\Unordered_map</Filter>
+      <Filter>Source Files\containers\HashTable</Filter>
+    </ClInclude>
+    <ClInclude Include="public\HashTable.h">
+      <Filter>Source Files\containers\HashTable</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -59,7 +62,10 @@
       <Filter>Source Files\containers</Filter>
     </ClCompile>
     <ClCompile Include="private\Unordered_map.cpp">
-      <Filter>Source Files\containers\Unordered_map</Filter>
+      <Filter>Source Files\containers\HashTable</Filter>
+    </ClCompile>
+    <ClCompile Include="private\HashTable.cpp">
+      <Filter>Source Files\containers\HashTable</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

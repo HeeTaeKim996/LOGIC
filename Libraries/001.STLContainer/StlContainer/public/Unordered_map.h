@@ -480,6 +480,17 @@ inline sizeType Unordered_map<Key, Value, Hash>::erase(const Key& key)
 	return 0;
 }
 
+
+
+
+
+
+
+
+
+
+
+
 template<typename Key, typename Value, typename Hash>
 inline void Unordered_map<Key, Value, Hash>::resize()
 {

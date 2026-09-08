@@ -1,27 +1,2 @@
-﻿  Unordered_map.cpp
-  main.cpp
-C:\Users\ttiig\source\repos\LOGIC\Libraries\001.STLContainer\StlContainer\public\Unordered_map.h(290,20): warning C4018: '<': signed/unsigned mismatch
-  (compiling source file 'private/main.cpp')
-      C:\Users\ttiig\source\repos\LOGIC\Libraries\001.STLContainer\StlContainer\public\Unordered_map.h(290,20):
-      the template instantiation context (the oldest one first) is
-          C:\Users\ttiig\source\repos\LOGIC\Libraries\001.STLContainer\StlContainer\private\main.cpp(159,26):
-          see reference to class template instantiation 'Unordered_map<int,int,std::hash<Key>>' being compiled
-          with
-          [
-              Key=int
-          ]
-          C:\Users\ttiig\source\repos\LOGIC\Libraries\001.STLContainer\StlContainer\public\Unordered_map.h(281,1):
-          while compiling class template member function 'void Unordered_map<int,int,std::hash<Key>>::clear(void)'
-          with
-          [
-              Key=int
-          ]
-              C:\Users\ttiig\source\repos\LOGIC\Libraries\001.STLContainer\StlContainer\private\main.cpp(321,12):
-              see the first reference to 'Unordered_map<int,int,std::hash<Key>>::clear' in 'main'
-          with
-          [
-              Key=int
-          ]
-  
-  Generating Code...
+﻿  HashTable.cpp
   StlContainer.vcxproj -> C:\Users\ttiig\source\repos\LOGIC\Libraries\001.STLContainer\StlContainer\out\x64\Debug\StlContainer.exe

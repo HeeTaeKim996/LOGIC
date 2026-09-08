@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="public\HashTable.h" />
     <ClInclude Include="public\IteratorTemplate.h" />
     <ClInclude Include="public\Mem.h" />
     <ClInclude Include="public\Priority_queue.h" />
@@ -29,6 +30,7 @@
     <ClInclude Include="Temp.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="private\HashTable.cpp" />
     <ClCompile Include="private\main.cpp" />
     <ClCompile Include="private\Mem.cpp" />
     <ClCompile Include="private\Priority_queue.cpp" />
