@@ -6,6 +6,7 @@
 #include "SizeType.h"
 #include "Std.h"
 #include <string>
+#include "RedBlackTree.h"
 
 
 /*
@@ -501,6 +502,8 @@ HashTable<Key, T, Hash, KeyOfValue>::createNode(const T& data, const size_t& inH
 
 
 
+
+
 template<typename Key, typename T, typename Hash, typename KeyOfValue>
 inline void HashTable<Key, T, Hash, KeyOfValue>::deleteNode(Node* deleted)
 {
@@ -551,8 +554,7 @@ inline void HashTable<Key, T, Hash, KeyOfValue>::deleteNode(Node* deleted)
 template<typename Key, typename T, typename Hash, typename KeyOfValue>
 class HashTableIterator
 {
-	using HT = HashTable<Key, T, Hash, KeyOfValue>;
-	using Node = typename HT::Node;
+	using Node = typename HashTable<Key, T, Hash, KeyOfValue>::Node;
 
 public:
 	HashTableIterator(Node* node) : _node(node) {}

@@ -9,6 +9,7 @@
 #include <unordered_map>
 #include "Unordered_map.h"
 #include "Unordered_set.h"
+#include "RedBlackTree.h"
 using namespace std;
 
 int main()
@@ -354,7 +355,7 @@ int main()
 
 #endif // ========== Unordered_map Test ==========
 
-#if 1 // Unordered_set
+#if 0 // Unordered_set
 
 	printf("========== Unordered_set Test ==========\n\n");
 
@@ -532,5 +533,9 @@ int main()
 	printf("\n========== Test End ==========\n");
 
 #endif // ========== Unordered_set Test ==========
+
+
+
+	RedBlackTree<int, int, std::less<int>, std::hash<int>> rbtree;
 }
 
