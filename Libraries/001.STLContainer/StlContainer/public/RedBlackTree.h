@@ -58,6 +58,7 @@ public:
 	std::pair<iterator, bool> insert(const Data& data);
 	sizeType erase(const Key& key);
 
+
 private:
 	void L(Node* parent);
 	void R(Node* parent);
@@ -103,8 +104,8 @@ private:
 
 
 template<typename Key, typename Data, typename Less, typename KeyOfValue>
-inline std::pair<TreeIterator<Key, Data, Less, KeyOfValue>, bool> 
-	RedBlackTree<Key, Data, Less, KeyOfValue>::insert(const Data& data)
+inline std::pair<TreeIterator<Key, Data, Less, KeyOfValue>, bool>
+RedBlackTree<Key, Data, Less, KeyOfValue>::insert(const Data& data)
 {
 	const Key& key = _keyOfValue(data);
 
@@ -231,7 +232,7 @@ inline sizeType RedBlackTree<Key, Data, Less, KeyOfValue>::erase(const Key& key)
 		// target->right 이 successorNode 라면, 
 		// 단순히 target parent 의 위와 left만 successorNode에게 인계하면 되지만,
 		// (아래 if-else 문 제외 코드들)
-		
+
 		// target->right 이 successorNode 가 아니라면, 
 		// target 의 right 인계처리와, successorNode 의 위 인계처리 작업이
 		// 추가로 필요하기에, 아래 else 코드가 추가됨
@@ -261,7 +262,7 @@ inline sizeType RedBlackTree<Key, Data, Less, KeyOfValue>::erase(const Key& key)
 
 		// 위 두 케이스는 안그런데, 여기서만 SuccessorNode 의 색상을 targetNode의 색상으로 교체한다.
 		// 이유는 아직 이해 못했다. 추후 나오겠지
-		successorNode->isRed = target->isRed; 
+		successorNode->isRed = target->isRed;
 	}
 
 	deleteNode(target);
@@ -375,7 +376,7 @@ inline void RedBlackTree<Key, Data, Less, KeyOfValue>::transplant(Node* oldNode,
 
 template<typename Key, typename Data, typename Less, typename KeyOfValue>
 inline RBNode<Data>*
-	RedBlackTree<Key, Data, Less, KeyOfValue>::minimum(Node* node)
+RedBlackTree<Key, Data, Less, KeyOfValue>::minimum(Node* node)
 {
 	while (node->left)
 	{
@@ -409,22 +410,29 @@ inline RBNode<Data>*
 template<typename Key, typename Data, typename Less, typename KeyOfValue>
 inline void RedBlackTree<Key, Data, Less, KeyOfValue>::insertFixup(Node* node)
 {
+	// 루트는 항상 블랙
 	if (node == _root)
 	{
 		node->isRed = false;
 		return;
 	}
 
+
+	// 부모가 레드인 경우에만 반복
 	while (node->parent && node->parent->isRed)
 	{
 		Node* parent = node->parent;
 		Node* grandParent = parent->parent;
 
 
+		// 부모가 증부모의 왼쪽 자식인 경우
 		if (parent == grandParent->left)
 		{
 			Node* uncle = grandParent->right;
 
+			// case1) 
+			// 삼촌도 레드라면, 부모-삼촌이 모두 레드인 경우로, 삼촌-부모를 모두 블랙으로 전환,
+			// 증부모를 레드로 폭발시키고, 증부모를 node로 할당하여 증부모 기준으로 다시 루프를 반복
 			if (uncle && uncle->isRed)
 			{
 				parent->isRed = false;
@@ -433,8 +441,14 @@ inline void RedBlackTree<Key, Data, Less, KeyOfValue>::insertFixup(Node* node)
 
 				node = grandParent;
 			}
+			// case2) 
+			// 삼촌이 블랙이라면, 부모를 증부모 위치로, 증부모를 삼촌 위치로 로테이트
+			// 증부모 위치의 부모는 블랙, 삼촌 위치의 증부모는 레드로 전환
 			else
 			{
+				// 증부모와 부모를 R하기 앞서, 자신이 부모의 오른쪽 자신인 경우 
+				// ( 증부모 - 부모 - 자신 ) 의 얼라인이 안된 경우, 얼라인을 맞춰줌
+				// ※ 이경우 자신 이 기존 부모와 증부모의 부모가 됨
 				if (node == parent->right)
 				{
 					node = parent;
@@ -449,6 +463,7 @@ inline void RedBlackTree<Key, Data, Less, KeyOfValue>::insertFixup(Node* node)
 				break;
 			}
 		}
+		// 부모가 증부모의 오른쪽 자식인 경우 ( 코드는 위와 대칭이다 )
 		else
 		{
 			Node* uncle = grandParent->left;
@@ -482,9 +497,158 @@ inline void RedBlackTree<Key, Data, Less, KeyOfValue>::insertFixup(Node* node)
 	_root->isRed = false;
 }
 
+
+
+
+
+
+
+
+
+
+
 template<typename Key, typename Data, typename Less, typename KeyOfValue>
 inline void RedBlackTree<Key, Data, Less, KeyOfValue>::eraseFixup(Node* node, Node* parent)
 {
+	// ※ 여기서 블랙이라 함은, nullptr( RB트리에서 개념적으로 블랙인 종단 노드) 를 포함한다
+
+	// 노드가 루트가 아니면서 블랙인 경우에 한해 반복
+	while (node != _root && (node == nullptr || node->isRed == false))
+	{
+		// 노드가 parent 의 왼쪽 자식인 경우
+		if (parent && node == parent->left)
+		{
+			Node* sibling = parent->right;
+
+			// case1) 형제가 레드인 경우
+			if (sibling && sibling->isRed)
+			{
+				sibling->isRed = false;
+				parent->isRed = true;
+
+				L(parent);
+
+				// L 로 인해, 기존 parent->right->left 가 parent 의 right 로 인계됐으므로,
+				// 기존 parent->right->left 가 현재의 sibling 이 됨
+				sibling = parent->right;
+			}
+
+
+			// case2) 형제가 블랙이거나, 형제의 자식들이 모두 블랙인 경우
+			if (sibling == nullptr ||
+				(
+					(sibling->left == nullptr || sibling->left->isRed == false)
+					&&
+					(sibling->right == nullptr || sibling->right->isRed == false)
+					))
+			{
+
+				if (sibling)
+				{
+					sibling->isRed = true;
+				}
+
+				node = parent;
+				parent = parent->parent;
+			}
+			else
+			{
+				// case3) 형제의 가까운 자식이 레드면서, 먼 자식은 블랙
+				if (sibling->right == nullptr || sibling->right->isRed == false)
+				{
+					if (sibling->left)
+					{
+						sibling->left->isRed = false;
+					}
+
+					sibling->isRed = true;
+					R(sibling);
+					sibling = parent->right;
+				}
+
+				// case4) 형제의 먼 자식이 레드
+				sibling->isRed = parent->isRed;
+				parent->isRed = false;
+
+				if (sibling->right)
+				{
+					sibling->right->isRed = false;
+				}
+
+				L(parent);
+
+				node = _root;
+				parent = nullptr;
+			}
+		}
+		// 노드가 parent 의 오른쪽 자식인 경우
+		else if (parent)
+		{
+			Node* sibling = parent->left;
+
+			// case1) 형제가 레드인 경우
+			if (sibling && sibling->isRed)
+			{
+				sibling->isRed = false;
+				parent->isRed = true;
+
+				R(parent);
+
+				sibling = parent->left;
+			}
+
+			// case2) 형제의 두 자식이 모두 블랙
+			if (sibling == nullptr ||
+				(
+					(sibling->left == nullptr || sibling->left->isRed == false) &&
+					(sibling->right == nullptr || sibling->right->isRed == false)
+					))
+			{
+				if (sibling)
+				{
+					sibling->isRed = true;
+				}
+
+				node = parent;
+				parent = node->parent;
+			}
+			else
+			{
+				// case3) 형제의 가까운 자식이 레드면서, 먼 자식은 블랙
+				if (sibling->left == nullptr || sibling->left->isRed == false)
+				{
+					if (sibling->right)
+					{
+						sibling->right->isRed = false;
+					}
+
+					sibling->isRed = true;
+					L(sibling);
+					sibling = parent->left;
+				}
+
+				// case4) 형제의 먼 자식이 레드
+				sibling->isRed = parent->isRed;
+				parent->isRed = false;
+
+				if (sibling->left)
+				{
+					sibling->left->isRed = false;
+				}
+
+				R(parent);
+
+				node = _root;
+				parent = nullptr;
+			}
+		}
+	}
+
+	if (node)
+	{
+		node->isRed = false;
+	}
+
 }
 
 
@@ -499,8 +663,8 @@ inline void RedBlackTree<Key, Data, Less, KeyOfValue>::eraseFixup(Node* node, No
 
 
 template<typename Key, typename Data, typename Less, typename KeyOfValue>
-inline RBNode<Data>* 
-	RedBlackTree<Key, Data, Less, KeyOfValue>::createNode(const Data& data, Node* parent)
+inline RBNode<Data>*
+RedBlackTree<Key, Data, Less, KeyOfValue>::createNode(const Data& data, Node* parent)
 {
 	_size++;
 	return new RBNode(data, parent);
