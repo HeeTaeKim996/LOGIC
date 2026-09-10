@@ -4,7 +4,15 @@
 
 #include "SizeType.h"
 #include "Std.h"
+/*
+	내용이 굉장히 어렵다. 이 내용을 주석을 보며 이해하기 어렵기에, 
+	따로 노트로 정리를 했다. 정리한 내용은 pdf 로,
+	$(SolutionDir)study\RedBlackTree\RedBlackTree.pdf 
+	에 위치한다
 
+	위 정리한 pdf 를 보며, 아래 함수인 L(LeftRotate), R(RightRotate), 
+	insert, insertFixup, erase, eraesFixup 을 비교해가며 이해하자
+*/
 
 
 
@@ -260,8 +268,10 @@ inline sizeType RedBlackTree<Key, Data, Less, KeyOfValue>::erase(const Key& key)
 		target->left->parent = successorNode;
 
 
-		// 위 두 케이스는 안그런데, 여기서만 SuccessorNode 의 색상을 targetNode의 색상으로 교체한다.
-		// 이유는 아직 이해 못했다. 추후 나오겠지
+
+		// successorNode 의 색을 target 색으로 승계한다. target->left, target->right 는 그대로 위치하고
+		// successorNode 가 색상을 승계하기에, 이부분은 문제가 되지 않는다. 
+		// 문제가 되는 부분은 successorNode <- right 로 대치되는 부분이다. 
 		successorNode->isRed = target->isRed;
 	}
 
@@ -512,6 +522,15 @@ inline void RedBlackTree<Key, Data, Less, KeyOfValue>::eraseFixup(Node* node, No
 {
 	// ※ 여기서 블랙이라 함은, nullptr( RB트리에서 개념적으로 블랙인 종단 노드) 를 포함한다
 
+	// ※ 아래의 sibling 이 종단노드(nullptr) 일 가능성은 없다. 
+	//	 현 eraseFixup 함수가 호출되는 조건은, 
+	//   erase 함수에서 erased 되는 노드가 종단노드(nullptr) 가 아니며, 색상이 블랙인 노드다.
+	//   
+	//	 해당 노드의 빈자리를 매꾸는 노드가 fixupNode 이기에, fixUpNode의 sibling 의 차수는 확정적으로 
+	//   fixUpNode 보다 1 높다. 따라서 fixUpNode(아래의 'node') 가 종단노드(nullptr) 일 수는 있어도, 
+	//   sibling 은 블랙노드일 수는 있어도 종단노드 일 가능성은 없기에, if(sibling == nullptr) 방어코드는 배제한다
+
+
 	// 노드가 루트가 아니면서 블랙인 경우에 한해 반복
 	while (node != _root && (node == nullptr || node->isRed == false))
 	{
@@ -520,8 +539,8 @@ inline void RedBlackTree<Key, Data, Less, KeyOfValue>::eraseFixup(Node* node, No
 		{
 			Node* sibling = parent->right;
 
-			// case1) 형제가 레드인 경우
-			if (sibling && sibling->isRed)
+			// case1) 형제가 레드인 경우 -> 노드의 형제가 블랙이 되도록 조정한다. 이후 2), 3), 4) 에 맡긴다
+			if (sibling->isRed)
 			{
 				sibling->isRed = false;
 				parent->isRed = true;
@@ -533,61 +552,52 @@ inline void RedBlackTree<Key, Data, Less, KeyOfValue>::eraseFixup(Node* node, No
 				sibling = parent->right;
 			}
 
+			// ※ 하단의 case2), case3), case4) 는 case1) 에 의해, sibling 이 블랙임을 전제로 한다
 
-			// case2) 형제가 블랙이거나, 형제의 자식들이 모두 블랙인 경우
-			if (sibling == nullptr ||
-				(
-					(sibling->left == nullptr || sibling->left->isRed == false)
-					&&
-					(sibling->right == nullptr || sibling->right->isRed == false)
-					))
+			// case2) 형제의 자식들이 모두 블랙인 경우
+			if (
+				(sibling->left == nullptr || sibling->left->isRed == false)
+				&&
+				(sibling->right == nullptr || sibling->right->isRed == false)
+				)
 			{
-
-				if (sibling)
-				{
-					sibling->isRed = true;
-				}
+				sibling->isRed = true;
 
 				node = parent;
 				parent = parent->parent;
 			}
 			else
 			{
-				// case3) 형제의 가까운 자식이 레드면서, 먼 자식은 블랙
+				// case3) 형제의 (노드 기준으로 가까운) 자식이 레드면서, (노드 기준으러 먼) 자식은 블랙
 				if (sibling->right == nullptr || sibling->right->isRed == false)
 				{
-					if (sibling->left)
-					{
-						sibling->left->isRed = false;
-					}
+					// ※ case2 가 false 이며 case3 은 true 이기에, sibling->left != nullptr
+					sibling->left->isRed = false;
 
 					sibling->isRed = true;
 					R(sibling);
 					sibling = parent->right;
 				}
 
-				// case4) 형제의 먼 자식이 레드
+				// case4) 형제의 먼 자식이 레드 
 				sibling->isRed = parent->isRed;
 				parent->isRed = false;
 
-				if (sibling->right)
-				{
-					sibling->right->isRed = false;
-				}
+				// ※ case2 가 false 이며 case3 을 거쳤기에, sibling->right != nullptr && sibling->right 는 레드
+				sibling->right->isRed = false;
 
 				L(parent);
 
-				node = _root;
-				parent = nullptr;
+				return;
 			}
 		}
-		// 노드가 parent 의 오른쪽 자식인 경우
+		// 노드가 parent 의 오른쪽 자식인 경우 ( 위와 코드 구조는 대칭으로 모두 같다 )
 		else if (parent)
 		{
 			Node* sibling = parent->left;
 
 			// case1) 형제가 레드인 경우
-			if (sibling && sibling->isRed)
+			if (sibling->isRed)
 			{
 				sibling->isRed = false;
 				parent->isRed = true;
@@ -598,17 +608,13 @@ inline void RedBlackTree<Key, Data, Less, KeyOfValue>::eraseFixup(Node* node, No
 			}
 
 			// case2) 형제의 두 자식이 모두 블랙
-			if (sibling == nullptr ||
-				(
-					(sibling->left == nullptr || sibling->left->isRed == false) &&
-					(sibling->right == nullptr || sibling->right->isRed == false)
-					))
+			if (
+				(sibling->left == nullptr || sibling->left->isRed == false) &&
+				(sibling->right == nullptr || sibling->right->isRed == false)
+				)
 			{
-				if (sibling)
-				{
-					sibling->isRed = true;
-				}
-
+				sibling->isRed = true;
+				
 				node = parent;
 				parent = node->parent;
 			}
@@ -617,10 +623,8 @@ inline void RedBlackTree<Key, Data, Less, KeyOfValue>::eraseFixup(Node* node, No
 				// case3) 형제의 가까운 자식이 레드면서, 먼 자식은 블랙
 				if (sibling->left == nullptr || sibling->left->isRed == false)
 				{
-					if (sibling->right)
-					{
-						sibling->right->isRed = false;
-					}
+					sibling->right->isRed = false;
+					
 
 					sibling->isRed = true;
 					L(sibling);
@@ -631,15 +635,12 @@ inline void RedBlackTree<Key, Data, Less, KeyOfValue>::eraseFixup(Node* node, No
 				sibling->isRed = parent->isRed;
 				parent->isRed = false;
 
-				if (sibling->left)
-				{
-					sibling->left->isRed = false;
-				}
 
+				sibling->left->isRed = false;
+				
 				R(parent);
 
-				node = _root;
-				parent = nullptr;
+				return;
 			}
 		}
 	}
@@ -648,7 +649,6 @@ inline void RedBlackTree<Key, Data, Less, KeyOfValue>::eraseFixup(Node* node, No
 	{
 		node->isRed = false;
 	}
-
 }
 
 
