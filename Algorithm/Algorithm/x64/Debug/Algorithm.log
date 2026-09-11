@@ -1,8 +1,104 @@
-﻿  main.cpp
+﻿  pch.cpp
+  Array.cpp
+  FixedArray.cpp
+  main.cpp
+  Search.cpp
 C:\Users\ttiig\source\repos\LOGIC\Algorithm\Algorithm\Sort.h(460,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
   (compiling source file '/main.cpp')
   
 C:\Users\ttiig\source\repos\LOGIC\Algorithm\Algorithm\Sort.h(518,8): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
   (compiling source file '/main.cpp')
   
+C:\Users\ttiig\source\repos\LOGIC\Algorithm\Algorithm\Search.h(28,10): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file '/Search.cpp')
+      C:\Users\ttiig\source\repos\LOGIC\Algorithm\Algorithm\Search.h(28,10):
+      the template instantiation context (the oldest one first) is
+          C:\Users\ttiig\source\repos\LOGIC\Algorithm\Algorithm\Search.cpp(25,15):
+          see reference to function template instantiation 'int Search::binarySearch<int>(const Array<int> &,std::function<int (const int &,const int &)>,const T &)' being compiled
+          with
+          [
+              T=int
+          ]
+  
+  Sort.cpp
+C:\Users\ttiig\source\repos\LOGIC\Algorithm\Algorithm\Sort.h(460,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file '/Sort.cpp')
+  
+C:\Users\ttiig\source\repos\LOGIC\Algorithm\Algorithm\Sort.h(518,8): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file '/Sort.cpp')
+  
+C:\Users\ttiig\source\repos\LOGIC\Algorithm\Algorithm\Sort.h(89,8): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file '/Sort.cpp')
+      C:\Users\ttiig\source\repos\LOGIC\Algorithm\Algorithm\Sort.h(89,8):
+      the template instantiation context (the oldest one first) is
+          C:\Users\ttiig\source\repos\LOGIC\Algorithm\Algorithm\Sort.cpp(34,15):
+          see reference to function template instantiation 'void Sort::bubbleSort<int>(Array<int> &,std::function<int (const int &,const int &)>)' being compiled
+  
+C:\Users\ttiig\source\repos\LOGIC\Algorithm\Algorithm\Sort.h(179,8): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file '/Sort.cpp')
+      C:\Users\ttiig\source\repos\LOGIC\Algorithm\Algorithm\Sort.h(179,8):
+      the template instantiation context (the oldest one first) is
+          C:\Users\ttiig\source\repos\LOGIC\Algorithm\Algorithm\Sort.cpp(56,15):
+          see reference to function template instantiation 'void Sort::shellSort<int>(Array<int> &,std::function<int (const int &,const int &)>)' being compiled
+  
+C:\Users\ttiig\source\repos\LOGIC\Algorithm\Algorithm\Sort.h(340,27): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file '/Sort.cpp')
+      C:\Users\ttiig\source\repos\LOGIC\Algorithm\Algorithm\Sort.h(340,27):
+      the template instantiation context (the oldest one first) is
+          C:\Users\ttiig\source\repos\LOGIC\Algorithm\Algorithm\Sort.cpp(78,15):
+          see reference to function template instantiation 'void Sort::quickSort<int>(Array<int> &,std::function<int (const int &,const int &)>)' being compiled
+  
+C:\Users\ttiig\source\repos\LOGIC\Algorithm\Algorithm\Sort.h(402,23): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file '/Sort.cpp')
+      C:\Users\ttiig\source\repos\LOGIC\Algorithm\Algorithm\Sort.h(402,23):
+      the template instantiation context (the oldest one first) is
+          C:\Users\ttiig\source\repos\LOGIC\Algorithm\Algorithm\Sort.cpp(86,15):
+          see reference to function template instantiation 'void Sort::mergeSort<int>(Array<int> &,std::function<int (const int &,const int &)>)' being compiled
+  
+C:\Users\ttiig\source\repos\LOGIC\Algorithm\Algorithm\Sort.h(434,8): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file '/Sort.cpp')
+      C:\Users\ttiig\source\repos\LOGIC\Algorithm\Algorithm\Sort.h(434,8):
+      the template instantiation context (the oldest one first) is
+          C:\Users\ttiig\source\repos\LOGIC\Algorithm\Algorithm\Sort.cpp(93,15):
+          see reference to function template instantiation 'void Sort::heapSort<int>(Array<int> &,std::function<int (const int &,const int &)>)' being compiled
+  
+  3.1.StringMatch.cpp
+C:\Users\ttiig\source\repos\LOGIC\Algorithm\Algorithm\3.1.StringMatch.cpp(93,29): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file '/3.1.StringMatch.cpp')
+  
+C:\Users\ttiig\source\repos\LOGIC\Algorithm\Algorithm\3.1.StringMatch.cpp(93,19): warning C4267: 'initializing': conversion from 'size_t' to 'const int', possible loss of data
+  (compiling source file '/3.1.StringMatch.cpp')
+  
+C:\Users\ttiig\source\repos\LOGIC\Algorithm\Algorithm\3.1.StringMatch.cpp(94,35): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file '/3.1.StringMatch.cpp')
+  
+C:\Users\ttiig\source\repos\LOGIC\Algorithm\Algorithm\3.1.StringMatch.cpp(94,22): warning C4267: 'initializing': conversion from 'size_t' to 'const int', possible loss of data
+  (compiling source file '/3.1.StringMatch.cpp')
+  
+C:\Users\ttiig\source\repos\LOGIC\Algorithm\Algorithm\3.1.StringMatch.cpp(147,29): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file '/3.1.StringMatch.cpp')
+  
+C:\Users\ttiig\source\repos\LOGIC\Algorithm\Algorithm\3.1.StringMatch.cpp(147,19): warning C4267: 'initializing': conversion from 'size_t' to 'const int', possible loss of data
+  (compiling source file '/3.1.StringMatch.cpp')
+  
+C:\Users\ttiig\source\repos\LOGIC\Algorithm\Algorithm\3.1.StringMatch.cpp(148,35): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file '/3.1.StringMatch.cpp')
+  
+C:\Users\ttiig\source\repos\LOGIC\Algorithm\Algorithm\3.1.StringMatch.cpp(148,22): warning C4267: 'initializing': conversion from 'size_t' to 'const int', possible loss of data
+  (compiling source file '/3.1.StringMatch.cpp')
+  
+C:\Users\ttiig\source\repos\LOGIC\Algorithm\Algorithm\3.1.StringMatch.cpp(328,29): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file '/3.1.StringMatch.cpp')
+  
+C:\Users\ttiig\source\repos\LOGIC\Algorithm\Algorithm\3.1.StringMatch.cpp(328,19): warning C4267: 'initializing': conversion from 'size_t' to 'const int', possible loss of data
+  (compiling source file '/3.1.StringMatch.cpp')
+  
+C:\Users\ttiig\source\repos\LOGIC\Algorithm\Algorithm\3.1.StringMatch.cpp(329,35): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file '/3.1.StringMatch.cpp')
+  
+C:\Users\ttiig\source\repos\LOGIC\Algorithm\Algorithm\3.1.StringMatch.cpp(329,22): warning C4267: 'initializing': conversion from 'size_t' to 'const int', possible loss of data
+  (compiling source file '/3.1.StringMatch.cpp')
+  
+  3.2.Trie.cpp
+  Generating Code...
   Algorithm.vcxproj -> C:\Users\ttiig\source\repos\LOGIC\Algorithm\Algorithm\out\x64\Debug\Algorithm.exe

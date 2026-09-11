@@ -1,16 +1,30 @@
-#include "Vector.h"
 
 #include <vector>
 #include <algorithm>
 
 #include <queue>
-#include "Priority_queue.h"
 #include <functional>
 #include <unordered_map>
-#include "Unordered_map.h"
-#include "Unordered_set.h"
-#include "RedBlackTree.h"
+
+
+#include "use/use_vector.h"
+#include "use/use_priority_queue.h"
+#include "use/use_unordered_map.h"
+#include "use/use_unordered_set.h"
+#include "use/use_map.h"
+#include "use/use_set.h"
+
+
 using namespace std;
+
+template<typename Key, typename Value>
+struct TempGetKey
+{
+	const Key& operator()(const std::pair<Key, Value>& data) const
+	{
+		return data.first;
+	}
+};
 
 int main()
 {
@@ -535,7 +549,309 @@ int main()
 #endif // ========== Unordered_set Test ==========
 
 
+		
+#if 0
+	printf("========== Map Test ==========\n\n");
 
-	RedBlackTree<int, int, std::less<int>, std::hash<int>> rbtree;
+	Map<int, int> map;
+
+
+	// ========================================
+	// 1. insert 테스트
+	// ========================================
+	printf("[1. insert]\n");
+
+	auto result1 = map.insert({ 3, 30 });
+	printf("insert(3, 30) : success = %d\n", result1.second);
+
+	auto result2 = map.insert({ 1, 10 });
+	printf("insert(1, 10) : success = %d\n", result2.second);
+
+	auto result3 = map.insert({ 5, 50 });
+	printf("insert(5, 50) : success = %d\n", result3.second);
+
+	// 중복 삽입
+	auto result4 = map.insert({ 3, 300 });
+	printf("insert(3, 300) duplicate : success = %d\n", result4.second);
+
+	printf("size : %d\n\n", (int)map.size());
+
+
+	// ========================================
+	// 2. find 테스트
+	// ========================================
+	printf("[2. find]\n");
+
+	auto it1 = map.find(3);
+
+	if (it1 != map.end())
+	{
+		printf("find(3) : {%d, %d}\n", it1->first, it1->second);
+	}
+	else
+	{
+		printf("find(3) : Not Found\n");
+	}
+
+	auto it2 = map.find(999);
+
+	if (it2 != map.end())
+	{
+		printf("find(999) : {%d, %d}\n", it2->first, it2->second);
+	}
+	else
+	{
+		printf("find(999) : Not Found\n");
+	}
+
+	printf("\n");
+
+
+	// ========================================
+	// 3. 전체 순회 테스트
+	// ========================================
+	printf("[3. iterator]\n");
+
+	for (auto it = map.begin(); it != map.end(); ++it)
+	{
+		printf("{%d, %d}\n", it->first, it->second);
+	}
+
+	printf("\n");
+
+
+	// ========================================
+	// 4. operator[] 테스트
+	// ========================================
+	printf("[4. operator[]]\n");
+
+	map[3] = 3000;
+	printf("map[3] = %d\n", map[3]);
+
+	map[7] = 70;
+	printf("map[7] = %d\n", map[7]);
+
+	printf("size : %d\n\n", (int)map.size());
+
+
+
+
+	// ========================================
+	// 6. 정렬 순서 순회 테스트
+	// ========================================
+	printf("[6. sorted order]\n");
+
+	for (auto it = map.begin();
+		it != map.end();
+		++it)
+	{
+		printf("%d -> %d\n", it->first, it->second);
+	}
+
+	printf("\n");
+
+
+	// ========================================
+	// 7. Map iterator -> Vector 테스트
+	// ========================================
+	printf("[7. iterator -> Vector]\n");
+
+	//Vector<std::pair<const int, int>> vec(map.begin(), map.end());
+	Vector vec(map.begin(), map.end());
+
+	printf("Vector size : %d\n", (int)vec.size());
+
+	for (auto it = vec.begin(); it != vec.end(); ++it)
+	{
+		printf("{%d, %d}\n", it->first, it->second);
+	}
+
+	printf("\n");
+
+
+	// ========================================
+	// 8. erase 테스트
+	// ========================================
+	printf("[8. erase]\n");
+
+	printf("erase(3) : %d\n",
+		(int)map.erase(3));
+
+	printf("erase(999) : %d\n",
+		(int)map.erase(999));
+
+	auto erasedIt = map.find(3);
+
+	if (erasedIt == map.end())
+	{
+		printf("find(3) after erase : Not Found\n");
+	}
+
+	printf("size : %d\n\n",
+		(int)map.size());
+
+
+	// ========================================
+	// 9. clear 테스트
+	// ========================================
+	printf("[9. clear]\n");
+
+	map.clear();
+
+	printf("empty : %d\n",
+		map.empty());
+
+	printf("size : %d\n",
+		(int)map.size());
+
+	printf("begin == end : %d\n",
+		map.begin() == map.end());
+
+
+	// ========================================
+	// 10. clear 이후 재사용 테스트
+	// ========================================
+	printf("\n[10. reuse after clear]\n");
+
+	map.insert({ 100, 1000 });
+
+	auto reuseIt = map.find(100);
+
+	if (reuseIt != map.end())
+	{
+		printf("find(100) : {%d, %d}\n",
+			reuseIt->first,
+			reuseIt->second);
+	}
+	else
+	{
+		printf("ERROR : reuse failed\n");
+	}
+
+
+	printf("\n========== Test End ==========\n");
+
+#endif // ========== Map Test ==========
+
+#if 1
+	printf("\n========== Set Test ==========\n");
+
+	Set<int> set;
+
+	// [1. insert]
+	printf("\n[1. insert]\n");
+
+	auto result1 = set.insert(3);
+	printf("insert(3) : success = %d\n", result1.second);
+
+	auto result2 = set.insert(1);
+	printf("insert(1) : success = %d\n", result2.second);
+
+	auto result3 = set.insert(5);
+	printf("insert(5) : success = %d\n", result3.second);
+
+	auto result4 = set.insert(3);
+	printf("insert(3) duplicate : success = %d\n", result4.second);
+
+	printf("size : %zu\n", set.size());
+
+
+	// [2. find]
+	printf("\n[2. find]\n");
+
+	auto it1 = set.find(3);
+
+	if (it1 != set.end())
+		printf("find(3) : %d\n", *it1);
+	else
+		printf("find(3) : Not Found\n");
+
+	auto it2 = set.find(999);
+
+	if (it2 != set.end())
+		printf("find(999) : %d\n", *it2);
+	else
+		printf("find(999) : Not Found\n");
+
+
+	// [3. iterator]
+	printf("\n[3. iterator]\n");
+
+	for (auto it = set.begin(); it != set.end(); ++it)
+	{
+		printf("%d\n", *it);
+	}
+
+
+	// [4. sorted order]
+	printf("\n[4. sorted order]\n");
+
+	for (auto it = set.begin(); it != set.end(); ++it)
+	{
+		printf("%d\n", *it);
+	}
+
+
+
+	// ========================================
+	// 4.++  Set iterator -> Vector 테스트
+	// ========================================
+	printf("\n[4.++ iterator -> Vector]\n");
+
+	Vector vec(set.begin(), set.end());
+
+	printf("Vector size : %d\n", (int)vec.size());
+
+	for (auto it = vec.begin(); it != vec.end(); ++it)
+	{
+		printf("%d,\t", *it, *it);
+	}
+	printf("\n\n");
+
+
+
+	// [5. erase]
+	printf("\n[5. erase]\n");
+
+	printf("erase(3) : %zu\n", set.erase(3));
+	printf("erase(999) : %zu\n", set.erase(999));
+
+	auto it3 = set.find(3);
+
+	if (it3 != set.end())
+		printf("find(3) after erase : %d\n", *it3);
+	else
+		printf("find(3) after erase : Not Found\n");
+
+	printf("size : %zu\n", set.size());
+
+
+	// [6. clear]
+	printf("\n[6. clear]\n");
+
+	set.clear();
+
+	printf("empty : %d\n", set.empty());
+	printf("size : %zu\n", set.size());
+	printf("begin == end : %d\n", set.begin() == set.end());
+
+
+	// [7. reuse after clear]
+	printf("\n[7. reuse after clear]\n");
+
+	set.insert(100);
+	set.insert(200);
+	set.insert(50);
+
+	printf("size : %zu\n", set.size());
+
+	for (auto it = set.begin(); it != set.end(); ++it)
+	{
+		printf("%d\n", *it);
+	}
+
+
+	printf("\n========== Test End ==========\n");
+#endif // ========== Set Test ==========
 }
 

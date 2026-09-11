@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Users\ttiig\source\repos\LOGIC\Libraries\001.STLContainer\StlContainer\out\x64\Debug\StlContainer.dll</FullPath>
+      <FullPath>C:\Users\ttiig\source\repos\LOGIC\Libraries\001.STLContainer\StlContainer\public\out\x64\Debug\StlContainer.dll</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

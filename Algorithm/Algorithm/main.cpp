@@ -32,7 +32,7 @@ int main()
 		printf("%d, ", vec[i]);
 	}
 
-	priority_queue<int> pq;
+	Priority_queue<int> pq;
 	pq.push(1);
 	pq.push(3);
 	pq.push(2);
@@ -55,7 +55,7 @@ int main()
 	printf("t1 : %d -> %d \n", it2->first, it2->second);
 
 	printf("\n USET test\n");
-	unordered_set<int> uset;
+	Unordered_set<int> uset;
 	uset.insert(1);
 	uset.insert(3);
 	auto it3 = uset.find(1);

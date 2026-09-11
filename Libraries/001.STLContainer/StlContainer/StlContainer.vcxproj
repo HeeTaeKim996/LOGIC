@@ -19,19 +19,28 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="public\HashTable.h" />
-    <ClInclude Include="public\IteratorTemplate.h" />
-    <ClInclude Include="public\Mem.h" />
-    <ClInclude Include="public\Priority_queue.h" />
-    <ClInclude Include="public\RedBlackTree.h" />
-    <ClInclude Include="public\SizeType.h" />
-    <ClInclude Include="public\Std.h" />
-    <ClInclude Include="public\Unordered_map.h" />
-    <ClInclude Include="public\Unordered_set.h" />
-    <ClInclude Include="public\Vector.h" />
+    <ClCompile Include="private\main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="private\main.cpp" />
+    <ClInclude Include="public\src\HashTable.h" />
+    <ClInclude Include="public\src\IteratorTemplate.h" />
+    <ClInclude Include="public\src\Map.h" />
+    <ClInclude Include="public\src\Mem.h" />
+    <ClInclude Include="public\src\Priority_queue.h" />
+    <ClInclude Include="public\src\RedBlackTree.h" />
+    <ClInclude Include="public\src\Set.h" />
+    <ClInclude Include="public\src\SizeType.h" />
+    <ClInclude Include="public\src\Std.h" />
+    <ClInclude Include="public\src\Unordered_map.h" />
+    <ClInclude Include="public\src\Unordered_set.h" />
+    <ClInclude Include="public\src\Vector.h" />
+    <ClInclude Include="public\use\001.STLContainer_Setting.h" />
+    <ClInclude Include="public\use\use_map.h" />
+    <ClInclude Include="public\use\use_priority_queue.h" />
+    <ClInclude Include="public\use\use_set.h" />
+    <ClInclude Include="public\use\use_unordered_map.h" />
+    <ClInclude Include="public\use\use_unordered_set.h" />
+    <ClInclude Include="public\use\use_vector.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
@@ -87,10 +96,10 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>$(ProjectDir)out\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir>$(ProjectDir)public\out\$(Platform)\$(Configuration)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>$(ProjectDir)out\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir>$(ProjectDir)public\out\$(Platform)\$(Configuration)\</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -124,7 +133,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)public\;C:\Users\ttiig\source\repos\LOGIC\Libraries\002.Hash\Hash\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)public\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <LanguageStandard>stdcpp17</LanguageStandard>
@@ -145,7 +154,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)public\;C:\Users\ttiig\source\repos\LOGIC\Libraries\002.Hash\Hash\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)public\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <LanguageStandard>stdcpp17</LanguageStandard>
