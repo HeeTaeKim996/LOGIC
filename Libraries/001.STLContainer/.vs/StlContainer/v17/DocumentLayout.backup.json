@@ -3,6 +3,34 @@
   "WorkspaceRootPath": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\001.STLContainer\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{242128BD-054B-4E7F-BAF6-20063DBAE9FC}|StlContainer\\StlContainer.vcxproj|C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\001.STLContainer\\StlContainer\\public\\use\\001.STLContainer_Setting.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{242128BD-054B-4E7F-BAF6-20063DBAE9FC}|StlContainer\\StlContainer.vcxproj|solutionrelative:StlContainer\\public\\use\\001.STLContainer_Setting.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{242128BD-054B-4E7F-BAF6-20063DBAE9FC}|StlContainer\\StlContainer.vcxproj|C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\001.STLContainer\\StlContainer\\public\\use\\use_vector.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{242128BD-054B-4E7F-BAF6-20063DBAE9FC}|StlContainer\\StlContainer.vcxproj|solutionrelative:StlContainer\\public\\use\\use_vector.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{242128BD-054B-4E7F-BAF6-20063DBAE9FC}|StlContainer\\StlContainer.vcxproj|C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\001.STLContainer\\StlContainer\\public\\use\\use_unordered_set.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{242128BD-054B-4E7F-BAF6-20063DBAE9FC}|StlContainer\\StlContainer.vcxproj|solutionrelative:StlContainer\\public\\use\\use_unordered_set.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{242128BD-054B-4E7F-BAF6-20063DBAE9FC}|StlContainer\\StlContainer.vcxproj|C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\001.STLContainer\\StlContainer\\public\\use\\use_unordered_map.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{242128BD-054B-4E7F-BAF6-20063DBAE9FC}|StlContainer\\StlContainer.vcxproj|solutionrelative:StlContainer\\public\\use\\use_unordered_map.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{242128BD-054B-4E7F-BAF6-20063DBAE9FC}|StlContainer\\StlContainer.vcxproj|C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\001.STLContainer\\StlContainer\\public\\use\\use_set.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{242128BD-054B-4E7F-BAF6-20063DBAE9FC}|StlContainer\\StlContainer.vcxproj|solutionrelative:StlContainer\\public\\use\\use_set.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{242128BD-054B-4E7F-BAF6-20063DBAE9FC}|StlContainer\\StlContainer.vcxproj|C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\001.STLContainer\\StlContainer\\public\\use\\use_priority_queue.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{242128BD-054B-4E7F-BAF6-20063DBAE9FC}|StlContainer\\StlContainer.vcxproj|solutionrelative:StlContainer\\public\\use\\use_priority_queue.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{242128BD-054B-4E7F-BAF6-20063DBAE9FC}|StlContainer\\StlContainer.vcxproj|C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\001.STLContainer\\StlContainer\\public\\use\\use_map.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{242128BD-054B-4E7F-BAF6-20063DBAE9FC}|StlContainer\\StlContainer.vcxproj|solutionrelative:StlContainer\\public\\use\\use_map.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{242128BD-054B-4E7F-BAF6-20063DBAE9FC}|StlContainer\\StlContainer.vcxproj|C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\001.STLContainer\\StlContainer\\private\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{242128BD-054B-4E7F-BAF6-20063DBAE9FC}|StlContainer\\StlContainer.vcxproj|solutionrelative:StlContainer\\private\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -15,40 +43,8 @@
       "RelativeMoniker": "D:0:0:{242128BD-054B-4E7F-BAF6-20063DBAE9FC}|StlContainer\\StlContainer.vcxproj|solutionrelative:StlContainer\\public\\src\\RedBlackTree.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{242128BD-054B-4E7F-BAF6-20063DBAE9FC}|StlContainer\\StlContainer.vcxproj|C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\001.STLContainer\\StlContainer\\public\\use\\use_unordered_map.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{242128BD-054B-4E7F-BAF6-20063DBAE9FC}|StlContainer\\StlContainer.vcxproj|solutionrelative:StlContainer\\public\\use\\use_unordered_map.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{242128BD-054B-4E7F-BAF6-20063DBAE9FC}|StlContainer\\StlContainer.vcxproj|C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\001.STLContainer\\StlContainer\\public\\use\\use_vector.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{242128BD-054B-4E7F-BAF6-20063DBAE9FC}|StlContainer\\StlContainer.vcxproj|solutionrelative:StlContainer\\public\\use\\use_vector.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{242128BD-054B-4E7F-BAF6-20063DBAE9FC}|StlContainer\\StlContainer.vcxproj|C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\001.STLContainer\\StlContainer\\public\\use\\use_set.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{242128BD-054B-4E7F-BAF6-20063DBAE9FC}|StlContainer\\StlContainer.vcxproj|solutionrelative:StlContainer\\public\\use\\use_set.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{242128BD-054B-4E7F-BAF6-20063DBAE9FC}|StlContainer\\StlContainer.vcxproj|C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\001.STLContainer\\StlContainer\\public\\use\\use_map.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{242128BD-054B-4E7F-BAF6-20063DBAE9FC}|StlContainer\\StlContainer.vcxproj|solutionrelative:StlContainer\\public\\use\\use_map.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{242128BD-054B-4E7F-BAF6-20063DBAE9FC}|StlContainer\\StlContainer.vcxproj|C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\001.STLContainer\\StlContainer\\public\\use\\001.STLContainer_Setting.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{242128BD-054B-4E7F-BAF6-20063DBAE9FC}|StlContainer\\StlContainer.vcxproj|solutionrelative:StlContainer\\public\\use\\001.STLContainer_Setting.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{242128BD-054B-4E7F-BAF6-20063DBAE9FC}|StlContainer\\StlContainer.vcxproj|C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\001.STLContainer\\StlContainer\\public\\use\\use_unordered_set.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{242128BD-054B-4E7F-BAF6-20063DBAE9FC}|StlContainer\\StlContainer.vcxproj|solutionrelative:StlContainer\\public\\use\\use_unordered_set.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{242128BD-054B-4E7F-BAF6-20063DBAE9FC}|StlContainer\\StlContainer.vcxproj|C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\001.STLContainer\\StlContainer\\public\\use\\use_priority_queue.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{242128BD-054B-4E7F-BAF6-20063DBAE9FC}|StlContainer\\StlContainer.vcxproj|solutionrelative:StlContainer\\public\\use\\use_priority_queue.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{242128BD-054B-4E7F-BAF6-20063DBAE9FC}|StlContainer\\StlContainer.vcxproj|C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\001.STLContainer\\StlContainer\\public\\src\\Vector.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{242128BD-054B-4E7F-BAF6-20063DBAE9FC}|StlContainer\\StlContainer.vcxproj|solutionrelative:StlContainer\\public\\src\\Vector.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\001.STLContainer\\Tester\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Tester\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,40 +58,16 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "use_unordered_map.h",
-              "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\001.STLContainer\\StlContainer\\public\\use\\use_unordered_map.h",
-              "RelativeDocumentMoniker": "StlContainer\\public\\use\\use_unordered_map.h",
-              "ToolTip": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\001.STLContainer\\StlContainer\\public\\use\\use_unordered_map.h",
-              "RelativeToolTip": "StlContainer\\public\\use\\use_unordered_map.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-09-11T07:46:37.067Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
               "Title": "001.STLContainer_Setting.h",
               "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\001.STLContainer\\StlContainer\\public\\use\\001.STLContainer_Setting.h",
               "RelativeDocumentMoniker": "StlContainer\\public\\use\\001.STLContainer_Setting.h",
               "ToolTip": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\001.STLContainer\\StlContainer\\public\\use\\001.STLContainer_Setting.h",
               "RelativeToolTip": "StlContainer\\public\\use\\001.STLContainer_Setting.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-09-11T07:46:03.794Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "main.cpp",
-              "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\001.STLContainer\\Tester\\main.cpp",
-              "RelativeDocumentMoniker": "Tester\\main.cpp",
-              "ToolTip": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\001.STLContainer\\Tester\\main.cpp",
-              "RelativeToolTip": "Tester\\main.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-09-07T09:01:31.165Z"
+              "WhenOpened": "2026-09-11T07:46:03.794Z",
+              "EditorCaption": ""
             }
           ]
         },
@@ -105,33 +77,31 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "HashTable.h",
-              "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\001.STLContainer\\StlContainer\\public\\src\\HashTable.h",
-              "RelativeDocumentMoniker": "StlContainer\\public\\src\\HashTable.h",
-              "ToolTip": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\001.STLContainer\\StlContainer\\public\\src\\HashTable.h",
-              "RelativeToolTip": "StlContainer\\public\\src\\HashTable.h",
-              "ViewState": "AgIAAGkBAAAAAAAAAAAlwI4BAAAUAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "use_unordered_map.h",
+              "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\001.STLContainer\\StlContainer\\public\\use\\use_unordered_map.h",
+              "RelativeDocumentMoniker": "StlContainer\\public\\use\\use_unordered_map.h",
+              "ToolTip": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\001.STLContainer\\StlContainer\\public\\use\\use_unordered_map.h",
+              "RelativeToolTip": "StlContainer\\public\\use\\use_unordered_map.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-09-11T08:00:06.5Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-11T08:08:26.006Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "use_map.h",
+              "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\001.STLContainer\\StlContainer\\public\\use\\use_map.h",
+              "RelativeDocumentMoniker": "StlContainer\\public\\use\\use_map.h",
+              "ToolTip": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\001.STLContainer\\StlContainer\\public\\use\\use_map.h",
+              "RelativeToolTip": "StlContainer\\public\\use\\use_map.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-09-11T07:51:19.882Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "RedBlackTree.h",
-              "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\001.STLContainer\\StlContainer\\public\\src\\RedBlackTree.h",
-              "RelativeDocumentMoniker": "StlContainer\\public\\src\\RedBlackTree.h",
-              "ToolTip": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\001.STLContainer\\StlContainer\\public\\src\\RedBlackTree.h",
-              "RelativeToolTip": "StlContainer\\public\\src\\RedBlackTree.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-09-11T08:00:04.314Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
               "Title": "use_unordered_set.h",
               "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\001.STLContainer\\StlContainer\\public\\use\\use_unordered_set.h",
               "RelativeDocumentMoniker": "StlContainer\\public\\use\\use_unordered_set.h",
@@ -143,44 +113,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "main.cpp",
-              "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\001.STLContainer\\StlContainer\\private\\main.cpp",
-              "RelativeDocumentMoniker": "StlContainer\\private\\main.cpp",
-              "ToolTip": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\001.STLContainer\\StlContainer\\private\\main.cpp",
-              "RelativeToolTip": "StlContainer\\private\\main.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAN8CAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-09-03T07:39:32.775Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "use_set.h",
-              "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\001.STLContainer\\StlContainer\\public\\use\\use_set.h",
-              "RelativeDocumentMoniker": "StlContainer\\public\\use\\use_set.h",
-              "ToolTip": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\001.STLContainer\\StlContainer\\public\\use\\use_set.h",
-              "RelativeToolTip": "StlContainer\\public\\use\\use_set.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-09-11T07:52:24.135Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "use_vector.h",
               "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\001.STLContainer\\StlContainer\\public\\use\\use_vector.h",
               "RelativeDocumentMoniker": "StlContainer\\public\\use\\use_vector.h",
               "ToolTip": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\001.STLContainer\\StlContainer\\public\\use\\use_vector.h",
               "RelativeToolTip": "StlContainer\\public\\use\\use_vector.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-09-11T07:46:45.738Z"
+              "WhenOpened": "2026-09-11T07:46:45.738Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 7,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\001.STLContainer\\StlContainer\\private\\main.cpp",
+              "RelativeDocumentMoniker": "StlContainer\\private\\main.cpp",
+              "ToolTip": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\001.STLContainer\\StlContainer\\private\\main.cpp",
+              "RelativeToolTip": "StlContainer\\private\\main.cpp",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAN8CAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-09-03T07:39:32.775Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "use_priority_queue.h",
               "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\001.STLContainer\\StlContainer\\public\\use\\use_priority_queue.h",
               "RelativeDocumentMoniker": "StlContainer\\public\\use\\use_priority_queue.h",
@@ -192,15 +150,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "use_map.h",
-              "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\001.STLContainer\\StlContainer\\public\\use\\use_map.h",
-              "RelativeDocumentMoniker": "StlContainer\\public\\use\\use_map.h",
-              "ToolTip": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\001.STLContainer\\StlContainer\\public\\use\\use_map.h",
-              "RelativeToolTip": "StlContainer\\public\\use\\use_map.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAPAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "use_set.h",
+              "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\001.STLContainer\\StlContainer\\public\\use\\use_set.h",
+              "RelativeDocumentMoniker": "StlContainer\\public\\use\\use_set.h",
+              "ToolTip": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\001.STLContainer\\StlContainer\\public\\use\\use_set.h",
+              "RelativeToolTip": "StlContainer\\public\\use\\use_set.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-09-11T07:51:19.882Z"
+              "WhenOpened": "2026-09-11T07:52:24.135Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "RedBlackTree.h",
+              "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\001.STLContainer\\StlContainer\\public\\src\\RedBlackTree.h",
+              "RelativeDocumentMoniker": "StlContainer\\public\\src\\RedBlackTree.h",
+              "ToolTip": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\001.STLContainer\\StlContainer\\public\\src\\RedBlackTree.h",
+              "RelativeToolTip": "StlContainer\\public\\src\\RedBlackTree.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-09-11T08:00:04.314Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "HashTable.h",
+              "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\001.STLContainer\\StlContainer\\public\\src\\HashTable.h",
+              "RelativeDocumentMoniker": "StlContainer\\public\\src\\HashTable.h",
+              "ToolTip": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\001.STLContainer\\StlContainer\\public\\src\\HashTable.h",
+              "RelativeToolTip": "StlContainer\\public\\src\\HashTable.h",
+              "ViewState": "AgIAAGkBAAAAAAAAAAAlwI4BAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-09-11T08:00:06.5Z"
             },
             {
               "$type": "Document",
