@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\000.MemoryAddresser\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6B677A9A-E031-4B1B-A4C4-C3DAA802CA13}|MemoryAddresser\\MemoryAddresser.vcxproj|C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\000.MemoryAddresser\\MemoryAddresser\\public\\src\\MemTracker.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6B677A9A-E031-4B1B-A4C4-C3DAA802CA13}|MemoryAddresser\\MemoryAddresser.vcxproj|solutionrelative:MemoryAddresser\\public\\src\\MemTracker.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6B677A9A-E031-4B1B-A4C4-C3DAA802CA13}|MemoryAddresser\\MemoryAddresser.vcxproj|C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\000.MemoryAddresser\\MemoryAddresser\\public\\src\\000.MemoryAddresser_setting.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6B677A9A-E031-4B1B-A4C4-C3DAA802CA13}|MemoryAddresser\\MemoryAddresser.vcxproj|solutionrelative:MemoryAddresser\\public\\src\\000.MemoryAddresser_setting.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6B677A9A-E031-4B1B-A4C4-C3DAA802CA13}|MemoryAddresser\\MemoryAddresser.vcxproj|C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\000.MemoryAddresser\\MemoryAddresser\\public\\use\\use_memTracker.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6B677A9A-E031-4B1B-A4C4-C3DAA802CA13}|MemoryAddresser\\MemoryAddresser.vcxproj|solutionrelative:MemoryAddresser\\public\\use\\use_memTracker.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{6B677A9A-E031-4B1B-A4C4-C3DAA802CA13}|MemoryAddresser\\MemoryAddresser.vcxproj|C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\000.MemoryAddresser\\MemoryAddresser\\public\\src\\MemCounter.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{6B677A9A-E031-4B1B-A4C4-C3DAA802CA13}|MemoryAddresser\\MemoryAddresser.vcxproj|solutionrelative:MemoryAddresser\\public\\src\\MemCounter.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6B677A9A-E031-4B1B-A4C4-C3DAA802CA13}|MemoryAddresser\\MemoryAddresser.vcxproj|C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\000.MemoryAddresser\\MemoryAddresser\\private\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{6B677A9A-E031-4B1B-A4C4-C3DAA802CA13}|MemoryAddresser\\MemoryAddresser.vcxproj|solutionrelative:MemoryAddresser\\private\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B677A9A-E031-4B1B-A4C4-C3DAA802CA13}|MemoryAddresser\\MemoryAddresser.vcxproj|C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\000.MemoryAddresser\\MemoryAddresser\\public\\use\\use_memCounter.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{6B677A9A-E031-4B1B-A4C4-C3DAA802CA13}|MemoryAddresser\\MemoryAddresser.vcxproj|solutionrelative:MemoryAddresser\\public\\use\\use_memCounter.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -25,44 +21,18 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 170,
-          "SelectedChildIndex": 1,
+          "DockedWidth": 165,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "000.MemoryAddresser_setting.h",
-              "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\000.MemoryAddresser\\MemoryAddresser\\public\\src\\000.MemoryAddresser_setting.h",
-              "RelativeDocumentMoniker": "MemoryAddresser\\public\\src\\000.MemoryAddresser_setting.h",
-              "ToolTip": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\000.MemoryAddresser\\MemoryAddresser\\public\\src\\000.MemoryAddresser_setting.h",
-              "RelativeToolTip": "MemoryAddresser\\public\\src\\000.MemoryAddresser_setting.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-09-12T01:40:17.625Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MemTracker.h",
-              "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\000.MemoryAddresser\\MemoryAddresser\\public\\src\\MemTracker.h",
-              "RelativeDocumentMoniker": "MemoryAddresser\\public\\src\\MemTracker.h",
-              "ToolTip": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\000.MemoryAddresser\\MemoryAddresser\\public\\src\\MemTracker.h",
-              "RelativeToolTip": "MemoryAddresser\\public\\src\\MemTracker.h",
-              "ViewState": "AgIAACkAAAAAAAAAAAAwwFkAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-09-12T01:36:13.69Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\000.MemoryAddresser\\MemoryAddresser\\private\\main.cpp",
               "RelativeDocumentMoniker": "MemoryAddresser\\private\\main.cpp",
               "ToolTip": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\000.MemoryAddresser\\MemoryAddresser\\private\\main.cpp",
               "RelativeToolTip": "MemoryAddresser\\private\\main.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-09-12T01:35:45.113Z",
               "EditorCaption": ""
@@ -70,14 +40,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "use_memTracker.h",
-              "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\000.MemoryAddresser\\MemoryAddresser\\public\\use\\use_memTracker.h",
-              "RelativeDocumentMoniker": "MemoryAddresser\\public\\use\\use_memTracker.h",
-              "ToolTip": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\000.MemoryAddresser\\MemoryAddresser\\public\\use\\use_memTracker.h",
-              "RelativeToolTip": "MemoryAddresser\\public\\use\\use_memTracker.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAbAAAAAAAAAA==",
+              "Title": "use_memCounter.h",
+              "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\000.MemoryAddresser\\MemoryAddresser\\public\\use\\use_memCounter.h",
+              "RelativeDocumentMoniker": "MemoryAddresser\\public\\use\\use_memCounter.h",
+              "ToolTip": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\000.MemoryAddresser\\MemoryAddresser\\public\\use\\use_memCounter.h",
+              "RelativeToolTip": "MemoryAddresser\\public\\use\\use_memCounter.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-09-12T01:35:25.867Z",
+              "WhenOpened": "2026-09-12T01:35:25.867Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 205,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MemCounter.h",
+              "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\000.MemoryAddresser\\MemoryAddresser\\public\\src\\MemCounter.h",
+              "RelativeDocumentMoniker": "MemoryAddresser\\public\\src\\MemCounter.h",
+              "ToolTip": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\000.MemoryAddresser\\MemoryAddresser\\public\\src\\MemCounter.h",
+              "RelativeToolTip": "MemoryAddresser\\public\\src\\MemCounter.h",
+              "ViewState": "AgIAAMcAAAAAAAAAAAAuwN4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-09-12T01:47:38.131Z",
               "EditorCaption": ""
             }
           ]

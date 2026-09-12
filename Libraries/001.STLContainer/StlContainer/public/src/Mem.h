@@ -4,12 +4,17 @@
 #include "Std.h"
 #include "SizeType.h"
 
+#include "use/use_memCounter.h"
+
 namespace m
 {
 	template<typename T>
 	[[nodiscard]] inline T* allocate(sizeType capacity) // ※ [[nodiscard]] : 호출자가 이 함수의 반환값을 변수에 저장하지 않고 버릴시, 컴파일 경고 발생
 	{
-		return static_cast<T*>(::operator new(capacity * sizeof(T)));
+		//return static_cast<T*>(::operator new(capacity * sizeof(T)));
+
+		return TrackAllocate<T>(capacity);
+
 		// ■ ::operater new 
 		//	new 는 메모리 할당 + 객체 생성자 호출인 반면,
 		//	::operator new 는 메모리 할당만 함 ( C 의 malloc 과 같은 역할 )
@@ -18,7 +23,10 @@ namespace m
 	template<typename T>
 	inline void deallocate(T* pos)
 	{
-		::operator delete(pos);
+		//::operator delete(pos);
+
+		TrackDeallocate<T>(pos);
+
 
 		// ■ ::operator delete
 		//	delete 는 메모리 수거 + 객체 소멸자 호출 인 반면,
@@ -38,7 +46,10 @@ namespace m
 	template<typename T, typename ...Args>
 	inline void construct(T* pos, Args && ...args)
 	{
-		::new (pos) T(Std::forward<Args>(args)...);
+		//::new (pos) T(Std::forward<Args>(args)...);
+
+
+		TrackConstruct<T>(pos, Std::forward<Args>(args)...);
 
 		// ■ ::new
 		//	placement new 라고 한다. (자주 언급되니 기억하자)
@@ -112,7 +123,10 @@ namespace m
 	template<typename T>
 	inline void destruct(T* pos)
 	{
-		pos->~T();
+		//pos->~T();
+
+		TrackDestruct<T>(pos);
+
 	}
 
 	template<typename T>
@@ -120,7 +134,9 @@ namespace m
 	{
 		for (; begin != end; begin++)
 		{
-			begin->~T();
+			//begin->~T();
+
+			TrackDestruct<T>(begin);
 		}
 	}
 

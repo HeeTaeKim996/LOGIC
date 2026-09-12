@@ -5,26 +5,44 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="Source Files\common">
+    <Filter Include="Source Files\public">
+      <UniqueIdentifier>{98e4b9d3-229a-4c18-92c1-ade230185abe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\public\use">
+      <UniqueIdentifier>{b77f97b3-3864-4e11-9a2d-4bfc7217281a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\public\src">
+      <UniqueIdentifier>{c574ccb1-b914-4290-af19-304fffa0cdba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\public\src\common">
       <UniqueIdentifier>{a1f03719-185c-48ee-a1e2-45ccdd8a8477}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\containers">
+    <Filter Include="Source Files\public\src\containers">
       <UniqueIdentifier>{45f57935-0907-499a-8e19-4c159bc30c8e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\IteratorTemplate">
-      <UniqueIdentifier>{0bcc4df2-6328-478e-a79a-eb2a7439166a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\containers\HashTable">
+    <Filter Include="Source Files\public\src\containers\HashTable">
       <UniqueIdentifier>{8d0b2fee-a32e-4f7c-b5b7-5cde7fd52397}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\containers\Vector">
+    <Filter Include="Source Files\public\src\containers\Vector">
       <UniqueIdentifier>{63a17e05-29bc-47a2-8ea6-cad01ab9cd80}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\containers\RedBlackTree">
+    <Filter Include="Source Files\public\src\containers\RedBlackTree">
       <UniqueIdentifier>{70dbc1b3-fd69-4529-bbab-9136171381c2}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\use">
-      <UniqueIdentifier>{b77f97b3-3864-4e11-9a2d-4bfc7217281a}</UniqueIdentifier>
+    <Filter Include="Source Files\public\src\IteratorTemplate">
+      <UniqueIdentifier>{0bcc4df2-6328-478e-a79a-eb2a7439166a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\private">
+      <UniqueIdentifier>{af4d4ba9-0530-415f-be2a-aa571af3eed4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\private\libs">
+      <UniqueIdentifier>{146e2374-d311-4bf1-841a-b5a5d304f032}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\private\libs\000.MemoryAddresser">
+      <UniqueIdentifier>{e6afe40d-77a3-48a9-aad2-51a4b4fd5c80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\private\libs\000.MemoryAddresser\use">
+      <UniqueIdentifier>{df79d44f-4bf5-4911-92b7-0e010e8909c2}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -34,61 +52,67 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="public\src\HashTable.h">
-      <Filter>Source Files\containers\HashTable</Filter>
+      <Filter>Source Files\public\src\containers\HashTable</Filter>
     </ClInclude>
     <ClInclude Include="public\src\IteratorTemplate.h">
-      <Filter>Source Files\IteratorTemplate</Filter>
+      <Filter>Source Files\public\src\IteratorTemplate</Filter>
     </ClInclude>
     <ClInclude Include="public\src\Map.h">
-      <Filter>Source Files\containers\RedBlackTree</Filter>
+      <Filter>Source Files\public\src\containers\RedBlackTree</Filter>
     </ClInclude>
     <ClInclude Include="public\src\Mem.h">
-      <Filter>Source Files\common</Filter>
+      <Filter>Source Files\public\src\common</Filter>
     </ClInclude>
     <ClInclude Include="public\src\Priority_queue.h">
-      <Filter>Source Files\containers\Vector</Filter>
+      <Filter>Source Files\public\src\containers\Vector</Filter>
     </ClInclude>
     <ClInclude Include="public\src\RedBlackTree.h">
-      <Filter>Source Files\containers\RedBlackTree</Filter>
+      <Filter>Source Files\public\src\containers\RedBlackTree</Filter>
     </ClInclude>
     <ClInclude Include="public\src\Set.h">
-      <Filter>Source Files\containers\RedBlackTree</Filter>
+      <Filter>Source Files\public\src\containers\RedBlackTree</Filter>
     </ClInclude>
     <ClInclude Include="public\src\SizeType.h">
-      <Filter>Source Files\common</Filter>
+      <Filter>Source Files\public\src\common</Filter>
     </ClInclude>
     <ClInclude Include="public\src\Std.h">
-      <Filter>Source Files\common</Filter>
+      <Filter>Source Files\public\src\common</Filter>
     </ClInclude>
     <ClInclude Include="public\src\Unordered_map.h">
-      <Filter>Source Files\containers\HashTable</Filter>
+      <Filter>Source Files\public\src\containers\HashTable</Filter>
     </ClInclude>
     <ClInclude Include="public\src\Unordered_set.h">
-      <Filter>Source Files\containers\HashTable</Filter>
+      <Filter>Source Files\public\src\containers\HashTable</Filter>
     </ClInclude>
     <ClInclude Include="public\src\Vector.h">
-      <Filter>Source Files\containers\Vector</Filter>
+      <Filter>Source Files\public\src\containers\Vector</Filter>
     </ClInclude>
     <ClInclude Include="public\use\use_vector.h">
-      <Filter>Source Files\use</Filter>
+      <Filter>Source Files\public\use</Filter>
     </ClInclude>
     <ClInclude Include="public\use\001.STLContainer_Setting.h">
-      <Filter>Source Files\use</Filter>
+      <Filter>Source Files\public\use</Filter>
     </ClInclude>
     <ClInclude Include="public\use\use_priority_queue.h">
-      <Filter>Source Files\use</Filter>
+      <Filter>Source Files\public\use</Filter>
     </ClInclude>
     <ClInclude Include="public\use\use_unordered_map.h">
-      <Filter>Source Files\use</Filter>
+      <Filter>Source Files\public\use</Filter>
     </ClInclude>
     <ClInclude Include="public\use\use_unordered_set.h">
-      <Filter>Source Files\use</Filter>
+      <Filter>Source Files\public\use</Filter>
     </ClInclude>
     <ClInclude Include="public\use\use_map.h">
-      <Filter>Source Files\use</Filter>
+      <Filter>Source Files\public\use</Filter>
     </ClInclude>
     <ClInclude Include="public\use\use_set.h">
-      <Filter>Source Files\use</Filter>
+      <Filter>Source Files\public\use</Filter>
+    </ClInclude>
+    <ClInclude Include="private\libs\000.MemoryAddresser\public\use\use_memCounter.h">
+      <Filter>Source Files\private\libs\000.MemoryAddresser\use</Filter>
+    </ClInclude>
+    <ClInclude Include="private\libs\000.MemoryAddresser\public\use\000.MemoryAddresser_setting.h">
+      <Filter>Source Files\private\libs\000.MemoryAddresser\use</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

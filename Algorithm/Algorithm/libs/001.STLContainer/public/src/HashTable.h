@@ -8,6 +8,7 @@
 #include <string>
 #include "RedBlackTree.h"
 
+#include "use/use_memCounter.h"
 
 /*
 	¡á Á¤¸®
@@ -101,7 +102,11 @@ private:
 #define INIT_BUCKET_COUNT 8
 template<typename Key, typename T, typename Hash, typename KeyOfValue>
 inline HashTable<Key, T, Hash, KeyOfValue>::HashTable(const Hash& hash, const KeyOfValue& keyOfValue)
-	: _hash(hash), _size(0), _bucketCount(INIT_BUCKET_COUNT), _buckets(new Node* [INIT_BUCKET_COUNT] {}),
+	: _hash(hash), _size(0), _bucketCount(INIT_BUCKET_COUNT), 
+
+	//_buckets(new Node* [INIT_BUCKET_COUNT] {}),
+	_buckets(TrackNewArray<Node*>(INIT_BUCKET_COUNT)),
+
 	_keyOfValue(keyOfValue)
 {
 	_dummyHead.next = nullptr;
@@ -115,10 +120,15 @@ inline HashTable<Key, T, Hash, KeyOfValue>::~HashTable()
 	{
 		Node* deleted = curr;
 		curr = curr->next;
-		delete deleted;
+
+		//delete deleted;
+		TrackDelete<Node>(deleted);
 	}
 
-	delete[] _buckets;
+	//delete[] _buckets;
+	TrackDeleteArray<Node*>(_buckets);
+
+
 	_buckets = nullptr;
 }
 
@@ -302,7 +312,9 @@ inline void HashTable<Key, T, Hash, KeyOfValue>::clear()
 	{
 		Node* deleted = curr;
 		curr = curr->next;
-		delete deleted;
+
+		//delete deleted;
+		TrackDelete<Node>(deleted);
 	}
 
 	for (int i = 0; i < _bucketCount; i++)
@@ -448,7 +460,10 @@ template<typename Key, typename T, typename Hash, typename KeyOfValue>
 inline void HashTable<Key, T, Hash, KeyOfValue>::resize()
 {
 	sizeType newBucketCount = _bucketCount * 2;
-	Node** newBuckets = new Node* [newBucketCount] {};
+
+	//Node** newBuckets = new Node* [newBucketCount] {};
+	Node** newBuckets = TrackNewArray<Node*>(newBucketCount);
+
 
 	Node* curr = _dummyHead.next;
 	_dummyHead.next = nullptr;
@@ -482,7 +497,9 @@ inline void HashTable<Key, T, Hash, KeyOfValue>::resize()
 		curr = nextNode;
 	}
 
-	delete[] _buckets;
+	//delete[] _buckets;
+	TrackDeleteArray<Node*>(_buckets);
+
 	_buckets = newBuckets;
 	_bucketCount = newBucketCount;
 }
@@ -494,7 +511,9 @@ HashTable<Key, T, Hash, KeyOfValue>::createNode(const T& data, const size_t& inH
 {
 	_size++;
 
-	Node* node = new Node();
+	//Node* node = new Node();
+	Node* node = TrackNew<Node>();
+
 	node->data = data;
 	node->hash = inHash;
 	return node;
@@ -509,7 +528,8 @@ inline void HashTable<Key, T, Hash, KeyOfValue>::deleteNode(Node* deleted)
 {
 	_size--;
 
-	delete deleted;
+	//delete deleted;
+	TrackDelete<Node>(deleted);
 }
 
 

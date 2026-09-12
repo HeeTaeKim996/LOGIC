@@ -4,6 +4,9 @@
 
 #include "SizeType.h"
 #include "Std.h"
+
+#include "use/use_memCounter.h"
+
 /*
 	내용이 굉장히 어렵다. 이 내용을 주석을 보며 이해하기 어렵기에, 
 	따로 노트로 정리를 했다. 정리한 내용은 pdf 로,
@@ -985,7 +988,9 @@ inline void RedBlackTree<Key, Data, Less, KeyOfValue>::recursionClear(Node* node
 	if (node->left) recursionClear(node->left);
 	if (node->right) recursionClear(node->right);
 
-	delete static_cast<DataNode*>(node);
+
+	//delete static_cast<DataNode*>(node);
+	TrackDelete<DataNode>(static_cast<DataNode*>(node));
 }
 
 
@@ -1004,7 +1009,9 @@ inline RBNode*
 RedBlackTree<Key, Data, Less, KeyOfValue>::createNode(const Data& data, RBNode* parent)
 {
 	_size++;
-	return new RBDataNode(data, parent);
+
+	//return new RBDataNode(data, parent);
+	return TrackNew<DataNode>(data, parent);
 }
 
 
@@ -1014,7 +1021,9 @@ template<typename Key, typename Data, typename Less, typename KeyOfValue>
 inline void RedBlackTree<Key, Data, Less, KeyOfValue>::deleteNode(Node* deleted)
 {
 	_size--;
-	delete static_cast<DataNode*>(deleted);
+
+	//delete static_cast<DataNode*>(deleted);
+	TrackDelete<DataNode>(static_cast<DataNode*>(deleted));
 }
 
 

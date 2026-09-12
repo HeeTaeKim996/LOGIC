@@ -2,13 +2,16 @@
   Array.cpp
   FixedArray.cpp
   main.cpp
-  Search.cpp
 C:\Users\ttiig\source\repos\LOGIC\Algorithm\Algorithm\Sort.h(460,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
   (compiling source file '/main.cpp')
   
 C:\Users\ttiig\source\repos\LOGIC\Algorithm\Algorithm\Sort.h(518,8): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
   (compiling source file '/main.cpp')
   
+C:\Users\ttiig\source\repos\LOGIC\Algorithm\Algorithm\main.cpp(33,21): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file '/main.cpp')
+  
+  Search.cpp
 C:\Users\ttiig\source\repos\LOGIC\Algorithm\Algorithm\Search.h(28,10): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
   (compiling source file '/Search.cpp')
       C:\Users\ttiig\source\repos\LOGIC\Algorithm\Algorithm\Search.h(28,10):

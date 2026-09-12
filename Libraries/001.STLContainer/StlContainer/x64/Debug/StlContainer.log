@@ -1,30 +1,30 @@
 ﻿  main.cpp
-C:\Users\ttiig\source\repos\LOGIC\Libraries\001.STLContainer\StlContainer\private\main.cpp(756,9): warning C4477: 'printf' : format string '%zu' requires an argument of type 'unsigned __int64', but variadic argument 1 has type 'sizeType'
-      C:\Users\ttiig\source\repos\LOGIC\Libraries\001.STLContainer\StlContainer\private\main.cpp(756,9):
+C:\Users\ttiig\source\repos\LOGIC\Libraries\001.STLContainer\StlContainer\private\main.cpp(784,10): warning C4477: 'printf' : format string '%zu' requires an argument of type 'unsigned __int64', but variadic argument 1 has type 'sizeType'
+      C:\Users\ttiig\source\repos\LOGIC\Libraries\001.STLContainer\StlContainer\private\main.cpp(784,10):
       consider using '%lu' in the format string
   
-C:\Users\ttiig\source\repos\LOGIC\Libraries\001.STLContainer\StlContainer\private\main.cpp(807,24): warning C4474: 'printf' : too many arguments passed for format string
-      C:\Users\ttiig\source\repos\LOGIC\Libraries\001.STLContainer\StlContainer\private\main.cpp(807,24):
+C:\Users\ttiig\source\repos\LOGIC\Libraries\001.STLContainer\StlContainer\private\main.cpp(835,25): warning C4474: 'printf' : too many arguments passed for format string
+      C:\Users\ttiig\source\repos\LOGIC\Libraries\001.STLContainer\StlContainer\private\main.cpp(835,25):
       placeholders and their parameters expect 1 variadic arguments, but 2 were provided
   
-C:\Users\ttiig\source\repos\LOGIC\Libraries\001.STLContainer\StlContainer\private\main.cpp(816,9): warning C4477: 'printf' : format string '%zu' requires an argument of type 'unsigned __int64', but variadic argument 1 has type 'sizeType'
-      C:\Users\ttiig\source\repos\LOGIC\Libraries\001.STLContainer\StlContainer\private\main.cpp(816,9):
+C:\Users\ttiig\source\repos\LOGIC\Libraries\001.STLContainer\StlContainer\private\main.cpp(844,10): warning C4477: 'printf' : format string '%zu' requires an argument of type 'unsigned __int64', but variadic argument 1 has type 'sizeType'
+      C:\Users\ttiig\source\repos\LOGIC\Libraries\001.STLContainer\StlContainer\private\main.cpp(844,10):
       consider using '%lu' in the format string
   
-C:\Users\ttiig\source\repos\LOGIC\Libraries\001.STLContainer\StlContainer\private\main.cpp(817,9): warning C4477: 'printf' : format string '%zu' requires an argument of type 'unsigned __int64', but variadic argument 1 has type 'sizeType'
-      C:\Users\ttiig\source\repos\LOGIC\Libraries\001.STLContainer\StlContainer\private\main.cpp(817,9):
+C:\Users\ttiig\source\repos\LOGIC\Libraries\001.STLContainer\StlContainer\private\main.cpp(845,10): warning C4477: 'printf' : format string '%zu' requires an argument of type 'unsigned __int64', but variadic argument 1 has type 'sizeType'
+      C:\Users\ttiig\source\repos\LOGIC\Libraries\001.STLContainer\StlContainer\private\main.cpp(845,10):
       consider using '%lu' in the format string
   
-C:\Users\ttiig\source\repos\LOGIC\Libraries\001.STLContainer\StlContainer\private\main.cpp(826,9): warning C4477: 'printf' : format string '%zu' requires an argument of type 'unsigned __int64', but variadic argument 1 has type 'sizeType'
-      C:\Users\ttiig\source\repos\LOGIC\Libraries\001.STLContainer\StlContainer\private\main.cpp(826,9):
+C:\Users\ttiig\source\repos\LOGIC\Libraries\001.STLContainer\StlContainer\private\main.cpp(854,10): warning C4477: 'printf' : format string '%zu' requires an argument of type 'unsigned __int64', but variadic argument 1 has type 'sizeType'
+      C:\Users\ttiig\source\repos\LOGIC\Libraries\001.STLContainer\StlContainer\private\main.cpp(854,10):
       consider using '%lu' in the format string
   
-C:\Users\ttiig\source\repos\LOGIC\Libraries\001.STLContainer\StlContainer\private\main.cpp(835,9): warning C4477: 'printf' : format string '%zu' requires an argument of type 'unsigned __int64', but variadic argument 1 has type 'sizeType'
-      C:\Users\ttiig\source\repos\LOGIC\Libraries\001.STLContainer\StlContainer\private\main.cpp(835,9):
+C:\Users\ttiig\source\repos\LOGIC\Libraries\001.STLContainer\StlContainer\private\main.cpp(863,10): warning C4477: 'printf' : format string '%zu' requires an argument of type 'unsigned __int64', but variadic argument 1 has type 'sizeType'
+      C:\Users\ttiig\source\repos\LOGIC\Libraries\001.STLContainer\StlContainer\private\main.cpp(863,10):
       consider using '%lu' in the format string
   
-C:\Users\ttiig\source\repos\LOGIC\Libraries\001.STLContainer\StlContainer\private\main.cpp(846,9): warning C4477: 'printf' : format string '%zu' requires an argument of type 'unsigned __int64', but variadic argument 1 has type 'sizeType'
-      C:\Users\ttiig\source\repos\LOGIC\Libraries\001.STLContainer\StlContainer\private\main.cpp(846,9):
+C:\Users\ttiig\source\repos\LOGIC\Libraries\001.STLContainer\StlContainer\private\main.cpp(874,10): warning C4477: 'printf' : format string '%zu' requires an argument of type 'unsigned __int64', but variadic argument 1 has type 'sizeType'
+      C:\Users\ttiig\source\repos\LOGIC\Libraries\001.STLContainer\StlContainer\private\main.cpp(874,10):
       consider using '%lu' in the format string
   
   StlContainer.vcxproj -> C:\Users\ttiig\source\repos\LOGIC\Libraries\001.STLContainer\StlContainer\public\out\x64\Debug\StlContainer.exe

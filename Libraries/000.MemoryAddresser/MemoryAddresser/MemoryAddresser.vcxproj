@@ -19,9 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="public\src\000.MemoryAddresser_setting.h" />
-    <ClInclude Include="public\src\MemTracker.h" />
-    <ClInclude Include="public\use\use_memTracker.h" />
+    <ClInclude Include="public\src\MemCounter.h" />
+    <ClInclude Include="public\use\000.MemoryAddresser_setting.h" />
+    <ClInclude Include="public\use\use_memCounter.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="private\main.cpp" />
