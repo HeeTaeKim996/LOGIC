@@ -10,7 +10,7 @@ import java.util.concurrent.Executors;
 public class Publish_Subscriber
 {
     /*
-    ■ Publich-Subscriber 패턴
+    ■ Publish-Subscriber 패턴
     Observer 패턴과 거의 같으나, 차이점은 발행자와 구독자 사이에 Broker 라는 클래스를 추가함으로써,
     발행자와 구독자의 관계가 더 유연해진다.
 
@@ -18,9 +18,8 @@ public class Publish_Subscriber
     단지 브로커에게 특정 방송(항목) 의 메세지를 전달하고,
     브로커가 자신이 갖고 있는 해당 방송을 구독 정보를 통해 구독자들에게 전달한다.
 
-    추가로 이 패턴은 비동기 메세지 송신/수신 에도 유리하다 하는데, 이건 옵저버 패턴에서도 충분히 구현 가능한거라
-    차별점으로 봐도 될련지 모르겠다.
-    대충 이해해서 Public-Subscriber 패턴에 비동기 패턴이 (옵저버 패턴에 비해) 더 자주 사용된다고 이해하자
+    추가로 이 패턴은 비동기 메세지 송신/수신 에서 옵저버 패턴에 비해 더 유리하기에, 비동기 송/수신 때 자주 사용된다
+    (스레드풀을 Broker 가 유일하게 갖고 관리하기 때문)
      */
 
     public static void main(String[] args)

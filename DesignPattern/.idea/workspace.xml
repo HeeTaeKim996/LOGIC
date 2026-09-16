@@ -3,7 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="94105101-64de-408e-aad7-cc54485f6c9c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Behaviour/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Behaviour/Command.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Behaviour/Memento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Behaviour/Memento.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Behaviour/Publish_Subscriber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Behaviour/Publish_Subscriber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Behaviour/Specification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Behaviour/Specification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Behaviour/Visitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Behaviour/Visitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Structual/Decorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Structual/Decorator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Structual/Facade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Structual/Facade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Libraries/000.MemoryAddresser/.vs/MemoryAddresser/FileContentIndex/32ca985d-f08f-40ce-9f4d-ae295c812bd3.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Libraries/000.MemoryAddresser/.vs/MemoryAddresser/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../Libraries/000.MemoryAddresser/.vs/MemoryAddresser/v17/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Libraries/000.MemoryAddresser/.vs/MemoryAddresser/v17/Browse.VC.db" beforeDir="false" afterPath="$PROJECT_DIR$/../Libraries/000.MemoryAddresser/.vs/MemoryAddresser/v17/Browse.VC.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Libraries/000.MemoryAddresser/.vs/MemoryAddresser/v17/DocumentLayout.backup.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Libraries/000.MemoryAddresser/.vs/MemoryAddresser/v17/DocumentLayout.backup.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Libraries/000.MemoryAddresser/.vs/MemoryAddresser/v17/DocumentLayout.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Libraries/000.MemoryAddresser/.vs/MemoryAddresser/v17/DocumentLayout.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,51 +46,51 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.AbstractFactory.executor": "Run",
-    "Application.Adapter.executor": "Run",
-    "Application.Bridge.executor": "Run",
-    "Application.Builder.executor": "Run",
-    "Application.ChainOfResponsibility.executor": "Run",
-    "Application.Command.executor": "Run",
-    "Application.Composite.executor": "Run",
-    "Application.Decorator.executor": "Run",
-    "Application.Facade.executor": "Run",
-    "Application.FactoryMethod.executor": "Run",
-    "Application.Flyweight.executor": "Run",
-    "Application.Interpreter.executor": "Run",
-    "Application.Iterator.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Application.Mediator.executor": "Run",
-    "Application.Memento.executor": "Run",
-    "Application.Observer.executor": "Run",
-    "Application.Prototype.executor": "Run",
-    "Application.Proxy.executor": "Run",
-    "Application.Publish_Subscriber.executor": "Run",
-    "Application.Singleton.executor": "Run",
-    "Application.Specification.executor": "Run",
-    "Application.State.executor": "Run",
-    "Application.Strategy.executor": "Run",
-    "Application.TemplateMethod.executor": "Run",
-    "Application.Visitor.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/ttiig/source/repos/LOGIC/DesignPattern",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.AbstractFactory.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Adapter.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Bridge.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Builder.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ChainOfResponsibility.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Command.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Composite.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Decorator.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Facade.executor&quot;: &quot;Run&quot;,
+    &quot;Application.FactoryMethod.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Flyweight.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Interpreter.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Iterator.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Mediator.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Memento.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Observer.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Prototype.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Proxy.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Publish_Subscriber.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Singleton.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Specification.executor&quot;: &quot;Run&quot;,
+    &quot;Application.State.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Strategy.executor&quot;: &quot;Run&quot;,
+    &quot;Application.TemplateMethod.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Visitor.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ttiig/source/repos/LOGIC/DesignPattern&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\ttiig\source\repos\LOGIC\DesignPattern\src" />

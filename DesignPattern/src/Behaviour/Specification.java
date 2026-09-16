@@ -11,6 +11,13 @@ public class Specification
     boolean 판별 함수 하나만 선언한 interface를 상속한 클래스들을 기반으로,
     AND OR NOT NOR 등으로 해당 Concrete 클래스들을 조합하여
     새로운 판별 클래스를 만들어내는 패턴
+
+    EX1 보다는 EX2 를 통해 구조를 이해하자
+
+    isSatisfiedBy 함수를 선언한 interface 를 만들고,
+    1) 인터페이스를 구현한 개별 판별 클래스
+    2) 1) 클래스들을 조합하는 목적으로 interface 를 구현하는 AND,OR,XOR,NOT 클래스
+    들을 구현한다. 2) 는 구조가 고정이며, 1) 은 유저가 추가하여, 2) 를 통해 여러 조합을 만들 수 있다
      */
 
     public static void main(String[] args)

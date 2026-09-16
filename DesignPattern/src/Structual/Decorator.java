@@ -78,7 +78,7 @@ public class Decorator
         }
     }
 
-    static class CoffeeDecorator implements Coffee
+    static abstract class CoffeeDecorator implements Coffee
     {
         protected Coffee decoratedCoffee;
 
