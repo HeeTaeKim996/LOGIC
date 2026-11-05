@@ -19,6 +19,10 @@
 
 #include "DES.h"
 
+
+
+
+
 int main()
 {
 	//Search::test();
@@ -86,6 +90,7 @@ int main()
 	//BinarySearch::test();
 
 	DES::test();
+	DES::checkWehtherIP_FP_is_fine();
 
 }
 

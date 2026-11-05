@@ -1,6 +1,10 @@
 #include "pch.h"
 #include "DES.h"
 
+
+
+
+
 const uint8 DES::SHIFTS[16] 
     = { 1,1,2,2,2,2,2,2,1,2,2,2,2,2,2,1 };
     // 총합 28 ( ROUND 16 다 돌 시 원래 C(28), D(28) 가 됨
@@ -200,15 +204,15 @@ uint64 DES::crypt(uint64 block, bool isDec)
 
     for (int r = 0; r < 16; r++)
     {
-        uint64 temp = expandTo48(right);
+        uint64 temp = expandTo48(right); // (3)
         
-        temp ^= isDec ? roundKeys[15 - r] : roundKeys[r];
+        temp ^= isDec ? roundKeys[15 - r] : roundKeys[r]; // (4)
 
-        uint32 temp2 = right;
+        uint32 tempRight = right;
         
-        // S-BOX(일부) + P-BOX 함께
+        // (5 ) + (6)
         right = permuteAfterSubsitute(substitute(temp)) ^ left;
-        left = temp2;
+        left = tempRight;
     }
 
     // 마지막에 P-BOX 한번더
@@ -221,6 +225,11 @@ uint64 DES::crypt(uint64 block, bool isDec)
 
 uint64 DES::expandTo48(uint32 num)
 {
+    // 여긴 사실 permutation 이 아니라 32 비트가 4비트로 구성된 8개의 청크
+    // 이고, 이 8개의 청크가 각각 인접한 청크들의 끝값을 하나씩 가져와,
+    // 6비트의 청크가 8개이니 48비트로 확장되는 것. 
+    // 고정된 인덱스만을 가져오니 이를 permute로 구현함
+    // ※ 0번 청크의 left 는 7번 청크의 right. 7번의 right 는 0의 left
     return permute(num, E, 32, 48);
 }
 
@@ -287,8 +296,24 @@ void DES::test()
 void DES::checkWehtherIP_FP_is_fine()
 {
     uint64 x = 0x0123456789ABCDEF;
+
+    bool succeed = true;
+
     if (x != permute(permute(x, IP, 64, 64), FP, 64, 64))
     {
-        printf("ERROR : IP - FP 가 역치환 관계가 아닙니다");
+        succeed = false;
+    }
+    if (x != permute(permute(x, FP, 64, 64), IP, 64, 64))
+    {;
+        succeed = false;
+    }
+
+    if (succeed)
+    {
+        printf("IP-FP 가 역치환 관계입니다\n");
+    }
+    else
+    {
+        printf("IP-FP 가 역치환 관계\n");
     }
 }

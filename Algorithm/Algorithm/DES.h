@@ -1,5 +1,11 @@
 #pragma once
 
+
+
+// ※ 개념 정리는 $(ProjectDir)study\001.DES 에 위치
+
+
+
 using uint64 = unsigned long long;
 using uint32 = unsigned long;
 using uint8 = unsigned char;
@@ -12,8 +18,8 @@ using uint8 = unsigned char;
 
 class DES
 {
-	// 알고리즘 고정 값들
-private: 
+	
+private: // 알고리즘 고정 값들 
 	const static uint8 SHIFTS[16];
 	const static uint8 PC1[56];
 	const static uint8 PC2[48];
@@ -31,7 +37,7 @@ public:
 	uint64 decrypt(uint64 c) { return crypt(c, true); }
 
 private:
-	uint64 permute(uint64 num, const uint8* p, int inBits, 
+	static uint64 permute(uint64 num, const uint8* p, int inBits, 
 		int outBits);
 
 private:
@@ -52,7 +58,7 @@ private:
 public:
 	// 테스트
 	static void test();
-	void checkWehtherIP_FP_is_fine();
+	static void checkWehtherIP_FP_is_fine();
 
 private:
 	uint64 roundKeys[16];
