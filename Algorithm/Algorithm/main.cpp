@@ -15,6 +15,9 @@
 
 #include "use/use_memCounter.h"
 
+#include "999.1.BinarySearch.h"
+
+#include "DES.h"
 
 int main()
 {
@@ -24,6 +27,7 @@ int main()
 	//StringMatch::test();
 	//Trie::test();
 
+#if 0 
 	{
 		Vector<int> vec;
 		vec.push_back(1);
@@ -76,6 +80,13 @@ int main()
 
 	MemCounterManager::instance()->printAll();
 	MemCounterManager::instance()->printTotalAll();
+#endif
+
+
+	//BinarySearch::test();
+
+	DES::test();
+
 }
 
 

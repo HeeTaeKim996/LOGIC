@@ -23,6 +23,12 @@
     <Filter Include="Source Files\Libs\001.STLContainer">
       <UniqueIdentifier>{27879a7d-47b4-4cf0-8070-b94397fce464}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\999.ETC">
+      <UniqueIdentifier>{85c739d9-2b30-4245-bca7-a0c03282f873}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\004.Cipher">
+      <UniqueIdentifier>{badf9339-edd0-4c75-99da-9f0350624dde}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -48,6 +54,9 @@
     </ClCompile>
     <ClCompile Include="3.2.Trie.cpp">
       <Filter>Source Files\003.StringMatch</Filter>
+    </ClCompile>
+    <ClCompile Include="DES.cpp">
+      <Filter>Source Files\004.Cipher</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -86,6 +95,12 @@
     </ClInclude>
     <ClInclude Include="use_unordered_set.h">
       <Filter>Source Files\Libs\001.STLContainer</Filter>
+    </ClInclude>
+    <ClInclude Include="999.1.BinarySearch.h">
+      <Filter>Source Files\999.ETC</Filter>
+    </ClInclude>
+    <ClInclude Include="DES.h">
+      <Filter>Source Files\004.Cipher</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

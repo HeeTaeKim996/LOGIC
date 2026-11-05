@@ -178,7 +178,7 @@ int main()
 #endif // ========== Priority_queue Test ==========
 
 
-#if 0 // Unordered_map
+#if 1 // Unordered_map
 	{
 		printf("========== Unordered_map Test ==========\n\n");
 
@@ -760,7 +760,7 @@ int main()
 	MemCounterManager::instance()->printAll();
 #endif // ========== Map Test ==========
 
-#if 1
+#if 0
 	{
 		printf("\n========== Set Test ==========\n");
 

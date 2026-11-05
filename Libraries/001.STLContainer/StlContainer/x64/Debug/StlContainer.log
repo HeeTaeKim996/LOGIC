@@ -1,30 +1,47 @@
 ﻿  main.cpp
-C:\Users\ttiig\source\repos\LOGIC\Libraries\001.STLContainer\StlContainer\private\main.cpp(784,10): warning C4477: 'printf' : format string '%zu' requires an argument of type 'unsigned __int64', but variadic argument 1 has type 'sizeType'
-      C:\Users\ttiig\source\repos\LOGIC\Libraries\001.STLContainer\StlContainer\private\main.cpp(784,10):
-      consider using '%lu' in the format string
-  
-C:\Users\ttiig\source\repos\LOGIC\Libraries\001.STLContainer\StlContainer\private\main.cpp(835,25): warning C4474: 'printf' : too many arguments passed for format string
-      C:\Users\ttiig\source\repos\LOGIC\Libraries\001.STLContainer\StlContainer\private\main.cpp(835,25):
-      placeholders and their parameters expect 1 variadic arguments, but 2 were provided
-  
-C:\Users\ttiig\source\repos\LOGIC\Libraries\001.STLContainer\StlContainer\private\main.cpp(844,10): warning C4477: 'printf' : format string '%zu' requires an argument of type 'unsigned __int64', but variadic argument 1 has type 'sizeType'
-      C:\Users\ttiig\source\repos\LOGIC\Libraries\001.STLContainer\StlContainer\private\main.cpp(844,10):
-      consider using '%lu' in the format string
-  
-C:\Users\ttiig\source\repos\LOGIC\Libraries\001.STLContainer\StlContainer\private\main.cpp(845,10): warning C4477: 'printf' : format string '%zu' requires an argument of type 'unsigned __int64', but variadic argument 1 has type 'sizeType'
-      C:\Users\ttiig\source\repos\LOGIC\Libraries\001.STLContainer\StlContainer\private\main.cpp(845,10):
-      consider using '%lu' in the format string
-  
-C:\Users\ttiig\source\repos\LOGIC\Libraries\001.STLContainer\StlContainer\private\main.cpp(854,10): warning C4477: 'printf' : format string '%zu' requires an argument of type 'unsigned __int64', but variadic argument 1 has type 'sizeType'
-      C:\Users\ttiig\source\repos\LOGIC\Libraries\001.STLContainer\StlContainer\private\main.cpp(854,10):
-      consider using '%lu' in the format string
-  
-C:\Users\ttiig\source\repos\LOGIC\Libraries\001.STLContainer\StlContainer\private\main.cpp(863,10): warning C4477: 'printf' : format string '%zu' requires an argument of type 'unsigned __int64', but variadic argument 1 has type 'sizeType'
-      C:\Users\ttiig\source\repos\LOGIC\Libraries\001.STLContainer\StlContainer\private\main.cpp(863,10):
-      consider using '%lu' in the format string
-  
-C:\Users\ttiig\source\repos\LOGIC\Libraries\001.STLContainer\StlContainer\private\main.cpp(874,10): warning C4477: 'printf' : format string '%zu' requires an argument of type 'unsigned __int64', but variadic argument 1 has type 'sizeType'
-      C:\Users\ttiig\source\repos\LOGIC\Libraries\001.STLContainer\StlContainer\private\main.cpp(874,10):
-      consider using '%lu' in the format string
+C:\Users\ttiig\source\repos\LOGIC\Libraries\001.STLContainer\StlContainer\public\src\HashTable.h(323,20): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'private/main.cpp')
+      C:\Users\ttiig\source\repos\LOGIC\Libraries\001.STLContainer\StlContainer\public\src\HashTable.h(323,20):
+      the template instantiation context (the oldest one first) is
+          C:\Users\ttiig\source\repos\LOGIC\Libraries\001.STLContainer\StlContainer\private\main.cpp(185,27):
+          see reference to class template instantiation 'Unordered_map<int,int,std::hash<Key>>' being compiled
+          with
+          [
+              Key=int
+          ]
+          C:\Users\ttiig\source\repos\LOGIC\Libraries\001.STLContainer\StlContainer\public\src\Unordered_map.h(30,1):
+          see reference to class template instantiation 'HashTable<Key,std::pair<Key,Value>,Hash,MakeKeyFromData<Key,Value>>' being compiled
+          with
+          [
+              Key=int,
+              Value=int,
+              Hash=std::hash<int>
+          ]
+          C:\Users\ttiig\source\repos\LOGIC\Libraries\001.STLContainer\StlContainer\public\src\HashTable.h(312,1):
+          while compiling class template member function 'void HashTable<Key,std::pair<Key,Value>,Hash,MakeKeyFromData<Key,Value>>::clear(void)'
+          with
+          [
+              Key=int,
+              Value=int,
+              Hash=std::hash<int>
+          ]
+              C:\Users\ttiig\source\repos\LOGIC\Libraries\001.STLContainer\StlContainer\public\src\Unordered_map.h(50,29):
+              see the first reference to 'HashTable<Key,std::pair<Key,Value>,Hash,MakeKeyFromData<Key,Value>>::clear' in 'Unordered_map<int,int,std::hash<Key>>::clear'
+          with
+          [
+              Key=int,
+              Value=int,
+              Hash=std::hash<int>
+          ]
+          and
+          [
+              Key=int
+          ]
+              C:\Users\ttiig\source\repos\LOGIC\Libraries\001.STLContainer\StlContainer\private\main.cpp(347,13):
+              see the first reference to 'Unordered_map<int,int,std::hash<Key>>::clear' in 'main'
+          with
+          [
+              Key=int
+          ]
   
   StlContainer.vcxproj -> C:\Users\ttiig\source\repos\LOGIC\Libraries\001.STLContainer\StlContainer\public\out\x64\Debug\StlContainer.exe

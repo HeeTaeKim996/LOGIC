@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Array.cpp" />
+    <ClCompile Include="DES.cpp" />
     <ClCompile Include="FixedArray.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="pch.cpp">
@@ -154,6 +155,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Array.h" />
+    <ClInclude Include="999.1.BinarySearch.h" />
+    <ClInclude Include="DES.h" />
     <ClInclude Include="FixedArray.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Search.h" />

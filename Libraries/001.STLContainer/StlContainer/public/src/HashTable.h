@@ -15,6 +15,14 @@
 	- 해시함수는 std::hash<..> 사용
 	- 체이닝은 폐쇄(Separate, Closed) 체이닝. 단방향 LinkedList 로 구현하되, DummyHead 를 사용하여,
 	  A 버켓의 꼬리가 B버켓의 헤드가 되는 구조로, 모든 노드를 연결
+
+	※ 인덱스 구하는 방법
+	- 인덱스를 구하는 sizeType idnex = node->hash & (_bucketCount - 1); 부분도 해싱의 제산법에 포함된다 볼 수 있다
+	  (1차 해싱은 node->hash 를 구하는 _hash 함수, 2차 해싱은 index 를 구하는 부분에서)
+	- index 를 해싱하는 방법은 크게 2가지로 나뉘는데,
+	  1) _bucketCount 를 미리 준비한 소수 배열로만 할당하고, index = hash % _bucketCount 사용 (stl 에서 이방법을 사용한다 들음)
+	  2) _bucketCount 를 2의 제곱으로만 할당하고, index = hash & (_bucketCount - 1) 로 효율화
+	  가 있다. 아래 코드는 2) 의 방법을 사용했다
 */
 
 
@@ -154,7 +162,11 @@ inline std::pair<HashTableIterator<Key, T, Hash, KeyOfValue>, bool>
 {
 	const Key& key = _keyOfValue(data);
 	size_t hash = _hash(key);
-	sizeType index = hash % _bucketCount;
+
+
+	sizeType index = hash & (_bucketCount - 1);
+
+
 
 	// ※ 꼬다리부터 머리(_buckets[index]) 방향으로  next를 무는 구조이다
 	// ※ 여기서 머리는 _buckets[index]로, 해당 버켓에 소속되지 않은 노드이며, 다른 버켓의 
@@ -168,7 +180,7 @@ inline std::pair<HashTableIterator<Key, T, Hash, KeyOfValue>, bool>
 	if (_buckets[index] != nullptr)
 	{
 		Node* curr = _buckets[index]->next;
-		while (curr != nullptr && curr->hash % _bucketCount == index)
+		while (curr != nullptr && (curr->hash & (_bucketCount - 1)) == index)
 		{
 			if (_keyOfValue(curr->data) == key)
 			{
@@ -188,7 +200,7 @@ inline std::pair<HashTableIterator<Key, T, Hash, KeyOfValue>, bool>
 	if (_size + 1 > _bucketCount)
 	{
 		resize();
-		index = hash % _bucketCount;
+		index = hash & (_bucketCount - 1);
 	}
 
 	Node* created = createNode(data, hash);
@@ -206,7 +218,7 @@ inline std::pair<HashTableIterator<Key, T, Hash, KeyOfValue>, bool>
 		// 또한 created 는 현 버켓에 최초로 추가된 노드이므로, 현 버켓의 꼬리이기도 하다
 		if (created->next != nullptr)
 		{
-			_buckets[created->next->hash % _bucketCount] = created;
+			_buckets[created->next->hash & (_bucketCount - 1)] = created;
 		}
 	}
 	else
@@ -231,13 +243,12 @@ HashTable<Key, T, Hash, KeyOfValue>::insert_or_assign(const T& data)
 
 	const Key& key = _keyOfValue(data);
 	size_t hash = _hash(key);
-	sizeType index = hash % _bucketCount;
-
+	sizeType index = hash & (_bucketCount - 1);
 
 	if (_buckets[index] != nullptr)
 	{
 		Node* curr = _buckets[index]->next;
-		while (curr != nullptr && curr->hash % _bucketCount == index)
+		while (curr != nullptr && (curr->hash & (_bucketCount - 1)) == index)
 		{
 			if (_keyOfValue(curr->data) == key)
 			{
@@ -254,7 +265,7 @@ HashTable<Key, T, Hash, KeyOfValue>::insert_or_assign(const T& data)
 	if (_size + 1 > _bucketCount)
 	{
 		resize();
-		index = hash % _bucketCount;
+		index = hash & (_bucketCount - 1);
 	}
 
 	Node* created = createNode(data, hash);
@@ -269,7 +280,7 @@ HashTable<Key, T, Hash, KeyOfValue>::insert_or_assign(const T& data)
 
 		if (created->next != nullptr)
 		{
-			_buckets[created->next->hash % _bucketCount] = created;
+			_buckets[created->next->hash & (_bucketCount - 1)] = created;
 		}
 	}
 	else
@@ -340,7 +351,7 @@ inline HashTableIterator<Key, T, Hash, KeyOfValue>
 	HashTable<Key, T, Hash, KeyOfValue>::find(const Key& key)
 {
 	size_t hash = _hash(key);
-	sizeType index = hash % _bucketCount;
+	sizeType index = hash & (_bucketCount - 1);
 
 	if (_buckets[index] == nullptr) return end();
 
@@ -349,7 +360,7 @@ inline HashTableIterator<Key, T, Hash, KeyOfValue>
 	Node* curr = _buckets[index]->next;
 	while (curr != nullptr)
 	{
-		if (curr->hash % _bucketCount != index) break;
+		if ((curr->hash & (_bucketCount - 1)) != index) break;
 
 		if (_keyOfValue(curr->data) == key) return iterator(curr);
 
@@ -373,14 +384,14 @@ template<typename Key, typename T, typename Hash, typename KeyOfValue>
 inline sizeType HashTable<Key, T, Hash, KeyOfValue>::erase(const Key& key)
 {
 	size_t hash = _hash(key);
-	sizeType index = hash % _bucketCount;
+	sizeType index = hash & (_bucketCount - 1);
 
 	if (_buckets[index] == nullptr) return 0;
 
 	Node* prev = _buckets[index];
 	Node* curr = prev->next;
 
-	while (curr != nullptr && curr->hash % _bucketCount == index)
+	while (curr != nullptr && (curr->hash & (_bucketCount - 1)) == index)
 	{
 		if (_keyOfValue(curr->data) == key)
 		{
@@ -389,7 +400,7 @@ inline sizeType HashTable<Key, T, Hash, KeyOfValue>::erase(const Key& key)
 
 			if (curr->next != nullptr)
 			{
-				sizeType nextIndex = curr->next->hash % _bucketCount;
+				sizeType nextIndex = curr->next->hash & (_bucketCount - 1);
 
 				// curr->next 가 다른 버켓 소속이라는 건, 현재 삭제되는 curr 가 해당 버킷의 머리(_buckets[index]) 
 				// 임을 의미하기에, prev(현 버킷의 새로운 꼬리)를 해당 버킷의 머리(_buckets[index]) 에 옮긴다
@@ -403,7 +414,9 @@ inline sizeType HashTable<Key, T, Hash, KeyOfValue>::erase(const Key& key)
 			// 현재 버켓이 텅 빈 경우, _buckets[index] 를 비우다 ( 다시 DummyHead를 받을 수 있게 )
 			// (어차피 _buckets[index]-> next 는 이미 위에서 갱신됐기에, 비워도 문제 안된다 )
 			if (prev == _buckets[index] &&
-				(curr->next == nullptr || curr->next->hash % _bucketCount != index))
+				(curr->next == nullptr || 
+					(curr->next->hash & (_bucketCount - 1)) != index)
+				)
 			{
 				_buckets[index] = nullptr;
 			}
@@ -472,7 +485,7 @@ inline void HashTable<Key, T, Hash, KeyOfValue>::resize()
 	{
 		Node* nextNode = curr->next;
 
-		sizeType index = curr->hash % newBucketCount;
+		sizeType index = curr->hash & (newBucketCount - 1);
 
 		if (newBuckets[index] == nullptr)
 		{
@@ -484,7 +497,7 @@ inline void HashTable<Key, T, Hash, KeyOfValue>::resize()
 			if (curr->next != nullptr)
 			{
 				// curr 을 해당 버킷의 머리로
-				newBuckets[curr->next->hash % newBucketCount] = curr;
+				newBuckets[curr->next->hash & (newBucketCount - 1)] = curr;
 			}
 		}
 		else
@@ -531,6 +544,7 @@ inline void HashTable<Key, T, Hash, KeyOfValue>::deleteNode(Node* deleted)
 	//delete deleted;
 	TrackDelete<Node>(deleted);
 }
+
 
 
 
