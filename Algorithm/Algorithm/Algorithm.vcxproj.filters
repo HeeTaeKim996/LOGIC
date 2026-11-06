@@ -58,6 +58,12 @@
     <ClCompile Include="DES.cpp">
       <Filter>Source Files\004.Cipher</Filter>
     </ClCompile>
+    <ClCompile Include="AES.cpp">
+      <Filter>Source Files\004.Cipher</Filter>
+    </ClCompile>
+    <ClCompile Include="999.2.GalosField.cpp">
+      <Filter>Source Files\999.ETC</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Search.h">
@@ -101,6 +107,12 @@
     </ClInclude>
     <ClInclude Include="DES.h">
       <Filter>Source Files\004.Cipher</Filter>
+    </ClInclude>
+    <ClInclude Include="AES.h">
+      <Filter>Source Files\004.Cipher</Filter>
+    </ClInclude>
+    <ClInclude Include="999.2.GalosField.h">
+      <Filter>Source Files\999.ETC</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

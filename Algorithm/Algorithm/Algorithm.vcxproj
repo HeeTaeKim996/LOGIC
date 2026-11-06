@@ -139,9 +139,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AES.cpp" />
     <ClCompile Include="Array.cpp" />
     <ClCompile Include="DES.cpp" />
     <ClCompile Include="FixedArray.cpp" />
+    <ClCompile Include="999.2.GalosField.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -154,10 +156,12 @@
     <ClInclude Include="001.STLContainer_AllSet.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AES.h" />
     <ClInclude Include="Array.h" />
     <ClInclude Include="999.1.BinarySearch.h" />
     <ClInclude Include="DES.h" />
     <ClInclude Include="FixedArray.h" />
+    <ClInclude Include="999.2.GalosField.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Search.h" />
     <ClInclude Include="Sort.h" />
