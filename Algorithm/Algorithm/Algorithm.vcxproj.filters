@@ -26,9 +26,6 @@
     <Filter Include="Source Files\999.ETC">
       <UniqueIdentifier>{85c739d9-2b30-4245-bca7-a0c03282f873}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\004.Cipher">
-      <UniqueIdentifier>{badf9339-edd0-4c75-99da-9f0350624dde}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -54,15 +51,6 @@
     </ClCompile>
     <ClCompile Include="3.2.Trie.cpp">
       <Filter>Source Files\003.StringMatch</Filter>
-    </ClCompile>
-    <ClCompile Include="DES.cpp">
-      <Filter>Source Files\004.Cipher</Filter>
-    </ClCompile>
-    <ClCompile Include="AES.cpp">
-      <Filter>Source Files\004.Cipher</Filter>
-    </ClCompile>
-    <ClCompile Include="999.2.GalosField.cpp">
-      <Filter>Source Files\999.ETC</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -103,15 +91,6 @@
       <Filter>Source Files\Libs\001.STLContainer</Filter>
     </ClInclude>
     <ClInclude Include="999.1.BinarySearch.h">
-      <Filter>Source Files\999.ETC</Filter>
-    </ClInclude>
-    <ClInclude Include="DES.h">
-      <Filter>Source Files\004.Cipher</Filter>
-    </ClInclude>
-    <ClInclude Include="AES.h">
-      <Filter>Source Files\004.Cipher</Filter>
-    </ClInclude>
-    <ClInclude Include="999.2.GalosField.h">
       <Filter>Source Files\999.ETC</Filter>
     </ClInclude>
   </ItemGroup>

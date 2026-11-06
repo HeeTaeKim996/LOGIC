@@ -1,5 +1,5 @@
-#include "pch.h"
-#include "999.2.GalosField.h"
+#include "src/GalosField.h"
+#include "stdio.h"
 
 
 

@@ -1,5 +1,4 @@
-#include "pch.h"
-#include "AES.h"
+#include "src/AES.h"
 
 #include <cstring>
 #include <cassert>
@@ -134,6 +133,9 @@ uint8 AES::gmul(uint8 a, uint8 b)
 		a = (a << 1) ^ ((a & 0x80) ? 0x1b : 0); 
         // 나머지 XOR 연산 을 multiplied a 에 미리 처리하여 성능 업
         // [ (a * b) % m == ( (a % m) * (b % m) ) % m ]
+
+        // 이론적으로 m = 0x11b 이지만, 어차피 uint8 이기에 
+        // 초과 비트가 절사되기에, 0x1b 사용
 		
         b >>= 1;
 	}

@@ -17,10 +17,6 @@
 
 #include "999.1.BinarySearch.h"
 
-#include "DES.h"
-
-#include "999.2.GalosField.h"
-#include "AES.h"
 
 
 int main()
@@ -87,14 +83,8 @@ int main()
 #endif
 
 
-	//BinarySearch::test();
+	BinarySearch::test();
 
-	//DES::test();
-	//DES::checkWehtherIP_FP_is_fine();
-
-	//GalosField::test();
-
-	AES::test();
 }
 
 

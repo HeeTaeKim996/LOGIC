@@ -1,2 +1,19 @@
-﻿  AES.cpp
+﻿  main.cpp
+C:\Users\ttiig\source\repos\LOGIC\Algorithm\Algorithm\Sort.h(460,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file '/main.cpp')
+  
+C:\Users\ttiig\source\repos\LOGIC\Algorithm\Algorithm\Sort.h(518,8): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file '/main.cpp')
+  
+C:\Users\ttiig\source\repos\LOGIC\Algorithm\Algorithm\999.1.BinarySearch.h(27,10): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file '/main.cpp')
+      C:\Users\ttiig\source\repos\LOGIC\Algorithm\Algorithm\999.1.BinarySearch.h(27,10):
+      the template instantiation context (the oldest one first) is
+          C:\Users\ttiig\source\repos\LOGIC\Algorithm\Algorithm\999.1.BinarySearch.h(84,32):
+          see reference to function template instantiation 'int BinarySearch::binarySearch<int>(const Array<int> &,const T &,std::function<int (const int &,const int &)>)' being compiled
+          with
+          [
+              T=int
+          ]
+  
   Algorithm.vcxproj -> C:\Users\ttiig\source\repos\LOGIC\Algorithm\Algorithm\out\x64\Debug\Algorithm.exe

@@ -1,5 +1,6 @@
 #pragma once
 
+// ※ 개념 정리는 $(ProjectDir)study\002.GalosField 에 위치
 
 using uint8 = unsigned char;
 
