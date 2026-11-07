@@ -1,7 +1,5 @@
 #pragma once
-
-
-using uint8 = unsigned char;
+#include "SizeType.h"
 
 // ※ 개념 정리는 $(ProjectDir)study\003.AES 에 위치
 
@@ -15,6 +13,7 @@ using uint8 = unsigned char;
 	( for(int c = 0; c < 4; ++c) for(int r = 0; r < 4; ++r)
 	  처럼 r 보다 c를 먼저 써야 함 )
 */
+
 
 
 class AES

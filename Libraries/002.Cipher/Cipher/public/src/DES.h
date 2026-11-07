@@ -1,14 +1,11 @@
 #pragma once
+#include "SizeType.h"
 
 
 
 // ※ 개념 정리는 $(ProjectDir)study\001.DES 에 위치
 
 
-
-using uint64 = unsigned long long;
-using uint32 = unsigned long;
-using uint8 = unsigned char;
 
 #define MASK_28 0x0F'FF'FF'FF
 #define MASK_56 0x00'FF'FF'FF'FF'FF'FF'FF

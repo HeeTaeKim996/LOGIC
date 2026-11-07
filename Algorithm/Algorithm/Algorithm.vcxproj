@@ -154,7 +154,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Array.h" />
-    <ClInclude Include="999.1.BinarySearch.h" />
+    <ClInclude Include="1.BinarySearch.h" />
+    <ClInclude Include="2.EuclidianAlgorithms.h" />
     <ClInclude Include="FixedArray.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Search.h" />

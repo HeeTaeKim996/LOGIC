@@ -9,28 +9,43 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
     </Filter>
+    <Filter Include="common">
+      <UniqueIdentifier>{e77fb5e0-56c0-46b3-8ca9-7649c2eabf22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="symmetric">
+      <UniqueIdentifier>{f1fbb28b-41fb-47fd-8b7a-e31153919db7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="private\AES.cpp">
-      <Filter>private</Filter>
+      <Filter>symmetric</Filter>
     </ClCompile>
     <ClCompile Include="private\DES.cpp">
-      <Filter>private</Filter>
+      <Filter>symmetric</Filter>
+    </ClCompile>
+    <ClCompile Include="private\IDEA.cpp">
+      <Filter>symmetric</Filter>
     </ClCompile>
     <ClCompile Include="private\GalosField.cpp">
-      <Filter>private</Filter>
+      <Filter>common</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="public\src\AES.h">
-      <Filter>public</Filter>
+      <Filter>symmetric</Filter>
     </ClInclude>
     <ClInclude Include="public\src\DES.h">
-      <Filter>public</Filter>
+      <Filter>symmetric</Filter>
+    </ClInclude>
+    <ClInclude Include="public\src\IDEA.h">
+      <Filter>symmetric</Filter>
+    </ClInclude>
+    <ClInclude Include="public\src\SizeType.h">
+      <Filter>symmetric</Filter>
     </ClInclude>
     <ClInclude Include="public\src\GalosField.h">
-      <Filter>public</Filter>
+      <Filter>common</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

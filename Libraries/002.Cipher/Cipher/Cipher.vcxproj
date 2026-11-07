@@ -129,11 +129,14 @@
     <ClCompile Include="private\AES.cpp" />
     <ClCompile Include="private\DES.cpp" />
     <ClCompile Include="private\GalosField.cpp" />
+    <ClCompile Include="private\IDEA.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="public\src\AES.h" />
     <ClInclude Include="public\src\DES.h" />
     <ClInclude Include="public\src\GalosField.h" />
+    <ClInclude Include="public\src\IDEA.h" />
+    <ClInclude Include="public\src\SizeType.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -90,7 +90,10 @@
     <ClInclude Include="use_unordered_set.h">
       <Filter>Source Files\Libs\001.STLContainer</Filter>
     </ClInclude>
-    <ClInclude Include="999.1.BinarySearch.h">
+    <ClInclude Include="1.BinarySearch.h">
+      <Filter>Source Files\999.ETC</Filter>
+    </ClInclude>
+    <ClInclude Include="2.EuclidianAlgorithms.h">
       <Filter>Source Files\999.ETC</Filter>
     </ClInclude>
   </ItemGroup>
