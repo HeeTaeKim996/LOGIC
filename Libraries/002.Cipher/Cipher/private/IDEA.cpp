@@ -16,7 +16,7 @@ void IDEA::crypt(uint8* m, const uint16* keys)
 
 #ifdef WHEN_ENDIAN_MATTERS
 	uint16 x[4];
-	reinterpretCast_to16(x, m, 4);
+	endianCopy_to16(x, m, 4);
 #else
 	uint16* x = reinterpret_cast<uint16*>(m);
 #endif
@@ -63,7 +63,7 @@ void IDEA::crypt(uint8* m, const uint16* keys)
 	baseBox(&keys[48]);
 
 #ifdef WHEN_ENDIAN_MATTERS
-	reinterpretCast_to8(m, x, 4);
+	endianCopy_to8(m, x, 4);
 #endif
 }
 
@@ -169,11 +169,11 @@ void IDEA::makeEncKeys(uint8* key) // 128(16)
 {
 	// 단순하다. 원본키 우선 넣고, 중복되면 섞어서 다시 넣기
 
-#ifdef WHEN_ENDIAN_MATTERS
 	uint16 k[8];
-	reinterpretCast_to16(k, key, 8);
+#ifdef WHEN_ENDIAN_MATTERS
+	endianCopy_to16(k, key, 8);
 #else
-	uint16* k = reinterpret_cast<uint16*>(key);
+	straightCopy_to16(k, key, 8);
 #endif 
 
 
@@ -218,7 +218,7 @@ void IDEA::makeDecKeys()
 
 	■ enc, dec 의 순서 불일치 부분 처리 
 
-	라운드 수를 2로 축약해서 이해하자
+	라운드 수를 3로 축약해서 이해하자
 	enc : B - X - S - B - X - S - B - X - B   ( -> 방향으로 진행 )
 	dec : B - X - B - S - X - B - S - X - B	  ( <- 방향으로 진행 )
 	※ 마지막 라운드 S는 끝 스왑 S 에 의해 중복되어 상쇄됨
@@ -239,20 +239,20 @@ void IDEA::makeDecKeys()
 		uint16* dec = &decKeys[6 * r];
 		const uint16* enc = &encKeys[48 - 6 * r];
 		// 첫 스타트는 48, 49, 50, 51
+		// (B 대응키 할당 목적. 어차피 그 다음은 X 고 그건 이후 
+		// [-2], [-1] 로 처리하니까.
 		
 		dec[0] = extendedEuclidian(enc[0]);
 		dec[3] = extendedEuclidian(enc[3]);
 
 		if (r == 0 || r == 8) 
-			// 첫/끝 단계는 위치 그대로 
-			// 첫 은 enc 가 라운드 스왑 + 끝 스왑 = 0 이니 그대로
-			// 끝 은 enc 에서 라운드 스왑 적용이 안되므로 그대로
+			// 첫/끝 단계 B 는 위치 그대로 
 		{
 			dec[1] = (uint16)(0 - enc[1]);
 			dec[2] = (uint16)(0 - enc[2]);
 		}
 		else
-			// 첫/끝 제외 중간 라운드들은 라운드 스왑을 반영
+			// 첫/끝 제외 중간 B들은 라운드 스왑을 반영하여 스왑
 		{
 			dec[1] = (uint16)(0 - enc[2]);
 			dec[2] = (uint16)(0 - enc[1]);
@@ -261,7 +261,6 @@ void IDEA::makeDecKeys()
 		if (r < 8) 
 			// 마지막 라운드 제외 4, 5 할당
 			// enc 기준으로 보면 '이전' 라운드의 xorBox 를 할당
-
 		{
 			dec[4] = enc[-2];
 			dec[5] = enc[-1];

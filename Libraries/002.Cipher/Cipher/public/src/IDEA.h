@@ -2,6 +2,7 @@
 
 #include "src/SizeType.h"
 
+// ※ $(ProjectDir)study/003.ExtendedEuclidianAlgorithm, 004.IDEA 참조
 
 
 #define M 0x1'00'01		// 2 ^ 16 + 1
@@ -41,10 +42,10 @@ private:
 	uint16 decKeys[52];
 
 
-
+private:
 #ifdef WHEN_ENDIAN_MATTERS
-private: // 엔디안 불일치 문제가 있다는 가정하에, 엔디안 정렬하는 함수
-	static inline void reinterpretCast_to16(uint16* dst, uint8* src, int n)
+	 // 엔디안 불일치 문제가 있다는 가정하에, 엔디안 정렬하는 함수
+	static inline void endianCopy_to16(uint16* dst, uint8* src, int n)
 	{
 		for (int i = 0; i < n; ++i)
 		{
@@ -52,12 +53,20 @@ private: // 엔디안 불일치 문제가 있다는 가정하에, 엔디안 정렬하는 함수
 		}
 	}
 
-	static inline void reinterpretCast_to8(uint8* dst, uint16* src, int n)
+	static inline void endianCopy_to8(uint8* dst, uint16* src, int n)
 	{
 		for (int i = 0; i < n; ++i)
 		{
 			dst[i * 2] = (uint8)(src[i] >> 8);
 			dst[i * 2 + 1] = (uint8)(src[i] & 0xFF);
+		}
+	}
+#else
+	static inline void straightCopy_to16(uint16* dst, uint8* src, int n)
+	{
+		for (int i = 0; i < n; ++i)
+		{
+			dst[i] = (uint16)((src[i * 2 + 1] << 8 | src[i * 2]));
 		}
 	}
 #endif
