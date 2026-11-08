@@ -1,19 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="public">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
-    <Filter Include="private">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
     <Filter Include="common">
       <UniqueIdentifier>{e77fb5e0-56c0-46b3-8ca9-7649c2eabf22}</UniqueIdentifier>
     </Filter>
     <Filter Include="symmetric">
       <UniqueIdentifier>{f1fbb28b-41fb-47fd-8b7a-e31153919db7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Interface">
+      <UniqueIdentifier>{da2e74b7-f3b2-446c-a5c7-2dee9c2d6a93}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -30,22 +25,41 @@
     <ClCompile Include="private\GalosField.cpp">
       <Filter>common</Filter>
     </ClCompile>
+    <ClCompile Include="private\RC4.cpp">
+      <Filter>symmetric</Filter>
+    </ClCompile>
+    <ClCompile Include="private\RC5.cpp">
+      <Filter>symmetric</Filter>
+    </ClCompile>
+    <ClCompile Include="private\Endian.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="public\src\AES.h">
-      <Filter>symmetric</Filter>
-    </ClInclude>
-    <ClInclude Include="public\src\DES.h">
-      <Filter>symmetric</Filter>
-    </ClInclude>
-    <ClInclude Include="public\src\IDEA.h">
-      <Filter>symmetric</Filter>
-    </ClInclude>
-    <ClInclude Include="public\src\SizeType.h">
-      <Filter>symmetric</Filter>
-    </ClInclude>
-    <ClInclude Include="public\src\GalosField.h">
+    <ClInclude Include="private\GalosField.h" />
+    <ClInclude Include="private\Endian.h">
       <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="private\AES.h">
+      <Filter>symmetric</Filter>
+    </ClInclude>
+    <ClInclude Include="private\DES.h">
+      <Filter>symmetric</Filter>
+    </ClInclude>
+    <ClInclude Include="private\IDEA.h">
+      <Filter>symmetric</Filter>
+    </ClInclude>
+    <ClInclude Include="private\RC4.h">
+      <Filter>symmetric</Filter>
+    </ClInclude>
+    <ClInclude Include="private\RC5.h">
+      <Filter>symmetric</Filter>
+    </ClInclude>
+    <ClInclude Include="private\SizeType.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="private\IBlockCryptor.h">
+      <Filter>Interface</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

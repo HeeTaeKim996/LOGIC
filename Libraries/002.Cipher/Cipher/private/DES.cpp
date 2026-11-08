@@ -1,5 +1,5 @@
-#include "src/DES.h"
-
+#include "DES.h"
+#include "Endian.h"
 
 
 const uint8 DES::SHIFTS[16] 
@@ -137,6 +137,18 @@ DES::DES(uint64 key)
     makeRoundKeys(key);
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
 uint64 DES::permute(uint64 num, const uint8* p, int inBits, 
     int outBits)
 {
@@ -192,8 +204,10 @@ void DES::ROL_28(uint32& shifter, uint32 n)
 
 
 
-uint64 DES::crypt(uint64 block, bool isDec)
+void DES::crypt(uint8* m, bool isDec)
 {
+    uint64 block = BigEndian::loadTo64(m);
+
     block = permute(block, IP, 64, 64); // IP 
 
     uint32 left = (block >> 32) & MASK_32;
@@ -217,7 +231,9 @@ uint64 DES::crypt(uint64 block, bool isDec)
 
 
     //checkWehtherIP_FP_is_fine();
-    return permute(block, FP, 64, 64); // FP ( IP 와 역치환 관계 )
+    block = permute(block, FP, 64, 64); // FP ( IP 와 역치환 관계 )
+    
+    BigEndian::storeFrom64(m, block); 
 }
 
 uint64 DES::expandTo48(uint32 num)
@@ -264,15 +280,28 @@ uint32 DES::permuteAfterSubsitute(uint32 num)
 void DES::test()
 {
 
-    auto func = [](uint64 key, uint64 p) -> void
+    auto func = [](uint64 key, uint8* p, uint8* c) -> void
     {
             DES des(key);
 
-            uint64 c = des.encrypt(p);
-            printf("C : %llx\n", c); // 123456789ABCDEF 출력
-            printf("P : %llx\n", des.decrypt(c)); // 123456789ABCDEF 출력
+            uint8 temp[8];
+            std::memcpy(temp, p, 8);
 
-            if (p == des.decrypt(c))
+            des.encrypt(temp);
+
+
+            if (std::memcmp(temp, c, 8) == 0)
+            {
+                printf("통과\n");
+            }
+            else
+            {
+                printf("실패\n");
+            }
+
+            des.decrypt(temp);
+
+            if (std::memcmp(temp, p, 8) == 0)
             {
                 printf("통과\n");
             }
@@ -283,11 +312,17 @@ void DES::test()
             printf("\n");
     };
 
-    func(0x133457799BBCDFF1, 0x0123456789ABCDEF);
-    // C : 123456789ABCDEF, P : 123456789ABCDEF 
-    func(0x0E329232EA6D0D73ULL, 0x8787878787878787ULL);
-    func(0x0101010101010101ULL, 0x95F8A5E5DD31D900ULL);
+    uint8 pt1[8] = { 0x01,0x23,0x45,0x67,0x89,0xAB,0xCD,0xEF };
+    uint8 ct1[8] = { 0x85,0xE8,0x13,0x54,0x0F,0x0A,0xB4,0x05 };
+    func(0x133457799BBCDFF1ULL, pt1, ct1);
 
+    uint8 pt2[8] = { 0x87,0x87,0x87,0x87,0x87,0x87,0x87,0x87 };
+    uint8 ct2[8] = { 0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00 };
+    func(0x0E329232EA6D0D73ULL, pt2, ct2);
+
+    uint8 pt3[8] = { 0x80,0x00,0x00,0x00,0x00,0x00,0x00,0x00 };
+    uint8 ct3[8] = { 0x95,0xF8,0xA5,0xE5,0xDD,0x31,0xD9,0x00 };
+    func(0x0101010101010101ULL, pt3, ct3);
 }
 
 void DES::checkWehtherIP_FP_is_fine()

@@ -128,15 +128,22 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="private\AES.cpp" />
     <ClCompile Include="private\DES.cpp" />
+    <ClCompile Include="private\Endian.cpp" />
     <ClCompile Include="private\GalosField.cpp" />
     <ClCompile Include="private\IDEA.cpp" />
+    <ClCompile Include="private\RC4.cpp" />
+    <ClCompile Include="private\RC5.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="public\src\AES.h" />
-    <ClInclude Include="public\src\DES.h" />
-    <ClInclude Include="public\src\GalosField.h" />
-    <ClInclude Include="public\src\IDEA.h" />
-    <ClInclude Include="public\src\SizeType.h" />
+    <ClInclude Include="private\AES.h" />
+    <ClInclude Include="private\IBlockCryptor.h" />
+    <ClInclude Include="private\DES.h" />
+    <ClInclude Include="private\Endian.h" />
+    <ClInclude Include="private\GalosField.h" />
+    <ClInclude Include="private\IDEA.h" />
+    <ClInclude Include="private\RC4.h" />
+    <ClInclude Include="private\RC5.h" />
+    <ClInclude Include="private\SizeType.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

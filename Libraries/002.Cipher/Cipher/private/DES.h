@@ -1,6 +1,6 @@
 #pragma once
 #include "SizeType.h"
-
+#include "IBlockCryptor.h"
 
 
 // ※ 개념 정리는 $(ProjectDir)study\001.DES 에 위치
@@ -13,7 +13,7 @@
 #define MASK_6  0x00'00'00'3F
 #define MASK_4  0x00'00'00'0F
 
-class DES
+class DES : public IBlockCryptor
 {
 	
 private: // 알고리즘 고정 값들 
@@ -30,8 +30,8 @@ private: // 알고리즘 고정 값들
 	
 public:
 	DES(uint64 key);
-	uint64 encrypt(uint64 p) { return crypt(p, false); }
-	uint64 decrypt(uint64 c) { return crypt(c, true); }
+	virtual void encrypt(uint8* p) override { crypt(p, false); }
+	virtual void decrypt(uint8* c) override { crypt(c, true); }
 
 private:
 	static uint64 permute(uint64 num, const uint8* p, int inBits, 
@@ -43,7 +43,9 @@ private:
 
 
 private:
-	uint64 crypt(uint64 block, bool isDec);
+	//uint64 encrypt(uint64 p) { return crypt(p, false); }
+	//uint64 decrypt(uint64 c) { return crypt(c, true); }
+	void crypt(uint8* m, bool isDec);
 
 private:
 	uint64 expandTo48(uint32 num);

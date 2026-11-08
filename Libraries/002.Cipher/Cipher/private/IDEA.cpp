@@ -1,6 +1,7 @@
-#include "src/IDEA.h"
+#include "IDEA.h"
 #include <cstring>
 #include <functional>
+#include "Endian.h"
 
 IDEA::IDEA(uint8* key)
 {
@@ -9,18 +10,10 @@ IDEA::IDEA(uint8* key)
 }
 
 
-
-
 void IDEA::crypt(uint8* m, const uint16* keys)
 {
-
-#ifdef WHEN_ENDIAN_MATTERS
 	uint16 x[4];
-	endianCopy_to16(x, m, 4);
-#else
-	uint16* x = reinterpret_cast<uint16*>(m);
-#endif
-
+	BigEndian::copyTo16(x, m, 4);
 
 	auto baseBox = [&](const uint16* f)
 		{
@@ -62,9 +55,7 @@ void IDEA::crypt(uint8* m, const uint16* keys)
 
 	baseBox(&keys[48]);
 
-#ifdef WHEN_ENDIAN_MATTERS
-	endianCopy_to8(m, x, 4);
-#endif
+	BigEndian::copyFrom16(m, x, 4);
 }
 
 
@@ -170,12 +161,7 @@ void IDEA::makeEncKeys(uint8* key) // 128(16)
 	// 단순하다. 원본키 우선 넣고, 중복되면 섞어서 다시 넣기
 
 	uint16 k[8];
-#ifdef WHEN_ENDIAN_MATTERS
-	endianCopy_to16(k, key, 8);
-#else
-	straightCopy_to16(k, key, 8);
-#endif 
-
+	BigEndian::copyTo16(k, key, 8);
 
 
 	int n = 0;

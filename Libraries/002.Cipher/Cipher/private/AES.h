@@ -1,5 +1,6 @@
 #pragma once
 #include "SizeType.h"
+#include "IBlockCryptor.h"
 
 // ※ 개념 정리는 $(ProjectDir)study\003.AES 에 위치
 
@@ -16,7 +17,7 @@
 
 
 
-class AES
+class AES : public IBlockCryptor
 {
 private:
 	static const uint8 SBOX[256];
@@ -26,8 +27,8 @@ private:
 
 public:
 	AES(const uint8* key, int keyBytes);
-	void encrypt(uint8* p);
-	void decrypt(uint8* c);
+	virtual void encrypt(uint8* p) override;
+	virtual void decrypt(uint8* c) override;
 
 private:
 	static void subBytes(uint8* state);

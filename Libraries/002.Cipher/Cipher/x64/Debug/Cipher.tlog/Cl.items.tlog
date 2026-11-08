@@ -1,5 +1,8 @@
 C:\Users\ttiig\source\repos\LOGIC\Libraries\002.Cipher\Cipher\main.cpp;C:\Users\ttiig\source\repos\LOGIC\Libraries\002.Cipher\Cipher\x64\Debug\main.obj
 C:\Users\ttiig\source\repos\LOGIC\Libraries\002.Cipher\Cipher\private\AES.cpp;C:\Users\ttiig\source\repos\LOGIC\Libraries\002.Cipher\Cipher\x64\Debug\AES.obj
 C:\Users\ttiig\source\repos\LOGIC\Libraries\002.Cipher\Cipher\private\DES.cpp;C:\Users\ttiig\source\repos\LOGIC\Libraries\002.Cipher\Cipher\x64\Debug\DES.obj
+C:\Users\ttiig\source\repos\LOGIC\Libraries\002.Cipher\Cipher\private\Endian.cpp;C:\Users\ttiig\source\repos\LOGIC\Libraries\002.Cipher\Cipher\x64\Debug\Endian.obj
 C:\Users\ttiig\source\repos\LOGIC\Libraries\002.Cipher\Cipher\private\GalosField.cpp;C:\Users\ttiig\source\repos\LOGIC\Libraries\002.Cipher\Cipher\x64\Debug\GalosField.obj
 C:\Users\ttiig\source\repos\LOGIC\Libraries\002.Cipher\Cipher\private\IDEA.cpp;C:\Users\ttiig\source\repos\LOGIC\Libraries\002.Cipher\Cipher\x64\Debug\IDEA.obj
+C:\Users\ttiig\source\repos\LOGIC\Libraries\002.Cipher\Cipher\private\RC4.cpp;C:\Users\ttiig\source\repos\LOGIC\Libraries\002.Cipher\Cipher\x64\Debug\RC4.obj
+C:\Users\ttiig\source\repos\LOGIC\Libraries\002.Cipher\Cipher\private\RC5.cpp;C:\Users\ttiig\source\repos\LOGIC\Libraries\002.Cipher\Cipher\x64\Debug\RC5.obj
