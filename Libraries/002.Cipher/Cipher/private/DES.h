@@ -32,6 +32,7 @@ public:
 	DES(uint64 key);
 	virtual void encrypt(uint8* p) override { crypt(p, false); }
 	virtual void decrypt(uint8* c) override { crypt(c, true); }
+	virtual int getBlockSize() { return 8; }
 
 private:
 	static uint64 permute(uint64 num, const uint8* p, int inBits, 

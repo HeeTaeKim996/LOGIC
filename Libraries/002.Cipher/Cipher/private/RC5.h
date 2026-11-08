@@ -46,6 +46,7 @@ public:
 	RC5(const uint8* key);
 	virtual void encrypt(uint8* p) override;
 	virtual void decrypt(uint8* c) override;
+	virtual int getBlockSize() { return 8; }
 
 private:
 	void makeKeys(const uint8* key);

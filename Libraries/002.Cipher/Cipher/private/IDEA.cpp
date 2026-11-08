@@ -3,7 +3,7 @@
 #include <functional>
 #include "Endian.h"
 
-IDEA::IDEA(uint8* key)
+IDEA::IDEA(const uint8* key)
 {
 	makeEncKeys(key);
 	makeDecKeys();
@@ -156,7 +156,7 @@ void IDEA::swap(uint16& x, uint16& y)
 
 
 
-void IDEA::makeEncKeys(uint8* key) // 128(16)
+void IDEA::makeEncKeys(const uint8* key) // 128(16)
 {
 	// 단순하다. 원본키 우선 넣고, 중복되면 섞어서 다시 넣기
 

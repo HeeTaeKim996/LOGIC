@@ -1,7 +1,1 @@
-﻿  main.cpp
-  Endian.cpp
-  RC5.cpp
-C:\Users\ttiig\source\repos\LOGIC\Libraries\002.Cipher\Cipher\private\RC5.cpp(97,33): warning C4554: '>>': check operator precedence for possible error; use parentheses to clarify precedence
-C:\Users\ttiig\source\repos\LOGIC\Libraries\002.Cipher\Cipher\private\RC5.cpp(106,33): warning C4554: '<<': check operator precedence for possible error; use parentheses to clarify precedence
-  Generating Code...
-  Cipher.vcxproj -> C:\Users\ttiig\source\repos\LOGIC\Libraries\002.Cipher\x64\Debug\Cipher.exe
+﻿  Cipher.vcxproj -> C:\Users\ttiig\source\repos\LOGIC\Libraries\002.Cipher\x64\Debug\Cipher.exe

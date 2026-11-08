@@ -34,6 +34,7 @@
     <ClCompile Include="private\Endian.cpp">
       <Filter>common</Filter>
     </ClCompile>
+    <ClCompile Include="private\BlockCrypt.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="private\GalosField.h" />
@@ -61,5 +62,6 @@
     <ClInclude Include="private\IBlockCryptor.h">
       <Filter>Interface</Filter>
     </ClInclude>
+    <ClInclude Include="private\BlockCrypt.h" />
   </ItemGroup>
 </Project>

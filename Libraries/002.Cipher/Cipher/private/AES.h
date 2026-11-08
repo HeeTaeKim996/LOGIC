@@ -29,6 +29,7 @@ public:
 	AES(const uint8* key, int keyBytes);
 	virtual void encrypt(uint8* p) override;
 	virtual void decrypt(uint8* c) override;
+	virtual int getBlockSize() override { return 16; }
 
 private:
 	static void subBytes(uint8* state);

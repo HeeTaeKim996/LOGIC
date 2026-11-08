@@ -42,7 +42,7 @@ void LittleEndian::storeFrom32(uint8* p, uint32 v)
 /*----------------------------
 		   BigEndian
 ----------------------------*/
-void BigEndian::copyTo16(uint16* dst, uint8* src, int n)
+void BigEndian::copyTo16(uint16* dst, const uint8* src, int n)
 {
 	for (int i = 0; i < n; ++i)
 	{
@@ -51,7 +51,7 @@ void BigEndian::copyTo16(uint16* dst, uint8* src, int n)
 	}
 }
 
-void BigEndian::copyFrom16(uint8* dst, uint16* src, int n)
+void BigEndian::copyFrom16(uint8* dst, const uint16* src, int n)
 {
 	for (int i = 0; i < n; ++i)
 	{

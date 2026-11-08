@@ -12,10 +12,10 @@
 class IDEA : public IBlockCryptor
 {
 public:
-	IDEA(uint8* key);
+	IDEA(const uint8* key);
 	virtual void encrypt(uint8* p) override { crypt(p, encKeys); }
 	virtual void decrypt(uint8* c) override { crypt(c, decKeys); }
-
+	virtual int getBlockSize() { return 8; }
 
 
 private:
@@ -33,7 +33,7 @@ private:
 
 
 private:
-	void makeEncKeys(uint8* key);
+	void makeEncKeys(const uint8* key);
 	void makeDecKeys();
 
 private:
