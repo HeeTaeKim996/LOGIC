@@ -35,6 +35,9 @@
       <Filter>common</Filter>
     </ClCompile>
     <ClCompile Include="private\BlockCrypt.cpp" />
+    <ClCompile Include="private\ARIA.cpp">
+      <Filter>symmetric</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="private\GalosField.h" />
@@ -63,5 +66,8 @@
       <Filter>Interface</Filter>
     </ClInclude>
     <ClInclude Include="private\BlockCrypt.h" />
+    <ClInclude Include="private\ARIA.h">
+      <Filter>symmetric</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -2,7 +2,7 @@
 #include "SizeType.h"
 #include "IBlockCryptor.h"
 
-// ※ 개념 정리는 $(ProjectDir)study\003.AES 에 위치
+// ※ 개념 정리는 $(SolutionDir)study\003.AES 에 위치
 
 /* ■ 행우선과 열우선
 	MIX, INVMIX 는 state 매트릭스와 연산할 때 

@@ -3,7 +3,7 @@
 #include "SizeType.h"
 #include "IBlockCryptor.h"
 
-// ※ $(ProjectDir)study/003.ExtendedEuclidianAlgorithm, 004.IDEA 참조
+// ※ $(SolutionDir)study/003.ExtendedEuclidianAlgorithm, 004.IDEA 참조
 
 
 #define M 0x1'00'01		// 2 ^ 16 + 1

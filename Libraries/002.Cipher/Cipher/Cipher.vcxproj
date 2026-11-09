@@ -127,6 +127,7 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="private\AES.cpp" />
+    <ClCompile Include="private\ARIA.cpp" />
     <ClCompile Include="private\BlockCrypt.cpp" />
     <ClCompile Include="private\DES.cpp" />
     <ClCompile Include="private\Endian.cpp" />
@@ -137,6 +138,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="private\AES.h" />
+    <ClInclude Include="private\ARIA.h" />
     <ClInclude Include="private\BlockCrypt.h" />
     <ClInclude Include="private\IBlockCryptor.h" />
     <ClInclude Include="private\DES.h" />

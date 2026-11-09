@@ -11,7 +11,7 @@
 #include "../private/RC4.h"
 #include "../private/RC5.h"
 #include "../private/BlockCrypt.h"
-
+#include "../private/ARIA.h"
 
 int main()
 {
@@ -21,7 +21,8 @@ int main()
 	//RC4::test();
 	//RC5::test();
 
-	BlockCrypt::test();
-
+	//BlockCrypt::test();
+	
+	ARIA::test();
 }
 

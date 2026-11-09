@@ -3,7 +3,7 @@
 #include "IBlockCryptor.h"
 
 
-// ※ 개념 정리는 $(ProjectDir)study\001.DES 에 위치
+// ※ 개념 정리는 $(SolutionDir)study\001.DES 에 위치
 
 
 
