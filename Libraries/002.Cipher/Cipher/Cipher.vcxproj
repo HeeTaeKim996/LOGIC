@@ -132,7 +132,9 @@
     <ClCompile Include="private\DES.cpp" />
     <ClCompile Include="private\Endian.cpp" />
     <ClCompile Include="private\GalosField.cpp" />
+    <ClCompile Include="private\HIGHT.cpp" />
     <ClCompile Include="private\IDEA.cpp" />
+    <ClCompile Include="private\LEA.cpp" />
     <ClCompile Include="private\RC4.cpp" />
     <ClCompile Include="private\RC5.cpp" />
     <ClCompile Include="private\SEED.cpp" />
@@ -141,11 +143,13 @@
     <ClInclude Include="private\AES.h" />
     <ClInclude Include="private\ARIA.h" />
     <ClInclude Include="private\BlockCrypt.h" />
+    <ClInclude Include="private\HIGHT.h" />
     <ClInclude Include="private\IBlockCryptor.h" />
     <ClInclude Include="private\DES.h" />
     <ClInclude Include="private\Endian.h" />
     <ClInclude Include="private\GalosField.h" />
     <ClInclude Include="private\IDEA.h" />
+    <ClInclude Include="private\LEA.h" />
     <ClInclude Include="private\RC4.h" />
     <ClInclude Include="private\RC5.h" />
     <ClInclude Include="private\SEED.h" />

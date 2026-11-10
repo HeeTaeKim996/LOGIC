@@ -1,6 +1,7 @@
 #pragma once
 #include "SizeType.h"
 
+#include "IBlockCryptor.h"
 
 
 // RFC 4269 (SEED) :  https://www.rfc-editor.org/info/rfc4269/
@@ -22,7 +23,7 @@
 #define MASK_8 0xFF
 #define MASK_32 0xFF'FF'FF'FF
 
-class SEED
+class SEED : IBlockCryptor
 {
 private:
 	static const uint8 S0[256];
@@ -31,9 +32,9 @@ private:
 
 public:
 	SEED(const uint8* key);
-	void encrypt(uint8* p) { crypt(p, false); }
-	void decrypt(uint8* c) { crypt(c, true); }
-	
+	virtual void encrypt(uint8* p) override { crypt(p, false); }
+	virtual void decrypt(uint8* c) override { crypt(c, true); }
+	virtual int getBlockSize() override { return 16; }
 
 private:
 	void crypt(uint8* m, bool isDec);

@@ -41,6 +41,12 @@
     <ClCompile Include="private\SEED.cpp">
       <Filter>symmetric</Filter>
     </ClCompile>
+    <ClCompile Include="private\HIGHT.cpp">
+      <Filter>symmetric</Filter>
+    </ClCompile>
+    <ClCompile Include="private\LEA.cpp">
+      <Filter>symmetric</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="private\GalosField.h" />
@@ -73,6 +79,12 @@
       <Filter>symmetric</Filter>
     </ClInclude>
     <ClInclude Include="private\SEED.h">
+      <Filter>symmetric</Filter>
+    </ClInclude>
+    <ClInclude Include="private\HIGHT.h">
+      <Filter>symmetric</Filter>
+    </ClInclude>
+    <ClInclude Include="private\LEA.h">
       <Filter>symmetric</Filter>
     </ClInclude>
   </ItemGroup>

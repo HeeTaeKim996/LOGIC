@@ -13,6 +13,8 @@
 #include "../private/BlockCrypt.h"
 #include "../private/ARIA.h"
 #include "../private/SEED.h"
+#include "../private/HIGHT.h"
+#include "../private/LEA.h"
 
 int main()
 {
@@ -25,6 +27,8 @@ int main()
 	//BlockCrypt::test();
 	
 	//ARIA::test();
-	SEED::test();
+	//SEED::test();
+	//Hight::test();
+	LEA::test();
 }
 
