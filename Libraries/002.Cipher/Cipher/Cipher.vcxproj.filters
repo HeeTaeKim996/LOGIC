@@ -7,85 +7,97 @@
     <Filter Include="symmetric">
       <UniqueIdentifier>{f1fbb28b-41fb-47fd-8b7a-e31153919db7}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Interface">
-      <UniqueIdentifier>{da2e74b7-f3b2-446c-a5c7-2dee9c2d6a93}</UniqueIdentifier>
+    <Filter Include="symmetric\BlockCrypt">
+      <UniqueIdentifier>{3382fabf-b9f3-4adb-a9a1-31f18629598f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="symmetric\BlockCrypt\BlockCryptor">
+      <UniqueIdentifier>{ad997e66-783f-4ada-ac6a-24743c970ec4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="symmetric\StreamCrypt">
+      <UniqueIdentifier>{c9bfaab6-6e1a-4d68-8fea-2c7f8b98bd0d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="private\AES.cpp">
-      <Filter>symmetric</Filter>
-    </ClCompile>
-    <ClCompile Include="private\DES.cpp">
-      <Filter>symmetric</Filter>
-    </ClCompile>
-    <ClCompile Include="private\IDEA.cpp">
-      <Filter>symmetric</Filter>
-    </ClCompile>
     <ClCompile Include="private\GalosField.cpp">
       <Filter>common</Filter>
-    </ClCompile>
-    <ClCompile Include="private\RC4.cpp">
-      <Filter>symmetric</Filter>
-    </ClCompile>
-    <ClCompile Include="private\RC5.cpp">
-      <Filter>symmetric</Filter>
     </ClCompile>
     <ClCompile Include="private\Endian.cpp">
       <Filter>common</Filter>
     </ClCompile>
-    <ClCompile Include="private\BlockCrypt.cpp" />
-    <ClCompile Include="private\ARIA.cpp">
-      <Filter>symmetric</Filter>
+    <ClCompile Include="private\AES.cpp">
+      <Filter>symmetric\BlockCrypt\BlockCryptor</Filter>
     </ClCompile>
-    <ClCompile Include="private\SEED.cpp">
-      <Filter>symmetric</Filter>
+    <ClCompile Include="private\ARIA.cpp">
+      <Filter>symmetric\BlockCrypt\BlockCryptor</Filter>
+    </ClCompile>
+    <ClCompile Include="private\DES.cpp">
+      <Filter>symmetric\BlockCrypt\BlockCryptor</Filter>
     </ClCompile>
     <ClCompile Include="private\HIGHT.cpp">
-      <Filter>symmetric</Filter>
+      <Filter>symmetric\BlockCrypt\BlockCryptor</Filter>
+    </ClCompile>
+    <ClCompile Include="private\IDEA.cpp">
+      <Filter>symmetric\BlockCrypt\BlockCryptor</Filter>
     </ClCompile>
     <ClCompile Include="private\LEA.cpp">
-      <Filter>symmetric</Filter>
+      <Filter>symmetric\BlockCrypt\BlockCryptor</Filter>
+    </ClCompile>
+    <ClCompile Include="private\RC5.cpp">
+      <Filter>symmetric\BlockCrypt\BlockCryptor</Filter>
+    </ClCompile>
+    <ClCompile Include="private\SEED.cpp">
+      <Filter>symmetric\BlockCrypt\BlockCryptor</Filter>
+    </ClCompile>
+    <ClCompile Include="private\BlockCrypt.cpp">
+      <Filter>symmetric\BlockCrypt</Filter>
+    </ClCompile>
+    <ClCompile Include="private\RC4.cpp">
+      <Filter>symmetric\StreamCrypt</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="private\GalosField.h" />
     <ClInclude Include="private\Endian.h">
       <Filter>common</Filter>
-    </ClInclude>
-    <ClInclude Include="private\AES.h">
-      <Filter>symmetric</Filter>
-    </ClInclude>
-    <ClInclude Include="private\DES.h">
-      <Filter>symmetric</Filter>
-    </ClInclude>
-    <ClInclude Include="private\IDEA.h">
-      <Filter>symmetric</Filter>
-    </ClInclude>
-    <ClInclude Include="private\RC4.h">
-      <Filter>symmetric</Filter>
-    </ClInclude>
-    <ClInclude Include="private\RC5.h">
-      <Filter>symmetric</Filter>
     </ClInclude>
     <ClInclude Include="private\SizeType.h">
       <Filter>common</Filter>
     </ClInclude>
-    <ClInclude Include="private\IBlockCryptor.h">
-      <Filter>Interface</Filter>
+    <ClInclude Include="private\AES.h">
+      <Filter>symmetric\BlockCrypt\BlockCryptor</Filter>
     </ClInclude>
-    <ClInclude Include="private\BlockCrypt.h" />
     <ClInclude Include="private\ARIA.h">
-      <Filter>symmetric</Filter>
+      <Filter>symmetric\BlockCrypt\BlockCryptor</Filter>
     </ClInclude>
-    <ClInclude Include="private\SEED.h">
-      <Filter>symmetric</Filter>
+    <ClInclude Include="private\DES.h">
+      <Filter>symmetric\BlockCrypt\BlockCryptor</Filter>
     </ClInclude>
     <ClInclude Include="private\HIGHT.h">
-      <Filter>symmetric</Filter>
+      <Filter>symmetric\BlockCrypt\BlockCryptor</Filter>
+    </ClInclude>
+    <ClInclude Include="private\IDEA.h">
+      <Filter>symmetric\BlockCrypt\BlockCryptor</Filter>
     </ClInclude>
     <ClInclude Include="private\LEA.h">
-      <Filter>symmetric</Filter>
+      <Filter>symmetric\BlockCrypt\BlockCryptor</Filter>
+    </ClInclude>
+    <ClInclude Include="private\RC5.h">
+      <Filter>symmetric\BlockCrypt\BlockCryptor</Filter>
+    </ClInclude>
+    <ClInclude Include="private\SEED.h">
+      <Filter>symmetric\BlockCrypt\BlockCryptor</Filter>
+    </ClInclude>
+    <ClInclude Include="private\IBlockCryptor.h">
+      <Filter>symmetric\BlockCrypt</Filter>
+    </ClInclude>
+    <ClInclude Include="private\RC4.h">
+      <Filter>symmetric\StreamCrypt</Filter>
+    </ClInclude>
+    <ClInclude Include="private\BlockCrypt.h">
+      <Filter>symmetric\BlockCrypt</Filter>
+    </ClInclude>
+    <ClInclude Include="private\GalosField.h">
+      <Filter>common</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
