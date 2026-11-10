@@ -135,6 +135,7 @@
     <ClCompile Include="private\IDEA.cpp" />
     <ClCompile Include="private\RC4.cpp" />
     <ClCompile Include="private\RC5.cpp" />
+    <ClCompile Include="private\SEED.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="private\AES.h" />
@@ -147,6 +148,7 @@
     <ClInclude Include="private\IDEA.h" />
     <ClInclude Include="private\RC4.h" />
     <ClInclude Include="private\RC5.h" />
+    <ClInclude Include="private\SEED.h" />
     <ClInclude Include="private\SizeType.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

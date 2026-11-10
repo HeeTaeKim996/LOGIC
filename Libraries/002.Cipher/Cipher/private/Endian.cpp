@@ -85,3 +85,21 @@ void BigEndian::storeFrom64(uint8* p, uint64 v)
 }
 
 
+
+
+uint32 BigEndian::loadTo32(const uint8* p)
+{
+	return (uint32)p[3]
+		| (uint32)p[2] << 8
+		| (uint32)p[1] << 16
+		| (uint32)p[0] << 24;
+}
+
+
+void BigEndian::storeFrom32(uint8* p, uint32 v)
+{
+	p[3] = (uint8)v;
+	p[2] = (uint8)(v >> 8);
+	p[1] = (uint8)(v >> 16);
+	p[0] = (uint8)(v >> 24);
+}
