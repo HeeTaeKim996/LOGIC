@@ -84,6 +84,10 @@ string BlockCrypt::encrypt(string p)
 	{
 		return encrypt_ECB_CTS(p, blockSize);
 	}
+	else if (blockMode == BlockMode::CBC_CTS)
+	{
+		return encrypt_CBC_CTS(p, blockSize);
+	}
 
 
 
@@ -122,7 +126,10 @@ string BlockCrypt::decrypt(string c)
 	{
 		return decrypt_ECB_CTS(c, blockSize);
 	}
-
+	else if (blockMode == BlockMode::CBC_CTS)
+	{
+		return decrypt_CBC_CTS(c, blockSize);
+	}
 
 	return c;
 }
@@ -210,11 +217,11 @@ string BlockCrypt::encrypt_CBC(string& p, int blockSize)
 {
 	pad(p, blockSize);
 
-	uint8* data = reinterpret_cast<uint8*>(&p[0]);
 	const size_t blockCount = p.size() / blockSize;
 
 	Vector<uint8> iv(blockSize);
-	
+
+	uint8* data = reinterpret_cast<uint8*>(&p[0]);
 	memcpy(&iv[0], &IV[0], blockSize);
 
 	for (size_t i = 0; i < blockCount; ++i)
@@ -237,14 +244,13 @@ string BlockCrypt::decrypt_CBC(string& c, int blockSize)
 		throw std::runtime_error("bad Length");
 	}
 
-
-	uint8* data = reinterpret_cast<uint8*>(&c[0]);
 	const size_t blockCount = c.size() / blockSize;
 
 	Vector<uint8> iv(blockSize);
 
 	memcpy(&iv[0], &IV[0], blockSize);
 
+	uint8* data = reinterpret_cast<uint8*>(&c[0]);
 	for (size_t i = 0; i < blockCount; ++i)
 	{
 		uint8* block = data + i * blockSize;
@@ -570,11 +576,142 @@ string BlockCrypt::decrypt_ECB_CTS(string& c, int blockSize)
 
 	Vector<uint8> realLast(blockSize);
 	memcpy(&realLast[0], tail, res);
-	memcpy(&realLast[res], lastFull + res, 
-		blockSize - res);
+	memcpy(&realLast[res], &lastFull[res], blockSize - res);
 	blockCryptor->decrypt(&realLast[0]);
 
 	memcpy(tail, lastFull, res);
+	memcpy(lastFull, &realLast[0], blockSize);
+
+	return c;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+string BlockCrypt::encrypt_CBC_CTS(string& p, int blockSize)
+{
+	const size_t blockCount = p.size() / blockSize;
+
+	if (blockCount == 0)
+	{
+		throw std::runtime_error(
+"CTS는 최소 1개의 FULL 블록이 필요라 에러(실제 하드웨어에서도 에러 낸다 함");
+	}
+
+	Vector<uint8> iv(blockSize);
+
+	memcpy(&iv[0], &IV[0], blockSize);
+
+	uint8* data = reinterpret_cast<uint8*>(&p[0]);
+	for (size_t i = 0; i < blockCount; ++i)
+	{
+		uint8* block = data + i * blockSize;
+
+		XOR(block, &iv[0], blockSize);
+		blockCryptor->encrypt(block);
+
+		memcpy(&iv[0], block, blockSize);
+	}
+
+
+	int res = p.size() - blockCount * blockSize;
+	if (res == 0) return p;
+
+	uint8* lastFull = data + (blockCount - 1) * blockSize;
+	uint8* tail = lastFull + blockSize;
+
+	XOR(tail, lastFull, res);
+
+	Vector<uint8> combined(blockSize);
+	memcpy(&combined[0], tail, res);
+	memcpy(&combined[res], &lastFull[res], blockSize - res);
+
+	blockCryptor->encrypt(&combined[0]);
+
+	memcpy(tail, lastFull, res);
+	memcpy(lastFull, &combined[0], blockSize);
+
+	return p;
+}
+
+string BlockCrypt::decrypt_CBC_CTS(string& c, int blockSize)
+{
+	const size_t blockCount = c.size() / blockSize;
+
+	if (blockCount == 0)
+	{
+		throw std::runtime_error(
+			"CTS는 최소 1개의 FULL 블록이 필요라 에러(실제 하드웨어에서도 에러 낸다 함");
+	}
+
+	Vector<uint8> iv(blockSize);
+	memcpy(&iv[0], &IV[0], blockSize);
+
+	uint8* data = reinterpret_cast<uint8*>(&c[0]);
+	for (size_t i = 0; i < blockCount - 1; ++i)
+	{
+		uint8* block = data + i * blockSize;
+
+		Vector<uint8> temp(blockSize);
+		memcpy(&temp[0], block, blockSize);
+
+		blockCryptor->decrypt(block);
+		XOR(block, &iv[0], blockSize);
+
+		memcpy(&iv[0], & temp[0], blockSize);
+	}
+
+	{ 
+		// C[i-2] 값(현 iv)을 XOR 에 사용하기 위한 기록이 필요하며, 
+		// encrypt 의 combined 는 C[i-2] 로 XOR 처리하지 않기에,
+		// 따로 처리
+		uint8* block = data + (blockCount - 1) * blockSize;
+
+		blockCryptor->decrypt(block);
+	}
+
+	int res = c.size() - blockCount * blockSize;
+	if (res == 0) return c;
+
+
+	uint8* lastFull = data + (blockCount - 1) * blockSize;
+	uint8* tail = lastFull + blockSize;
+	
+
+	Vector<uint8> realLast(blockSize);
+	memcpy(&realLast[0], tail, res);
+	memcpy(&realLast[res], &lastFull[res], blockSize - res);
+
+	XOR(&lastFull[0], tail, res);
+
+	blockCryptor->decrypt(&realLast[0]);
+	XOR(&realLast[0], &iv[0], blockSize); // C[i-2] 와 XOR
+
+	memcpy(tail, &lastFull[0], res);
 	memcpy(lastFull, &realLast[0], blockSize);
 
 	return c;
@@ -685,6 +822,9 @@ void BlockCrypt::XOR(uint8* dst, uint8* x, int n)
 
 
 #include "AES.h"
+#include "IDEA.h"
+#include "LEA.h"
+#include <functional>
 void BlockCrypt::test()
 {
 	BlockCrypt blockCrypt;
@@ -692,12 +832,24 @@ void BlockCrypt::test()
 	uint8 key[32];
 	for (int i = 0; i < 32; ++i) key[i] = (uint8)i;
 
-	blockCrypt.initCryptor(TrackNew<AES>(key, 32));
 
 	string pt = "다만 한 가지 짚을 점이 있습니다. 성경 본문은 번역본마다 저작권이 다릅니다. 현재 한국에서 흔히 쓰는 개역개정,"
 		"새번역, 공동번역 등은 저작권이 있어서 제가 본문을 그대로 옮겨 드리기는 어렵습니다. 대신 합법적으로 쓸 수 있는 방법이 있습니다.";
-	string ct = blockCrypt.encrypt(pt);
-	printf("%s\n", ct.c_str());
-	string pt2 = blockCrypt.decrypt(ct);
-	printf("%s\n", pt2.c_str());
+
+	string pt2 = "5추가. 다만 한 가지 짚을 점이 있습니다. 성경 본문은 번역본마다 저작권이 다릅니다. 현재 한국에서 흔히 쓰는 개역개정,"
+		"새번역, 공동번역 등은 저작권이 있어서 제가 본문을 그대로 옮겨 드리기는 어렵습니다. 대신 합법적으로 쓸 수 있는 방법이 있습니다.";
+
+	auto test = [&](IBlockCryptor* blockCryptor, string p) -> void
+		{
+			blockCrypt.initCryptor(blockCryptor);
+
+			string c = blockCrypt.encrypt(p);
+			printf("%s\n\n", c.c_str());
+
+			string p2 = blockCrypt.decrypt(c);
+			printf("%s\n\n", p2.c_str());
+		};
+
+	test(TrackNew<AES>(key, 32), pt);
+	test(TrackNew<LEA>(key, 128), pt2);
 }

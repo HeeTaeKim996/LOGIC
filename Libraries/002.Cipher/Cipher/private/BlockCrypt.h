@@ -54,6 +54,9 @@ private:
 	string encrypt_ECB_CTS(string& p, int blockSize);
 	string decrypt_ECB_CTS(string& c, int blockSize);
 
+	string encrypt_CBC_CTS(string& p, int blockSize);
+	string decrypt_CBC_CTS(string& p, int blockSize);
+
 	static void pad(string& s, size_t blockSize);
 	static void unpad(string& s, size_t blockSize);
 	
@@ -61,7 +64,7 @@ private:
 
 private:
 	IBlockCryptor* blockCryptor = nullptr;
-	BlockMode blockMode = BlockMode::ECB_CTS;
+	BlockMode blockMode = BlockMode::CBC_CTS;
 
 	// ※ 초기값 ( 블록이 128 비트 이하로 가정 )
 	uint8 IV[16] = { 
