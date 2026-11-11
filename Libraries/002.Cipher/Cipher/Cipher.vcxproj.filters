@@ -16,6 +16,9 @@
     <Filter Include="symmetric\StreamCrypt">
       <UniqueIdentifier>{c9bfaab6-6e1a-4d68-8fea-2c7f8b98bd0d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="999.Libs">
+      <UniqueIdentifier>{e62bf8bf-b84a-4deb-9e35-acc09d144d26}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -98,6 +101,9 @@
     </ClInclude>
     <ClInclude Include="private\GalosField.h">
       <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="private\libs\001.STLContainer\public\use\001.STLContainer_Setting.h">
+      <Filter>999.Libs</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

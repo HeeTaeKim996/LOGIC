@@ -102,7 +102,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)public;$(ProjectDir)private\libs\000.MemoryAddresser\public;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)public;$(ProjectDir)private\libs\000.MemoryAddresser\public;$(ProjectDir)private\libs\001.STLContainer\public;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -117,7 +118,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)public;$(ProjectDir)private\libs\000.MemoryAddresser\public;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)public;$(ProjectDir)private\libs\000.MemoryAddresser\public;$(ProjectDir)private\libs\001.STLContainer\public;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -150,6 +152,7 @@
     <ClInclude Include="private\GalosField.h" />
     <ClInclude Include="private\IDEA.h" />
     <ClInclude Include="private\LEA.h" />
+    <ClInclude Include="private\libs\001.STLContainer\public\use\001.STLContainer_Setting.h" />
     <ClInclude Include="private\RC4.h" />
     <ClInclude Include="private\RC5.h" />
     <ClInclude Include="private\SEED.h" />

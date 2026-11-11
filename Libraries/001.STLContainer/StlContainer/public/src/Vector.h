@@ -31,7 +31,7 @@ private:
 	T* _arr;
 	sizeType _size;
 	sizeType _capacity;
-	
+
 
 
 public:
@@ -51,31 +51,31 @@ public:
 	sizeType capacity() const noexcept { return _capacity; }
 	bool empty() const noexcept { return _size == 0; }
 
-	T* data()				{ return _arr; }
-	const T* data() const	{ return _arr; }
+	T* data() { return _arr; }
+	const T* data() const { return _arr; }
 
-	iterator begin()				{ return iterator(_arr); }
-	const_iterator begin() const	{ return const_iterator(_arr); }
+	iterator begin() { return iterator(_arr); }
+	const_iterator begin() const { return const_iterator(_arr); }
 
-	iterator end()				{ return iterator(_arr + _size); }
-	const_iterator end() const	{ return const_iterator(_arr + _size); }
+	iterator end() { return iterator(_arr + _size); }
+	const_iterator end() const { return const_iterator(_arr + _size); }
 
-	reverse_iterator rbegin()				{ return reverse_iterator(_arr + _size - 1); }
-	const_reverse_iterator rbegin() const	{ return const_reverse_iterator(_arr + _size - 1); }
+	reverse_iterator rbegin() { return reverse_iterator(_arr + _size - 1); }
+	const_reverse_iterator rbegin() const { return const_reverse_iterator(_arr + _size - 1); }
 
-	reverse_iterator rend()					{ return reverse_iterator(_arr - 1); }
-	const_reverse_iterator rend() const		{ return const_reverse_iterator(_arr - 1); }
+	reverse_iterator rend() { return reverse_iterator(_arr - 1); }
+	const_reverse_iterator rend() const { return const_reverse_iterator(_arr - 1); }
 
-	T& front()				{ return *_arr; }
-	const T& front() const	{ return *_arr; }
+	T& front() { return *_arr; }
+	const T& front() const { return *_arr; }
 
-	T& back()				{ return *(_arr + _size - 1); }
-	const T& back() const	{ return *(_arr + _size - 1); }
+	T& back() { return *(_arr + _size - 1); }
+	const T& back() const { return *(_arr + _size - 1); }
 
-	T& at(sizeType index)				{ return _arr[index]; }
-	const T& at(sizeType index) const	{ return _arr[index]; }
+	T& at(sizeType index) { return _arr[index]; }
+	const T& at(sizeType index) const { return _arr[index]; }
 
-	T& operator[](sizeType index)				{ return _arr[index]; }
+	T& operator[](sizeType index) { return _arr[index]; }
 	const T& operator[](sizeType index) const { return _arr[index]; }
 
 
@@ -94,6 +94,12 @@ public:
 
 	void insert(const_iterator itPos, const T& value);
 	void insert(const_iterator itPos, T* begin, T* end);
+
+	inline void insert(const_iterator itPos, iterator begin, iterator end)
+	{ insert(itPos, begin.get(), end.get());}
+	inline void insert(const_iterator itPos, const_iterator begin, const_iterator end)
+	{ insert(itPos, begin.get(), end.get());}
+
 	template <typename... Args>
 	T& emplace(const_iterator itPos, Args&&... args);
 
@@ -106,7 +112,7 @@ public:
 	void resize(sizeType size, const T& value);
 
 	void swap(Vector& other);
-	
+
 	void clear();
 
 	void shrink_to_fit();
@@ -161,9 +167,9 @@ template<typename FromIt>
 inline Vector<T>::Vector(FromIt begin, FromIt end)
 	: _arr(nullptr), _size(0), _capacity(0)
 {
-	
 
-	for(; begin != end; ++begin)
+
+	for (; begin != end; ++begin)
 	{
 		push_back(*begin);
 	}
@@ -191,16 +197,16 @@ inline Vector<T>::~Vector()
 template<typename T>
 inline  Vector<T>& Vector<T>::operator=(const Vector<T>& other)
 {
-	T* dst =  m::allocate<T>(other._capacity);
+	T* dst = m::allocate<T>(other._capacity);
 	m::copyConstructRange<T>(dst, other._arr, other._arr + other._size);
 
 	m::destructRange<T>(_arr, _arr + _size);
 	m::deallocate<T>(_arr);
 
 	_arr = dst;
-	_size		= other._size;
-	_capacity	= other._capacity;
-	
+	_size = other._size;
+	_capacity = other._capacity;
+
 
 	return *this;
 }
@@ -210,15 +216,15 @@ inline  Vector<T>& Vector<T>::operator=(Vector<T>&& other)
 {
 	m::destructRange<T>(_arr, _arr + _size);
 	m::deallocate<T>(_arr);
-	
-	_size		= other._size;
-	_capacity	= other._capacity;
-	_arr		= other._arr;
+
+	_size = other._size;
+	_capacity = other._capacity;
+	_arr = other._arr;
 
 	other._size = 0;
 	other._capacity = 0;
 	other._arr = nullptr;
-	
+
 	return *this;
 }
 
@@ -423,15 +429,38 @@ inline void Vector<T>::insert(const_iterator itPos, T* srcBegin, T* srcEnd)
 	}
 	else
 	{
-		// 삽입으로 인해 기존 end 밖으로 밀려나는 애들을, T 생성과 함께 복사(?)
-		m::moveConstructBackward<T>(_arr + newSize - 1,
-			_arr + _size - 1, _arr + _size - insertingSize - 1);
+		sizeType tailSize = sizeType(_arr + _size - pos);
+		// tailSize : 기존 원소 중 뒤로 밀려나는 pos ~ (_arr + _size - 1) 인 원소들의 수 
 
-		// 삽입으로 인해 뒤로 밀려나지만, end 밖으로 밀려나지는 않는 애들을 복사
-		m::moveBackward<T>(_arr + _size - 1, _arr + _size - insertingSize - 1, pos - 1);
+		if (tailSize >= insertingSize)
+		{
+			// 삽입으로 인해 기존 end 밖으로 밀려나는 tail 중 
+			// 일부인 뒤쪽 tail들(insertingSize)을, T 생성자로 처리
+			m::moveConstructBackward<T>(_arr + newSize - 1,
+				_arr + _size - 1, _arr + _size - insertingSize - 1);
 
-		// 새로 삽입되는 애들을 복사
-		m::copyRange<T>(pos, srcBegin, srcEnd);
+			// 삽입으로 인해 뒤로 밀려나지만, end 밖으로 밀려나지는 않는 
+			// 앞쪽 tail들(tailSize - insertingSize)은 복사
+			m::moveBackward<T>(_arr + _size - 1, _arr + _size - insertingSize - 1, pos - 1);
+
+			// 새로 삽입되는 애들을 복사
+			m::copyRange<T>(pos, srcBegin, srcEnd);
+		}
+		else
+		{
+			// insertingSize 가 tail 보다 크니, 모든 tail 들이 밖으로 밀려나므로,
+			// 모든 tail들을 생성자로 밖에 생성
+			m::moveConstructBackward<T>(_arr + newSize - 1, _arr + _size - 1, pos - 1);
+
+			// pos 부터 기존 _arr + _size - 1 까지의 기존 원소 자리에
+			// 새로 삽입되는 애들을 복사
+			m::copyRange<T>(pos, srcBegin, srcBegin + tailSize);
+
+			// insertingSize 가 tail 보다 크니, 새로 삽입되는 애들 중 일부 는 생성자로 밖에 생성
+			m::copyConstructRange<T>(_arr + _size, srcBegin + tailSize, srcEnd);
+		}
+
+
 	}
 
 	_size = newSize;
@@ -453,7 +482,7 @@ inline T& Vector<T>::emplace(const_iterator itPos, Args && ...args)
 		{
 			m::construct<T>(_arr + _size, static_cast<T&&>(*(_arr + _size - 1)));
 			m::moveBackward<T>(_arr + _size - 1, _arr + _size - 2, pos - 1);
-			
+
 			m::destruct<T>(pos);
 			m::construct<T>(pos, Std::forward<Args>(args)...);
 		}
@@ -519,7 +548,7 @@ inline void Vector<T>::erase(const T* itBegin, const T* itEnd)
 
 	m::destructRange<T>(begin, end);
 	m::moveRange<T>(begin, end, _arr + _size);
-	
+
 	_size -= (sizeType)(itEnd - itBegin);
 }
 
@@ -758,12 +787,13 @@ public:
 	template<
 		typename U,
 		typename = std::enable_if_t<
-		std::is_convertible_v<U*, T*>	
+		std::is_convertible_v<U*, T*>
 		>
 	>
 	Vector_iterator(const Vector_iterator<U>& other)
 		: _ptr(other._ptr) // 여기(const 타입)서 other._ptr(원형 타입의 _ptr)에 접근할 수 있는 이유는, 위에 선언한 firend class Vector_iterator 부분 때문.
-	{}
+	{
+	}
 
 public:
 	T& operator * () const { return *_ptr; }
@@ -772,10 +802,10 @@ public:
 	inline Vector_iterator operator ++(int) // 후위 연산자
 	{
 		Vector_iterator temp = *this;
-		++_ptr; 
+		++_ptr;
 		return temp;
 	}
-	
+
 	Vector_iterator& operator -- () { --_ptr; return *this; }
 	inline Vector_iterator operator --(int)
 	{
@@ -785,13 +815,13 @@ public:
 	}
 
 
-	Vector_iterator operator + (sizeType n) const { return Vector_iterator(_ptr + n);}
+	Vector_iterator operator + (sizeType n) const { return Vector_iterator(_ptr + n); }
 	Vector_iterator operator - (sizeType n) const { return Vector_iterator(_ptr - n); }
 
 	template<typename U>
 	bool operator == (const Vector_iterator<U>& other) const { return _ptr == other._ptr; }
 	template<typename U>
-	bool operator != (const Vector_iterator<U>& other) const{ return _ptr != other._ptr; }
+	bool operator != (const Vector_iterator<U>& other) const { return _ptr != other._ptr; }
 
 	T* get() const { return _ptr; }
 
@@ -843,7 +873,7 @@ public:
 
 	Vector_reverse_iterator operator + (sizeType n) const { return Vector_reverse_iterator(_ptr - n); }
 	Vector_reverse_iterator operator - (sizeType n) const { return Vector_reverse_iterator(_ptr + n); }
-	
+
 	template<typename U>
 	bool operator == (const Vector_reverse_iterator<U>& other) const { return _ptr == other._ptr; }
 	template<typename U>

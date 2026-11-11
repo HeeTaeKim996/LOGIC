@@ -24,11 +24,11 @@ int main()
 	//RC4::test();
 	//RC5::test();
 
-	//BlockCrypt::test();
+	BlockCrypt::test();
 	
 	//ARIA::test();
 	//SEED::test();
 	//Hight::test();
-	LEA::test();
+	//LEA::test();
 }
 

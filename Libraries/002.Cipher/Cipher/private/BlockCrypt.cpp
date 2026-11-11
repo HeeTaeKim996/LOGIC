@@ -1,6 +1,7 @@
 #include "BlockCrypt.h"
 #include <stdexcept>
 #include "src/MemCounter.h"
+#include <cassert>
 
 BlockCrypt::~BlockCrypt()
 {
@@ -12,34 +13,79 @@ BlockCrypt::~BlockCrypt()
 
 void BlockCrypt::initCryptor(IBlockCryptor* inCryptor)
 {
+	if (blockCryptor == inCryptor) return;
+
 	if (blockCryptor != nullptr)
 	{
 		TrackDelete(blockCryptor);
+		resetMembers();
 	}
-	if (blockCryptor == inCryptor) return;
-
+	
 	blockCryptor = inCryptor;
 }
+
+
+
+void BlockCrypt::resetMembers()
+{
+	keyStream.clear();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 string BlockCrypt::encrypt(string p)
 {
 	if (blockCryptor == nullptr) return p;
 
 	const int blockSize = blockCryptor->getBlockSize();
-	pad(p, blockSize);
 
-	uint8* data = reinterpret_cast<uint8*>(&p[0]);
-	const size_t blockCount = p.size() / blockSize;
-
+	assert(blockSize >= 0 &&  blockSize <= 16); 
+	// IV 를 블록이 최대 128 로 산정하여 처리함
+	
 	if (blockMode == BlockMode::ECB)
 	{
-		for (size_t i = 0; i < blockCount; ++i)
-		{
-			blockCryptor->encrypt(data + i * blockSize);
-		}
+		return encrypt_ECB(p, blockSize);
+	}
+	else if (blockMode == BlockMode::CBC)
+	{
+		return encrypt_CBC(p, blockSize);
+	}
+	else if (blockMode == BlockMode::CFB)
+	{
+		return encrypt_CFB(p, blockSize);
+	}
+	else if (blockMode == BlockMode::OFB)
+	{
+		return encrypt_OFB(p, blockSize);
+	}
+	else if (blockMode == BlockMode::CTR)
+	{
+		return encrypt_CTR(p, blockSize);
+	}
+	else if (blockMode == BlockMode::ECB_CTS)
+	{
+		return encrypt_ECB_CTS(p, blockSize);
 	}
 
-	// TODO : ECB 외에 모드 처리 추가
+
 
 	return p;
 }
@@ -49,6 +95,86 @@ string BlockCrypt::decrypt(string c)
 	if (blockCryptor == nullptr) return c;
 
 	const int blockSize = blockCryptor->getBlockSize();
+	assert(blockSize >= 0 && blockSize <= 16);
+
+
+	if (blockMode == BlockMode::ECB)
+	{
+		return decrypt_ECB(c, blockSize);
+	}
+	else if (blockMode == BlockMode::CBC)
+	{
+		return decrypt_CBC(c, blockSize);
+	}
+	else if (blockMode == BlockMode::CFB)
+	{
+		return decrypt_CFB(c, blockSize);
+	}
+	else if (blockMode == BlockMode::OFB)
+	{
+		return decrypt_OFB(c, blockSize);
+	}
+	else if (blockMode == BlockMode::CTR)
+	{
+		return decrypt_CTR(c, blockSize);
+	}
+	else if (blockMode == BlockMode::ECB_CTS)
+	{
+		return decrypt_ECB_CTS(c, blockSize);
+	}
+
+
+	return c;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+string BlockCrypt::encrypt_ECB(string& p, int blockSize)
+{
+	pad(p, blockSize);
+
+	const size_t blockCount = p.size() / blockSize;
+
+	uint8* data = reinterpret_cast<uint8*>(&p[0]);
+	for (size_t i = 0; i < blockCount; ++i)
+	{
+		blockCryptor->encrypt(data + i * blockSize);
+	}
+
+	return p;
+}
+
+string BlockCrypt::decrypt_ECB(string& c, int blockSize)
+{
 	if (c.size() % blockSize != 0)
 	{
 		throw std::runtime_error("bad Length");
@@ -57,20 +183,435 @@ string BlockCrypt::decrypt(string c)
 	uint8* data = reinterpret_cast<uint8*>(&c[0]);
 	const size_t blockCount = c.size() / blockSize;
 
-	if (blockMode == BlockMode::ECB)
+	for (size_t i = 0; i < blockCount; ++i)
 	{
-		for (size_t i = 0; i < blockCount; ++i)
-		{
-			blockCryptor->decrypt(data + i * blockSize);
-		}
+		blockCryptor->decrypt(data + i * blockSize);
 	}
-	
-	// TODO : ECB 외에 모드 처리 추가
-
 
 	unpad(c, blockSize);
 	return c;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+string BlockCrypt::encrypt_CBC(string& p, int blockSize)
+{
+	pad(p, blockSize);
+
+	uint8* data = reinterpret_cast<uint8*>(&p[0]);
+	const size_t blockCount = p.size() / blockSize;
+
+	Vector<uint8> iv(blockSize);
+	
+	memcpy(&iv[0], &IV[0], blockSize);
+
+	for (size_t i = 0; i < blockCount; ++i)
+	{
+		uint8* block = data + i * blockSize;
+
+		XOR(block, &iv[0], blockSize);
+		blockCryptor->encrypt(block);
+
+		memcpy(&iv[0], block, blockSize);
+	}
+
+	return p;
+}
+
+string BlockCrypt::decrypt_CBC(string& c, int blockSize)
+{
+	if (c.size() % blockSize != 0)
+	{
+		throw std::runtime_error("bad Length");
+	}
+
+
+	uint8* data = reinterpret_cast<uint8*>(&c[0]);
+	const size_t blockCount = c.size() / blockSize;
+
+	Vector<uint8> iv(blockSize);
+
+	memcpy(&iv[0], &IV[0], blockSize);
+
+	for (size_t i = 0; i < blockCount; ++i)
+	{
+		uint8* block = data + i * blockSize;
+
+		Vector<uint8> temp(blockSize);
+		memcpy(&temp[0], block, blockSize);
+
+		blockCryptor->decrypt(block);
+		XOR(block, &iv[0], blockSize);
+
+		memcpy(&iv[0], &temp[0], blockSize);
+	}
+
+	unpad(c, blockSize);
+	return c;
+}
+
+
+
+
+
+
+
+
+
+
+string BlockCrypt::encrypt_CFB(string& p, int blockSize)
+{
+	Vector<uint8> iv(blockSize);
+	memcpy(&iv[0], &IV[0], blockSize);
+
+	uint8* data = reinterpret_cast<uint8*>(&p[0]);
+	size_t blockCount = p.size() / blockSize;
+	size_t res = p.size() - blockSize * blockCount;
+
+	for (size_t i = 0; i < blockCount; ++i)
+	{
+		uint8* block = data + i * blockSize;
+
+		blockCryptor->encrypt(&iv[0]);
+		XOR(block, &iv[0], blockSize);
+
+		memcpy(&iv[0], block, blockSize);
+	}
+
+	if (res)
+	{
+		uint8* resBytes = data + blockCount * blockSize;
+
+		blockCryptor->encrypt(&iv[0]);
+		XOR(resBytes, &iv[0], res);
+	}
+
+	return p;
+}
+
+string BlockCrypt::decrypt_CFB(string& c, int blockSize)
+{
+	Vector<uint8> iv(blockSize);
+	memcpy(&iv[0], &IV[0], blockSize);
+
+	uint8* data = reinterpret_cast<uint8*>(&c[0]);
+	size_t blockCount = c.size() / blockSize;
+	size_t res = c.size() - blockSize * blockCount;
+
+	for (size_t i = 0; i < blockCount; ++i)
+	{
+		uint8* block = data + i * blockSize;
+
+		Vector<uint8> temp(blockSize);
+		memcpy(&temp[0], block, blockSize);
+
+		blockCryptor->encrypt(&iv[0]);
+		XOR(block, &iv[0], blockSize);
+
+		memcpy(&iv[0], &temp[0], blockSize);
+	}
+
+	if (res)
+	{
+		uint8* resBytes = data + blockCount * blockSize;
+
+		blockCryptor->encrypt(&iv[0]);
+		XOR(resBytes, &iv[0], res);
+	}
+
+	return c;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+string BlockCrypt::encrypt_OFB(string& p, int blockSize)
+{
+	size_t needSize 
+		= (p.size() + blockSize - 1) / blockSize * blockSize;
+	// EX. size = 16. blockSize = 8 -> need = (16+8-1) / 16 * 16
+	//			= 23 / 16 * 16 = 16
+	//	   size = 17 . blockSize = 8 -> need = (17+8-1) / 16 * 16
+	//			= 24 / 16 * 16 = 32
+
+	if (keyStream.size() < needSize)
+	{
+		addStreamKey_OFB(needSize, blockSize);
+	}
+
+
+	uint8* data = reinterpret_cast<uint8*>(&p[0]);
+	XOR(data, &keyStream[0], p.size());
+
+	return p;
+}
+
+string BlockCrypt::decrypt_OFB(string& c, int blockSize)
+{
+	size_t needSize
+		= (c.size() + blockSize - 1) / blockSize * blockSize;
+
+	if (keyStream.size() < needSize)
+	{
+		addStreamKey_OFB(needSize, blockSize);
+	}
+
+	uint8* data = reinterpret_cast<uint8*>(&c[0]);
+	XOR(data, &keyStream[0], c.size());
+	
+	return c;
+}
+
+void BlockCrypt::addStreamKey_OFB(size_t needSize, int blockSize)
+{
+	keyStream.reserve(needSize);
+
+	Vector<uint8> temp(blockSize);
+	if (keyStream.empty() == false)
+	{
+		memcpy(&temp[0], &keyStream[keyStream.size() - blockSize],
+			blockSize);
+	}
+	else
+	{
+		memcpy(&temp[0], &IV[0], blockSize);
+	}
+
+	while (keyStream.size() < needSize)
+	{
+		blockCryptor->encrypt(&temp[0]);
+
+		keyStream.insert(keyStream.end(),
+			temp.begin(), temp.end());
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+string BlockCrypt::encrypt_CTR(string& p, int blockSize)
+{
+	size_t needBlock
+		= (p.size() + blockSize - 1) / blockSize;
+	size_t doneBlock = keyStream.size() / blockSize;
+
+	if (doneBlock < needBlock)
+	{
+		addStreamKey_CTR(needBlock, doneBlock, blockSize);
+	}
+
+	uint8* data = reinterpret_cast<uint8*>(&p[0]);
+	XOR(data, &keyStream[0], p.size());
+
+	return p;
+}
+
+string BlockCrypt::decrypt_CTR(string& c, int blockSize)
+{
+	size_t needBlock
+		= (c.size() + blockSize - 1) / blockSize;
+	size_t doneBlock = keyStream.size() / blockSize;
+
+	if (doneBlock < needBlock)
+	{
+		addStreamKey_CTR(needBlock, doneBlock, blockSize);
+	}
+
+	uint8* data = reinterpret_cast<uint8*>(&c[0]);
+	XOR(data, &keyStream[0], c.size());
+
+	return c;
+}
+
+void BlockCrypt::addStreamKey_CTR(size_t needBlock, 
+	size_t doneBlock, int blockSize)
+{
+	for (size_t i = doneBlock; i < needBlock; ++i)
+	{
+		Vector<uint8> ctr(blockSize);
+		memcpy(&ctr[0], &IV[0], blockSize); 
+		// IV 를 CTR 초기값으로 봄
+
+		addCounter_CTR(&ctr[0], blockSize, i);
+
+		blockCryptor->encrypt(&ctr[0]);
+		keyStream.insert(keyStream.end(),ctr.begin(), ctr.end());
+	}
+}
+
+
+
+
+void BlockCrypt::addCounter_CTR(uint8* block, int blockSize, size_t add)
+{
+	// block 을 빅엔디안으로 보고 더하기
+	for (int i = blockSize - 1; i >= 0 && add > 0; --i)
+	{
+		uint64 sum = (uint64)block[i] + (add & 0xFF);
+		block[i] = (uint8)sum;
+		
+		add = (add >> 8) + (sum >> 8); // 더하기의 올림을 반영
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+string BlockCrypt::encrypt_ECB_CTS(string& p, int blockSize)
+{
+	size_t blockCount = p.size() / blockSize;
+
+	if (blockCount == 0)
+	{
+		throw std::runtime_error(
+"CTS는 최소 1개의 FULL 블록이 필요라 에러(실제 하드웨어에서도 에러 낸다 함");
+	}
+
+	uint8* data = reinterpret_cast<uint8*>(&p[0]);
+	for (size_t i = 0; i < blockCount; ++i)
+	{
+		blockCryptor->encrypt(data + i * blockSize);
+	}
+
+	int res = p.size() - blockCount * blockSize;
+	if (res == 0) return p; 
+	// res 가 없을 경우 ECB 와 동일 (패딩이 없는)
+
+	
+	uint8* lastFull = data + (blockCount - 1) * blockSize;
+	uint8* tail = data + blockCount * blockSize;
+
+	Vector<uint8> combined(blockSize);
+	memcpy(&combined[0], tail, res);
+	memcpy(&combined[res], lastFull + res, blockSize - res);
+
+	blockCryptor->encrypt(&combined[0]);
+
+	memcpy(tail, &lastFull[0], res);
+	memcpy(lastFull, &combined[0], blockSize);
+
+	return p;
+}
+
+string BlockCrypt::decrypt_ECB_CTS(string& c, int blockSize)
+{
+	size_t blockCount = c.size() / blockSize;
+
+	if (blockCount == 0)
+	{
+		throw std::runtime_error(
+"CTS는 최소 1개의 FULL 블록이 필요라 에러(실제 하드웨어에서도 에러 낸다 함");
+	}
+
+	uint8* data = reinterpret_cast<uint8*>(&c[0]);
+	for (size_t i = 0; i < blockCount; ++i)
+	{
+		blockCryptor->decrypt(data + i * blockSize);
+	}
+
+	int res = c.size() - blockCount * blockSize;
+	if (res == 0) return c;
+	// res 가 없을 경우 ECB 와 동일 (패딩이 없는)
+
+	uint8* lastFull = data + (blockCount - 1) * blockSize;
+	uint8* tail = data + blockCount * blockSize;
+
+	Vector<uint8> realLast(blockSize);
+	memcpy(&realLast[0], tail, res);
+	memcpy(&realLast[res], lastFull + res, 
+		blockSize - res);
+	blockCryptor->decrypt(&realLast[0]);
+
+	memcpy(tail, lastFull, res);
+	memcpy(lastFull, &realLast[0], blockSize);
+
+	return c;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 void BlockCrypt::pad(string& s, size_t blockSize)
 {
@@ -105,6 +646,14 @@ void BlockCrypt::unpad(string& s, size_t blockSize)
 
 	// 입력된 n값대로, n개를 제거
 	s.resize(s.size() - n);
+}
+
+void BlockCrypt::XOR(uint8* dst, uint8* x, int n)
+{
+	for (int i = 0; i < n; ++i)
+	{
+		dst[i] ^= x[i];
+	}
 }
 
 

@@ -29,7 +29,7 @@ struct TempGetKey
 
 int main()
 {
-#if 0 // test Vec
+#if 1 // test Vec
 	{
 		Vector<int> vecs;
 		vecs.push_back(1);
@@ -178,7 +178,7 @@ int main()
 #endif // ========== Priority_queue Test ==========
 
 
-#if 1 // Unordered_map
+#if 0 // Unordered_map
 	{
 		printf("========== Unordered_map Test ==========\n\n");
 
