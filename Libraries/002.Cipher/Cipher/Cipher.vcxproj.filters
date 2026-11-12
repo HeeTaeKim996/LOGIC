@@ -22,6 +22,9 @@
     <Filter Include="assymetric">
       <UniqueIdentifier>{1d4fa031-786a-4ec0-8482-0192e58e00d9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="assymetric\ECC">
+      <UniqueIdentifier>{d9a72a84-db73-42e1-8cf4-db9668df9560}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -60,6 +63,9 @@
     </ClCompile>
     <ClCompile Include="private\AssymetricTest.cpp">
       <Filter>assymetric</Filter>
+    </ClCompile>
+    <ClCompile Include="private\ECC.cpp">
+      <Filter>assymetric\ECC</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -107,6 +113,9 @@
     </ClInclude>
     <ClInclude Include="private\AssymetricTest.h">
       <Filter>assymetric</Filter>
+    </ClInclude>
+    <ClInclude Include="private\ECC.h">
+      <Filter>assymetric\ECC</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

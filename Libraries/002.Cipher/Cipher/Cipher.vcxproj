@@ -133,6 +133,7 @@
     <ClCompile Include="private\BlockCrypt.cpp" />
     <ClCompile Include="private\DES.cpp" />
     <ClCompile Include="private\AssymetricTest.cpp" />
+    <ClCompile Include="private\ECC.cpp" />
     <ClCompile Include="private\Endian.cpp" />
     <ClCompile Include="private\HIGHT.cpp" />
     <ClCompile Include="private\IDEA.cpp" />
@@ -146,6 +147,7 @@
     <ClInclude Include="private\ARIA.h" />
     <ClInclude Include="private\BlockCrypt.h" />
     <ClInclude Include="private\AssymetricTest.h" />
+    <ClInclude Include="private\ECC.h" />
     <ClInclude Include="private\HIGHT.h" />
     <ClInclude Include="private\IBlockCryptor.h" />
     <ClInclude Include="private\DES.h" />

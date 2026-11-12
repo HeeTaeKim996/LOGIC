@@ -1,1 +1,7 @@
-﻿  Cipher.vcxproj -> C:\Users\ttiig\source\repos\LOGIC\Libraries\002.Cipher\x64\Debug\Cipher.exe
+﻿  ECC.cpp
+C:\Users\ttiig\source\repos\LOGIC\Libraries\002.Cipher\Cipher\private\ECC.cpp(72,19): warning C4244: 'argument': conversion from 'int64' to 'int32', possible loss of data
+C:\Users\ttiig\source\repos\LOGIC\Libraries\002.Cipher\Cipher\private\ECC.cpp(72,15): warning C4244: 'argument': conversion from 'int64' to 'int32', possible loss of data
+  Endian.cpp
+  SEED.cpp
+  Generating Code...
+  Cipher.vcxproj -> C:\Users\ttiig\source\repos\LOGIC\Libraries\002.Cipher\x64\Debug\Cipher.exe
