@@ -3,10 +3,13 @@
 #include <functional>
 #include "Endian.h"
 
+
+
 IDEA::IDEA(const uint8* key)
 {
 	makeEncKeys(key);
 	makeDecKeys();
+
 }
 
 

@@ -19,12 +19,12 @@
     <Filter Include="999.Libs">
       <UniqueIdentifier>{e62bf8bf-b84a-4deb-9e35-acc09d144d26}</UniqueIdentifier>
     </Filter>
+    <Filter Include="assymetric">
+      <UniqueIdentifier>{1d4fa031-786a-4ec0-8482-0192e58e00d9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="private\GalosField.cpp">
-      <Filter>common</Filter>
-    </ClCompile>
     <ClCompile Include="private\Endian.cpp">
       <Filter>common</Filter>
     </ClCompile>
@@ -57,6 +57,9 @@
     </ClCompile>
     <ClCompile Include="private\RC4.cpp">
       <Filter>symmetric\StreamCrypt</Filter>
+    </ClCompile>
+    <ClCompile Include="private\AssymetricTest.cpp">
+      <Filter>assymetric</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -99,11 +102,11 @@
     <ClInclude Include="private\BlockCrypt.h">
       <Filter>symmetric\BlockCrypt</Filter>
     </ClInclude>
-    <ClInclude Include="private\GalosField.h">
-      <Filter>common</Filter>
-    </ClInclude>
     <ClInclude Include="private\libs\001.STLContainer\public\use\001.STLContainer_Setting.h">
       <Filter>999.Libs</Filter>
+    </ClInclude>
+    <ClInclude Include="private\AssymetricTest.h">
+      <Filter>assymetric</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

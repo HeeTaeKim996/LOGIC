@@ -5,7 +5,6 @@
 
 
 #include "../private/DES.h"
-#include "../private/GalosField.h"
 #include "../private/AES.h"
 #include "../private/IDEA.h"
 #include "../private/RC4.h"
@@ -15,6 +14,7 @@
 #include "../private/SEED.h"
 #include "../private/HIGHT.h"
 #include "../private/LEA.h"
+#include "../private/AssymetricTest.h"
 
 int main()
 {
@@ -24,11 +24,13 @@ int main()
 	//RC4::test();
 	//RC5::test();
 
-	BlockCrypt::test();
+	//BlockCrypt::test();
 	
 	//ARIA::test();
 	//SEED::test();
 	//Hight::test();
 	//LEA::test();
+
+	AssymetricTest::test();
 }
 

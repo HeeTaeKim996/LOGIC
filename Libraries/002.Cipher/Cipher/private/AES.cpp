@@ -2,6 +2,7 @@
 
 #include <cstring>
 #include <cassert>
+#include "src/IM_gf.h"
 
 const uint8 AES::SBOX[256] = {
     0x63,0x7c,0x77,0x7b,0xf2,0x6b,0x6f,0xc5,0x30,0x01,0x67,0x2b,0xfe,0xd7,0xab,0x76,
@@ -158,6 +159,7 @@ void AES::mixColumns(uint8* state)
             for (int i = 0; i < 4; ++i)
             {
                 temp[r] ^= gmul(col[i], MIX[r][i]);
+                
             }
         }
 
