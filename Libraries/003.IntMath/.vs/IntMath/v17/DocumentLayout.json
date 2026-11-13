@@ -44,7 +44,7 @@
               "RelativeDocumentMoniker": "IntMath\\public\\src\\BigInt.h",
               "ToolTip": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\003.IntMath\\IntMath\\public\\src\\BigInt.h",
               "RelativeToolTip": "IntMath\\public\\src\\BigInt.h",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABUAAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABUAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2026-11-13T05:49:28.421Z",
               "EditorCaption": ""
@@ -59,8 +59,7 @@
               "RelativeToolTip": "IntMath\\private\\main.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-11-12T04:35:13.653Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-12T04:35:13.653Z"
             },
             {
               "$type": "Document",
@@ -72,8 +71,7 @@
               "RelativeToolTip": "IntMath\\public\\src\\IM_int.h",
               "ViewState": "AgIAACEAAAAAAAAAAAD4vwgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-11-12T04:43:07.116Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-12T04:43:07.116Z"
             }
           ]
         },
@@ -89,7 +87,7 @@
               "RelativeDocumentMoniker": "IntMath\\private\\BigInt.cpp",
               "ToolTip": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\003.IntMath\\IntMath\\private\\BigInt.cpp",
               "RelativeToolTip": "IntMath\\private\\BigInt.cpp",
-              "ViewState": "AgIAAOEAAAAAAAAAAAD4vwYBAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-11-13T05:50:20.943Z",
               "EditorCaption": ""
@@ -116,8 +114,7 @@
               "RelativeToolTip": "IntMath\\public\\src\\IM_mod.h",
               "ViewState": "AgIAAEkAAAAAAAAAAAD4v14AAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-11-12T04:50:05.926Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-12T04:50:05.926Z"
             }
           ]
         }
