@@ -11,16 +11,36 @@
       "RelativeMoniker": "D:0:0:{B170F0F8-1098-47E1-8B0A-0B54CDB1D9DD}|Cipher\\Cipher.vcxproj|solutionrelative:Cipher\\private\\AssymetricTest.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{B170F0F8-1098-47E1-8B0A-0B54CDB1D9DD}|Cipher\\Cipher.vcxproj|C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B170F0F8-1098-47E1-8B0A-0B54CDB1D9DD}|Cipher\\Cipher.vcxproj|solutionrelative:Cipher\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B170F0F8-1098-47E1-8B0A-0B54CDB1D9DD}|Cipher\\Cipher.vcxproj|C:\\USERS\\TTIIG\\SOURCE\\REPOS\\LOGIC\\LIBRARIES\\002.CIPHER\\CIPHER\\PRIVATE\\LIBS\\003.INTMATH\\PUBLIC\\SRC\\IM_MOD.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B170F0F8-1098-47E1-8B0A-0B54CDB1D9DD}|Cipher\\Cipher.vcxproj|solutionrelative:CIPHER\\PRIVATE\\LIBS\\003.INTMATH\\PUBLIC\\SRC\\IM_MOD.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:1:0:{B170F0F8-1098-47E1-8B0A-0B54CDB1D9DD}|Cipher\\Cipher.vcxproj|C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\ECC.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:1:0:{B170F0F8-1098-47E1-8B0A-0B54CDB1D9DD}|Cipher\\Cipher.vcxproj|solutionrelative:Cipher\\private\\ECC.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B170F0F8-1098-47E1-8B0A-0B54CDB1D9DD}|Cipher\\Cipher.vcxproj|C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\ECC.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B170F0F8-1098-47E1-8B0A-0B54CDB1D9DD}|Cipher\\Cipher.vcxproj|solutionrelative:Cipher\\private\\ECC.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:2:0:{B170F0F8-1098-47E1-8B0A-0B54CDB1D9DD}|Cipher\\Cipher.vcxproj|C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\ECC.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:2:0:{B170F0F8-1098-47E1-8B0A-0B54CDB1D9DD}|Cipher\\Cipher.vcxproj|solutionrelative:Cipher\\private\\ECC.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B170F0F8-1098-47E1-8B0A-0B54CDB1D9DD}|Cipher\\Cipher.vcxproj|C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\SizeType.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B170F0F8-1098-47E1-8B0A-0B54CDB1D9DD}|Cipher\\Cipher.vcxproj|solutionrelative:Cipher\\private\\SizeType.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B170F0F8-1098-47E1-8B0A-0B54CDB1D9DD}|Cipher\\Cipher.vcxproj|C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\RC4.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{B170F0F8-1098-47E1-8B0A-0B54CDB1D9DD}|Cipher\\Cipher.vcxproj|solutionrelative:Cipher\\private\\RC4.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B170F0F8-1098-47E1-8B0A-0B54CDB1D9DD}|Cipher\\Cipher.vcxproj|C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\RC4.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{B170F0F8-1098-47E1-8B0A-0B54CDB1D9DD}|Cipher\\Cipher.vcxproj|solutionrelative:Cipher\\private\\RC4.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B170F0F8-1098-47E1-8B0A-0B54CDB1D9DD}|Cipher\\Cipher.vcxproj|C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{B170F0F8-1098-47E1-8B0A-0B54CDB1D9DD}|Cipher\\Cipher.vcxproj|solutionrelative:Cipher\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:2:0:{B170F0F8-1098-47E1-8B0A-0B54CDB1D9DD}|Cipher\\Cipher.vcxproj|C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\AES.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -31,7 +51,7 @@
       "RelativeMoniker": "D:1:0:{B170F0F8-1098-47E1-8B0A-0B54CDB1D9DD}|Cipher\\Cipher.vcxproj|solutionrelative:Cipher\\private\\AES.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B170F0F8-1098-47E1-8B0A-0B54CDB1D9DD}|Cipher\\Cipher.vcxproj|C:\\USERS\\TTIIG\\SOURCE\\REPOS\\LOGIC\\LIBRARIES\\002.CIPHER\\CIPHER\\PRIVATE\\LIBS\\003.INTMATH\\PUBLIC\\SRC\\IM_GF.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{B170F0F8-1098-47E1-8B0A-0B54CDB1D9DD}|Cipher\\Cipher.vcxproj|C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\CIPHER\\PRIVATE\\LIBS\\003.INTMATH\\PUBLIC\\SRC\\IM_GF.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{B170F0F8-1098-47E1-8B0A-0B54CDB1D9DD}|Cipher\\Cipher.vcxproj|solutionrelative:CIPHER\\PRIVATE\\LIBS\\003.INTMATH\\PUBLIC\\SRC\\IM_GF.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
@@ -125,10 +145,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{B170F0F8-1098-47E1-8B0A-0B54CDB1D9DD}|Cipher\\Cipher.vcxproj|C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\RC5.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{B170F0F8-1098-47E1-8B0A-0B54CDB1D9DD}|Cipher\\Cipher.vcxproj|solutionrelative:Cipher\\private\\RC5.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B170F0F8-1098-47E1-8B0A-0B54CDB1D9DD}|Cipher\\Cipher.vcxproj|C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\SizeType.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{B170F0F8-1098-47E1-8B0A-0B54CDB1D9DD}|Cipher\\Cipher.vcxproj|solutionrelative:Cipher\\private\\SizeType.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -138,11 +154,124 @@
       "DocumentGroups": [
         {
           "DockedWidth": 225,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 5,
+              "Title": "ECC.h",
+              "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\ECC.h",
+              "RelativeDocumentMoniker": "Cipher\\private\\ECC.h",
+              "ToolTip": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\ECC.h",
+              "RelativeToolTip": "Cipher\\private\\ECC.h",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAIwCYAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-11-12T10:12:51.743Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ARIA.h",
+              "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\ARIA.h",
+              "RelativeDocumentMoniker": "Cipher\\private\\ARIA.h",
+              "ToolTip": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\ARIA.h",
+              "RelativeToolTip": "Cipher\\private\\ARIA.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-11-09T05:40:27.836Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AssymetricTest.h",
+              "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\AssymetricTest.h",
+              "RelativeDocumentMoniker": "Cipher\\private\\AssymetricTest.h",
+              "ToolTip": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\AssymetricTest.h",
+              "RelativeToolTip": "Cipher\\private\\AssymetricTest.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-11-12T01:07:00.919Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AES.cpp",
+              "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\AES.cpp",
+              "RelativeDocumentMoniker": "Cipher\\private\\AES.cpp",
+              "ToolTip": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\AES.cpp",
+              "RelativeToolTip": "Cipher\\private\\AES.cpp",
+              "ViewState": "AgIAAGwAAAAAAAAAAAD4v38AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-11-12T03:45:40.013Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RC4.cpp",
+              "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\RC4.cpp",
+              "RelativeDocumentMoniker": "Cipher\\private\\RC4.cpp",
+              "ToolTip": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\RC4.cpp",
+              "RelativeToolTip": "Cipher\\private\\RC4.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-11-08T01:19:21.978Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\main.cpp",
+              "RelativeDocumentMoniker": "Cipher\\main.cpp",
+              "ToolTip": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\main.cpp",
+              "RelativeToolTip": "Cipher\\main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-11-06T10:49:49.558Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IM_mod.h",
+              "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\libs\\003.IntMath\\public\\src\\IM_mod.h",
+              "RelativeDocumentMoniker": "Cipher\\private\\libs\\003.IntMath\\public\\src\\IM_mod.h",
+              "ToolTip": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\libs\\003.IntMath\\public\\src\\IM_mod.h",
+              "RelativeToolTip": "Cipher\\private\\libs\\003.IntMath\\public\\src\\IM_mod.h",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAAGEAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-11-12T22:13:54.203Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ECC.cpp",
+              "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\ECC.cpp",
+              "RelativeDocumentMoniker": "Cipher\\private\\ECC.cpp",
+              "ToolTip": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\ECC.cpp",
+              "RelativeToolTip": "Cipher\\private\\ECC.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-11-12T10:38:48.503Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "SizeType.h",
+              "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\SizeType.h",
+              "RelativeDocumentMoniker": "Cipher\\private\\SizeType.h",
+              "ToolTip": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\SizeType.h",
+              "RelativeToolTip": "Cipher\\private\\SizeType.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-11-08T01:19:41.4Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
               "Title": "LEA.h",
               "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\LEA.h",
               "RelativeDocumentMoniker": "Cipher\\private\\LEA.h",
@@ -154,72 +283,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "main.cpp",
-              "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\main.cpp",
-              "RelativeDocumentMoniker": "Cipher\\main.cpp",
-              "ToolTip": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\main.cpp",
-              "RelativeToolTip": "Cipher\\main.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-11-06T10:49:49.558Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ARIA.h",
-              "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\ARIA.h",
-              "RelativeDocumentMoniker": "Cipher\\private\\ARIA.h",
-              "ToolTip": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\ARIA.h",
-              "RelativeToolTip": "Cipher\\private\\ARIA.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-11-09T05:40:27.836Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AssymetricTest.h",
-              "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\AssymetricTest.h",
-              "RelativeDocumentMoniker": "Cipher\\private\\AssymetricTest.h",
-              "ToolTip": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\AssymetricTest.h",
-              "RelativeToolTip": "Cipher\\private\\AssymetricTest.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-11-12T01:07:00.919Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AES.cpp",
-              "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\AES.cpp",
-              "RelativeDocumentMoniker": "Cipher\\private\\AES.cpp",
-              "ToolTip": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\AES.cpp",
-              "RelativeToolTip": "Cipher\\private\\AES.cpp",
-              "ViewState": "AgIAAGwAAAAAAAAAAAD4v38AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-11-12T03:45:40.013Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "RC4.cpp",
-              "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\RC4.cpp",
-              "RelativeDocumentMoniker": "Cipher\\private\\RC4.cpp",
-              "ToolTip": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\RC4.cpp",
-              "RelativeToolTip": "Cipher\\private\\RC4.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-11-08T01:19:21.978Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 9,
               "Title": "RC4.h",
               "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\RC4.h",
               "RelativeDocumentMoniker": "Cipher\\private\\RC4.h",
@@ -227,12 +291,11 @@
               "RelativeToolTip": "Cipher\\private\\RC4.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-11-08T01:19:38.782Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-08T01:19:38.782Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 15,
               "Title": "IDEA.h",
               "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\IDEA.h",
               "RelativeDocumentMoniker": "Cipher\\private\\IDEA.h",
@@ -240,12 +303,11 @@
               "RelativeToolTip": "Cipher\\private\\IDEA.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-11-08T01:19:32.943Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-08T01:19:32.943Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 12,
               "Title": "IM_gf.h",
               "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\libs\\003.IntMath\\public\\src\\IM_gf.h",
               "RelativeDocumentMoniker": "Cipher\\private\\libs\\003.IntMath\\public\\src\\IM_gf.h",
@@ -253,12 +315,11 @@
               "RelativeToolTip": "Cipher\\private\\libs\\003.IntMath\\public\\src\\IM_gf.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-11-12T05:31:32.222Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-12T05:31:32.222Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 26,
               "Title": "Mem.h",
               "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\libs\\001.STLContainer\\public\\src\\Mem.h",
               "RelativeDocumentMoniker": "Cipher\\private\\libs\\001.STLContainer\\public\\src\\Mem.h",
@@ -270,7 +331,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 23,
               "Title": "MemCounter.h",
               "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\libs\\000.MemoryAddresser\\public\\src\\MemCounter.h",
               "RelativeDocumentMoniker": "Cipher\\private\\libs\\000.MemoryAddresser\\public\\src\\MemCounter.h",
@@ -282,7 +343,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 25,
               "Title": "BlockCrypt.cpp",
               "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\BlockCrypt.cpp",
               "RelativeDocumentMoniker": "Cipher\\private\\BlockCrypt.cpp",
@@ -294,7 +355,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 24,
               "Title": "BlockCrypt.h",
               "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\BlockCrypt.h",
               "RelativeDocumentMoniker": "Cipher\\private\\BlockCrypt.h",
@@ -306,7 +367,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 27,
               "Title": "SEED.h",
               "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\SEED.h",
               "RelativeDocumentMoniker": "Cipher\\private\\SEED.h",
@@ -318,7 +379,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 29,
               "Title": "DES.h",
               "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\DES.h",
               "RelativeDocumentMoniker": "Cipher\\private\\DES.h",
@@ -330,7 +391,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 34,
               "Title": "Endian.h",
               "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\Endian.h",
               "RelativeDocumentMoniker": "Cipher\\private\\Endian.h",
@@ -342,7 +403,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 35,
               "Title": "RC5.h",
               "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\RC5.h",
               "RelativeDocumentMoniker": "Cipher\\private\\RC5.h",
@@ -354,7 +415,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 32,
               "Title": "HIGHT.h",
               "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\HIGHT.h",
               "RelativeDocumentMoniker": "Cipher\\private\\HIGHT.h",
@@ -363,28 +424,29 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2026-11-10T05:49:29.389Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "SizeType.h",
-              "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\SizeType.h",
-              "RelativeDocumentMoniker": "Cipher\\private\\SizeType.h",
-              "ToolTip": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\SizeType.h",
-              "RelativeToolTip": "Cipher\\private\\SizeType.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-11-08T01:19:41.4Z"
             }
           ]
         },
         {
           "DockedWidth": 196,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
+              "Title": "ECC.cpp",
+              "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\ECC.cpp",
+              "RelativeDocumentMoniker": "Cipher\\private\\ECC.cpp",
+              "ToolTip": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\ECC.cpp",
+              "RelativeToolTip": "Cipher\\private\\ECC.cpp",
+              "ViewState": "AgIAAEQAAAAAAAAAAAD4v1MAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-11-12T10:12:51.28Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "AES.cpp",
               "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\AES.cpp",
               "RelativeDocumentMoniker": "Cipher\\private\\AES.cpp",
@@ -392,12 +454,11 @@
               "RelativeToolTip": "Cipher\\private\\AES.cpp",
               "ViewState": "AgIAAIYAAAAAAAAAAAD4v5QAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-11-12T05:32:05.525Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-12T05:32:05.525Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 14,
               "Title": "IDEA.cpp",
               "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\IDEA.cpp",
               "RelativeDocumentMoniker": "Cipher\\private\\IDEA.cpp",
@@ -405,12 +466,11 @@
               "RelativeToolTip": "Cipher\\private\\IDEA.cpp",
               "ViewState": "AgIAAI4AAAAAAAAAAAD4vwQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-11-12T05:26:49.87Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-12T05:26:49.87Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 16,
               "Title": "IDEA.cpp",
               "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\IDEA.cpp",
               "RelativeDocumentMoniker": "Cipher\\private\\IDEA.cpp",
@@ -418,8 +478,7 @@
               "RelativeToolTip": "Cipher\\private\\IDEA.cpp",
               "ViewState": "AgIAANAAAAAAAAAAAAAQwOkAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-11-12T04:58:05.248Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-12T04:58:05.248Z"
             },
             {
               "$type": "Document",
@@ -429,14 +488,14 @@
               "RelativeDocumentMoniker": "Cipher\\private\\AssymetricTest.cpp",
               "ToolTip": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\AssymetricTest.cpp",
               "RelativeToolTip": "Cipher\\private\\AssymetricTest.cpp",
-              "ViewState": "AgIAAAcAAAAAAAAAAAD4v28AAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAANAAAAAAAAAAAAAkwOwAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-11-12T01:06:47.728Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 18,
               "Title": "ARIA.cpp",
               "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\ARIA.cpp",
               "RelativeDocumentMoniker": "Cipher\\private\\ARIA.cpp",
@@ -448,7 +507,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 13,
               "Title": "AES.h",
               "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\AES.h",
               "RelativeDocumentMoniker": "Cipher\\private\\AES.h",
@@ -456,12 +515,11 @@
               "RelativeToolTip": "Cipher\\private\\AES.h",
               "ViewState": "AgIAAB4AAAAAAAAAAAAkwDoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-11-10T11:37:51.637Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-10T11:37:51.637Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 30,
               "Title": "RC5.cpp",
               "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\RC5.cpp",
               "RelativeDocumentMoniker": "Cipher\\private\\RC5.cpp",
@@ -473,7 +531,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 19,
               "Title": "DES.cpp",
               "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\DES.cpp",
               "RelativeDocumentMoniker": "Cipher\\private\\DES.cpp",
@@ -485,7 +543,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 20,
               "Title": "BlockCrypt.cpp",
               "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\BlockCrypt.cpp",
               "RelativeDocumentMoniker": "Cipher\\private\\BlockCrypt.cpp",
@@ -497,7 +555,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 22,
               "Title": "LEA.cpp",
               "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\LEA.cpp",
               "RelativeDocumentMoniker": "Cipher\\private\\LEA.cpp",
@@ -509,7 +567,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 28,
               "Title": "SEED.cpp",
               "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\SEED.cpp",
               "RelativeDocumentMoniker": "Cipher\\private\\SEED.cpp",
@@ -521,7 +579,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 33,
               "Title": "IBlockCryptor.h",
               "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\IBlockCryptor.h",
               "RelativeDocumentMoniker": "Cipher\\private\\IBlockCryptor.h",
@@ -533,7 +591,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 31,
               "Title": "HIGHT.cpp",
               "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\HIGHT.cpp",
               "RelativeDocumentMoniker": "Cipher\\private\\HIGHT.cpp",

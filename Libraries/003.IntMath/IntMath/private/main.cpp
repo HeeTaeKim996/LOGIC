@@ -9,8 +9,8 @@
 
 int main()
 {
-	test_IM_int();
-	//test_IM_mod();
-	test_IM_gf();
+	//test_IM_int();
+	test_IM_mod();
+	//test_IM_gf();
 }
 

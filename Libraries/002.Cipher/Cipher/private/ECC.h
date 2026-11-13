@@ -1,6 +1,6 @@
 #pragma once
 #include "SizeType.h"
-
+#include <stdio.h>
 
 
 struct Point
@@ -19,6 +19,11 @@ struct Point
 	};
 
 
+	void print()
+	{
+		printf("P(%d,%d)\n", x, y);
+	}
+
 	int32 x = 0;
 	int32 y = 0;
 	bool inf = false; // true 이면 무한 원점 0 (x, y 는 무시됨)
@@ -27,18 +32,34 @@ struct Point
 
 class ECC
 {
-	int32 madd(int64 a, int64 b) { return norm(a + b); }
-	int32 msub(int64 a, int64 b) { return norm(a - b); }
-	int32 mmul(int64 a, int64 b) { return norm(a * b); }
+public:
+	ECC(int32 inP, int32 inA, int32 inB) : p(inP), a(inA), b(inB) {}
+
+public:
+	Point add(const Point& A, const Point& B);
+	Point scalarMulNaively(const Point& A, int32 k);
+	Point scalarMul(Point A, int k);
+	bool isOnCurve(const Point& A);
+	Point neg(const Point& A);
+
+
+private:
+	int32 add(int64 a, int64 b) { return norm(a + b); }
+	int32 sub(int64 a, int64 b) { return norm(a - b); }
+	int32 mul(int64 a, int64 b) { return norm(a * b); }
 
 	int32 inv_mul(int32 a);
 	int32 norm(int64 a);
 
-	Point add(const Point& A, const Point& B);
+
 
 private:
 	// 곡선 파라미터 : y^2 = x^3 + a*x + b ( mod p )
 	int32 p;
 	int32 a; // 0 <= a < p
 	int32 b;
+
+
+public:
+	static void test();
 };

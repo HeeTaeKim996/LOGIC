@@ -2,10 +2,17 @@
 #include <type_traits>
 #include <stdio.h>
 
+#define CHECK(T) do{											\
+	static_assert(std::is_integral_v<T>, "T must be Integer");	\
+	static_assert(std::is_signed_v<T>, "T must be Signed");		\
+	} while(0)
+
+// ※ 모듈러면 signed 에서 처리해야하니, signed 정수로 전제
+
 template<typename T>
 T extendedEuclidian(T k, T m) // 확장 유클리드 알고리즘(모듈러 곱 역원 도출)
 {
-	static_assert(std::is_integral_v<T>, "T must be Integer");
+	CHECK(T);
 	using S = std::make_signed_t<T>;
 
 	if (k <= 1) return k;
@@ -37,7 +44,7 @@ T extendedEuclidian(T k, T m) // 확장 유클리드 알고리즘(모듈러 곱 역원 도출)
 template<typename T>
 T mpow(T g, T x, T p)
 {
-	static_assert(std::is_integral_v<T>, "T must be Integer");
+	CHECK(T);
 
 	// 키가 uint64 까지만 있다 가정했고, out * g 에서 오버플로도 배제함
 	// 이것도 고려하면 코드가 복잡해서 가장 단순한 버전으로 처리
@@ -56,6 +63,33 @@ T mpow(T g, T x, T p)
 
 	return out;
 }
+
+
+template<typename T>
+static T norm(T a, T p)
+{
+	a %= p;
+	if (a < 0) a += p;
+	return a;
+}
+
+
+
+
+template<typename T>
+T madd(T a, T b, T p)
+{
+	CHECK(T);
+	return norm(a + b, p);
+}
+
+template<typename T>
+T msub(T a, T b, T p)
+{
+	CHECK(T);
+	return norm(a - b, p);
+}
+
 
 
 

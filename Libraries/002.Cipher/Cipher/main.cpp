@@ -15,6 +15,7 @@
 #include "../private/HIGHT.h"
 #include "../private/LEA.h"
 #include "../private/AssymetricTest.h"
+#include "../private/ECC.h"
 
 int main()
 {
@@ -32,5 +33,6 @@ int main()
 	//LEA::test();
 
 	AssymetricTest::test();
+	//ECC::test();
 }
 
