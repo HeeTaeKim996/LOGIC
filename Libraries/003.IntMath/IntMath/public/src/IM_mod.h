@@ -91,7 +91,12 @@ T msub(T a, T b, T p)
 }
 
 
-
+template<typename T>
+T mmul(T a, T b, T p)
+{
+	CHECK(T);
+	return norm(a * b, p);
+}
 
 void test_IM_mod()
 {

@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{B170F0F8-1098-47E1-8B0A-0B54CDB1D9DD}|Cipher\\Cipher.vcxproj|C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\CIPHER\\PRIVATE\\LIBS\\003.INTMATH\\PUBLIC\\SRC\\IM_MOD.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B170F0F8-1098-47E1-8B0A-0B54CDB1D9DD}|Cipher\\Cipher.vcxproj|solutionrelative:CIPHER\\PRIVATE\\LIBS\\003.INTMATH\\PUBLIC\\SRC\\IM_MOD.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B170F0F8-1098-47E1-8B0A-0B54CDB1D9DD}|Cipher\\Cipher.vcxproj|C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\AssymetricTest.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{B170F0F8-1098-47E1-8B0A-0B54CDB1D9DD}|Cipher\\Cipher.vcxproj|solutionrelative:Cipher\\private\\AssymetricTest.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -13,10 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{B170F0F8-1098-47E1-8B0A-0B54CDB1D9DD}|Cipher\\Cipher.vcxproj|C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{B170F0F8-1098-47E1-8B0A-0B54CDB1D9DD}|Cipher\\Cipher.vcxproj|solutionrelative:Cipher\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B170F0F8-1098-47E1-8B0A-0B54CDB1D9DD}|Cipher\\Cipher.vcxproj|C:\\USERS\\TTIIG\\SOURCE\\REPOS\\LOGIC\\LIBRARIES\\002.CIPHER\\CIPHER\\PRIVATE\\LIBS\\003.INTMATH\\PUBLIC\\SRC\\IM_MOD.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{B170F0F8-1098-47E1-8B0A-0B54CDB1D9DD}|Cipher\\Cipher.vcxproj|solutionrelative:CIPHER\\PRIVATE\\LIBS\\003.INTMATH\\PUBLIC\\SRC\\IM_MOD.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:1:0:{B170F0F8-1098-47E1-8B0A-0B54CDB1D9DD}|Cipher\\Cipher.vcxproj|C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\ECC.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -154,7 +154,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 225,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
@@ -166,8 +166,7 @@
               "RelativeToolTip": "Cipher\\private\\ECC.h",
               "ViewState": "AgIAAAoAAAAAAAAAAAAIwCYAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-11-12T10:12:51.743Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-12T10:12:51.743Z"
             },
             {
               "$type": "Document",
@@ -183,7 +182,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "AssymetricTest.h",
               "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\AssymetricTest.h",
               "RelativeDocumentMoniker": "Cipher\\private\\AssymetricTest.h",
@@ -220,7 +219,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\main.cpp",
               "RelativeDocumentMoniker": "Cipher\\main.cpp",
@@ -228,18 +227,17 @@
               "RelativeToolTip": "Cipher\\main.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-11-06T10:49:49.558Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-06T10:49:49.558Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "IM_mod.h",
               "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\libs\\003.IntMath\\public\\src\\IM_mod.h",
               "RelativeDocumentMoniker": "Cipher\\private\\libs\\003.IntMath\\public\\src\\IM_mod.h",
               "ToolTip": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\libs\\003.IntMath\\public\\src\\IM_mod.h",
               "RelativeToolTip": "Cipher\\private\\libs\\003.IntMath\\public\\src\\IM_mod.h",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAAAGEAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAIwEsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2026-11-12T22:13:54.203Z",
               "EditorCaption": ""
@@ -254,8 +252,7 @@
               "RelativeToolTip": "Cipher\\private\\ECC.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-11-12T10:38:48.503Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-12T10:38:48.503Z"
             },
             {
               "$type": "Document",
@@ -441,8 +438,7 @@
               "RelativeToolTip": "Cipher\\private\\ECC.cpp",
               "ViewState": "AgIAAEQAAAAAAAAAAAD4v1MAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-11-12T10:12:51.28Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-12T10:12:51.28Z"
             },
             {
               "$type": "Document",
@@ -482,13 +478,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "AssymetricTest.cpp",
               "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\AssymetricTest.cpp",
               "RelativeDocumentMoniker": "Cipher\\private\\AssymetricTest.cpp",
               "ToolTip": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\002.Cipher\\Cipher\\private\\AssymetricTest.cpp",
               "RelativeToolTip": "Cipher\\private\\AssymetricTest.cpp",
-              "ViewState": "AgIAANAAAAAAAAAAAAAkwOwAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAkwNwAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-11-12T01:06:47.728Z",
               "EditorCaption": ""
