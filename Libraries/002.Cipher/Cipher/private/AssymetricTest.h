@@ -10,7 +10,9 @@ public:
 		RSA();
 		EIGammal();
 
+
 		ECDH();
+		ECEIGammal();
 		ECDSA();
 	}
 
@@ -20,5 +22,6 @@ private:
 	static void EIGammal();
 	
 	static void ECDH();
+	static void ECEIGammal();
 	static void ECDSA();
 };

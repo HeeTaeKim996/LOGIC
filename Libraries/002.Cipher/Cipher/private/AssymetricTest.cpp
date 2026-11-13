@@ -10,7 +10,7 @@
 #include "src/IM_mod.h"
 #include "src/IM_int.h"
 #include "ECC.h"
-
+#include <cassert>
 
 void AssymetricTest::DiffieHellman()
 {
@@ -200,6 +200,46 @@ void AssymetricTest::ECDH()
 	func(ECC(17, 2, 2), Point(5, 1), 19, /*privA*/ 7, /*privB*/ 11);
 }
 
+void AssymetricTest::ECEIGammal()
+{
+	auto func = [](ECC ecc, Point G, int32 n, int32 e, int32 r,
+		Point M)-> void
+		{
+			assert(ecc.isOnCurve(M));
+			// M 이 ecc 곡선 위의 점이어야 하는 까다로운 조건이 있기에,
+			// ECEIGammal 은 자주 쓰이지 않는다.
+			
+			// 의외로 ECC 를 직접 활용하여 메세지를 암복화하는 경우는 
+			// 흔치 않고, ECC + 대칭키 로 섞어 사용하거나, RSA 를 사용
+
+			// 수신자(개인키 보유) 전송
+			Point E = ecc.scalarMul(G, e); // e G
+
+
+			// 송신자(공개키 공유) 전송
+			Point C1 = ecc.scalarMul(G, r); // r G
+			Point C2 = ecc.add(M, ecc.scalarMul(E, r)); // M + r e G
+
+
+			// 수신자 복호화
+			Point S = ecc.scalarMul(C1, e); // e r G
+			Point D = ecc.add(C2, ecc.neg(S));
+			// M + r e G + ( - [ e R G ] )  == M
+
+			if (D == M && D.inf == M.inf)
+			{
+				printf("ECEIGammal 암복호화 성공\n");
+			}
+			else
+			{
+				printf("ECEIGammal 암복호화 실패\n");
+			}
+		};
+
+	func(ECC(17, 2, 2), Point(5, 1),
+		19, 7, 3, Point(10, 6));
+}
+
 
 
 
@@ -209,7 +249,7 @@ void AssymetricTest::ECDSA()
 		int64 p, int64 e, int64 m, int64 r) -> void
 		{
 			
-			// 서명 (서명에 사용되는 e, k, R 는 비공개)
+			// 서명 (서명에 사용되는 e, r 는 비공개)
 			// ※ e 는 서명자가 영구적으로 들고 있는 비밀키로, E도 상시
 			// ※ r 은 서명할 때마다 새로 생성되는 난수로, R도 서명 때 생성
 			Point E = ecc.scalarMul(G, e);
@@ -222,8 +262,9 @@ void AssymetricTest::ECDSA()
 				inv_r, madd(m, mmul(Rx, e, p), p), p);
 
 			
-			// 검증 
-			// (검증자에게 원점(G), m(메세지), 서명(E, s, Rx) 이 전달됨)
+			// 검증자에게 전달 
+			// (m(메세지), 서명(E, s, Rx) 이 전달)
+			// ( 원점 G, 모듈려 p는 사전 공유 )
 			int64 inv_s = extendedEuclidian<int64>(s, p);
 			int64 u1 = mmul(m, inv_s, p);
 			int64 u2 = mmul(Rx, inv_s, p);

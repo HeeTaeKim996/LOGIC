@@ -1,2 +1,3 @@
-﻿  main.cpp
+﻿  BigInt.cpp
+C:\Users\ttiig\source\repos\LOGIC\Libraries\003.IntMath\IntMath\private\BigInt.cpp(144,15): warning C4244: '=': conversion from 'word' to 'half', possible loss of data
   IntMath.vcxproj -> C:\Users\ttiig\source\repos\LOGIC\Libraries\003.IntMath\x64\Debug\IntMath.exe
