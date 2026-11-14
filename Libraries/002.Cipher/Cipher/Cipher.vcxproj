@@ -70,6 +70,12 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(ProjectDir)public\out\$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(ProjectDir)public\out\$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -108,6 +114,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>$(ProjectDir)private\libs\003.IntMath\public\out\$(Platform)\$(Configuration)\IntMath.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -124,6 +131,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>$(ProjectDir)private\libs\003.IntMath\public\out\$(Platform)\$(Configuration)\IntMath.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -133,7 +141,6 @@
     <ClCompile Include="private\BlockCrypt.cpp" />
     <ClCompile Include="private\DES.cpp" />
     <ClCompile Include="private\AssymetricTest.cpp" />
-    <ClCompile Include="private\ECC.cpp" />
     <ClCompile Include="private\Endian.cpp" />
     <ClCompile Include="private\HIGHT.cpp" />
     <ClCompile Include="private\IDEA.cpp" />
@@ -147,7 +154,6 @@
     <ClInclude Include="private\ARIA.h" />
     <ClInclude Include="private\BlockCrypt.h" />
     <ClInclude Include="private\AssymetricTest.h" />
-    <ClInclude Include="private\ECC.h" />
     <ClInclude Include="private\HIGHT.h" />
     <ClInclude Include="private\IBlockCryptor.h" />
     <ClInclude Include="private\DES.h" />

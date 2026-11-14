@@ -1,6 +1,1 @@
-﻿  AssymetricTest.cpp
-C:\Users\ttiig\source\repos\LOGIC\Libraries\002.Cipher\Cipher\private\AssymetricTest.cpp(255,31): warning C4244: 'argument': conversion from 'int64' to 'int', possible loss of data
-C:\Users\ttiig\source\repos\LOGIC\Libraries\002.Cipher\Cipher\private\AssymetricTest.cpp(256,31): warning C4244: 'argument': conversion from 'int64' to 'int', possible loss of data
-C:\Users\ttiig\source\repos\LOGIC\Libraries\002.Cipher\Cipher\private\AssymetricTest.cpp(273,22): warning C4244: 'argument': conversion from 'int64' to 'int', possible loss of data
-C:\Users\ttiig\source\repos\LOGIC\Libraries\002.Cipher\Cipher\private\AssymetricTest.cpp(274,22): warning C4244: 'argument': conversion from 'int64' to 'int', possible loss of data
-  Cipher.vcxproj -> C:\Users\ttiig\source\repos\LOGIC\Libraries\002.Cipher\x64\Debug\Cipher.exe
+﻿  Cipher.vcxproj -> C:\Users\ttiig\source\repos\LOGIC\Libraries\002.Cipher\Cipher\public\out\x64\Debug\Cipher.exe

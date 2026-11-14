@@ -1,12 +1,13 @@
 #pragma once
 #include <type_traits>
+#include "IM_check.h"
 
 
 
 template<typename T>
 T gmul(T a, T b, T mod, unsigned n) 
 {
-	static_assert(std::is_integral_v<T>, "T must be Integer");
+	CHECK_INT(T);
 
 	const T msb = static_cast<T>(T(1) << (n - 1));
 	T res = 0;
@@ -52,7 +53,7 @@ static T degree(T a)
 template<typename T>
 T gdiv(T a, T b)
 {
-	static_assert(std::is_integral_v<T>, "T must be Integer");
+	CHECK_INT(T);
 
 	T quotient = 0;
 
@@ -78,6 +79,8 @@ T gdiv(T a, T b)
 template<typename T>
 T gres(T a, T b)
 {
+	CHECK_INT(T);
+
 	if (b == 0) return -1;
 
 	while (a && degree(a) >= degree(b))

@@ -10,15 +10,30 @@
     <ClCompile Include="private\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="private\BigInt.cpp">
+    <ClCompile Include="private\IM_BigInt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="private\IM_ECC.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="public\src\IM_int.h" />
-    <ClInclude Include="public\src\IM_mod.h" />
-    <ClInclude Include="public\src\IM_gf.h" />
-    <ClInclude Include="public\src\BigInt.h">
+    <ClInclude Include="public\src\IM_BigInt.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="public\src\IM_ECC.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="public\src\IM_gf.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="public\src\IM_int.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="public\src\IM_mod.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="public\src\IM_check.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>

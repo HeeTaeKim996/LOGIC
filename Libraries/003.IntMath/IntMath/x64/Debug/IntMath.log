@@ -1,20 +1,40 @@
-﻿  BigInt.cpp
-C:\Users\ttiig\source\repos\LOGIC\Libraries\003.IntMath\IntMath\private\BigInt.cpp(390,15): warning C4244: '=': conversion from 'word' to 'half', possible loss of data
-  main.cpp
-C:\Users\ttiig\source\repos\LOGIC\Libraries\003.IntMath\IntMath\public\src\IM_mod.h(27,2): warning C4984: 'if constexpr' is a C++17 language extension
+﻿  main.cpp
+C:\Users\ttiig\source\repos\LOGIC\Libraries\003.IntMath\IntMath\public\src\IM_BigInt.h(176,15): warning C4251: 'BigInt::vec': class 'std::vector<half,std::allocator<half>>' needs to have dll-interface to be used by clients of class 'BigInt'
+  (compiling source file 'private/main.cpp')
+      C:\Users\ttiig\source\repos\LOGIC\Libraries\003.IntMath\IntMath\public\src\IM_BigInt.h(154,26):
+      see declaration of 'std::vector<half,std::allocator<half>>'
+  
+C:\Users\ttiig\source\repos\LOGIC\Libraries\003.IntMath\IntMath\public\src\IM_int.h(11,2): warning C4984: 'if constexpr' is a C++17 language extension
   (compiling source file 'private/main.cpp')
   
-C:\Users\ttiig\source\repos\LOGIC\Libraries\003.IntMath\IntMath\public\src\IM_mod.h(58,2): warning C4984: 'if constexpr' is a C++17 language extension
+C:\Users\ttiig\source\repos\LOGIC\Libraries\003.IntMath\IntMath\public\src\IM_int.h(35,2): warning C4984: 'if constexpr' is a C++17 language extension
   (compiling source file 'private/main.cpp')
   
-C:\Users\ttiig\source\repos\LOGIC\Libraries\003.IntMath\IntMath\public\src\IM_mod.h(93,2): warning C4984: 'if constexpr' is a C++17 language extension
+C:\Users\ttiig\source\repos\LOGIC\Libraries\003.IntMath\IntMath\public\src\IM_int.h(43,2): warning C4984: 'if constexpr' is a C++17 language extension
   (compiling source file 'private/main.cpp')
   
-C:\Users\ttiig\source\repos\LOGIC\Libraries\003.IntMath\IntMath\public\src\IM_mod.h(100,2): warning C4984: 'if constexpr' is a C++17 language extension
+C:\Users\ttiig\source\repos\LOGIC\Libraries\003.IntMath\IntMath\public\src\IM_mod.h(18,2): warning C4984: 'if constexpr' is a C++17 language extension
   (compiling source file 'private/main.cpp')
   
-C:\Users\ttiig\source\repos\LOGIC\Libraries\003.IntMath\IntMath\public\src\IM_mod.h(108,2): warning C4984: 'if constexpr' is a C++17 language extension
+C:\Users\ttiig\source\repos\LOGIC\Libraries\003.IntMath\IntMath\public\src\IM_mod.h(49,2): warning C4984: 'if constexpr' is a C++17 language extension
   (compiling source file 'private/main.cpp')
   
-  Generating Code...
-  IntMath.vcxproj -> C:\Users\ttiig\source\repos\LOGIC\Libraries\003.IntMath\x64\Debug\IntMath.exe
+C:\Users\ttiig\source\repos\LOGIC\Libraries\003.IntMath\IntMath\public\src\IM_mod.h(84,2): warning C4984: 'if constexpr' is a C++17 language extension
+  (compiling source file 'private/main.cpp')
+  
+C:\Users\ttiig\source\repos\LOGIC\Libraries\003.IntMath\IntMath\public\src\IM_mod.h(91,2): warning C4984: 'if constexpr' is a C++17 language extension
+  (compiling source file 'private/main.cpp')
+  
+C:\Users\ttiig\source\repos\LOGIC\Libraries\003.IntMath\IntMath\public\src\IM_mod.h(99,2): warning C4984: 'if constexpr' is a C++17 language extension
+  (compiling source file 'private/main.cpp')
+  
+C:\Users\ttiig\source\repos\LOGIC\Libraries\003.IntMath\IntMath\public\src\IM_gf.h(10,2): warning C4984: 'if constexpr' is a C++17 language extension
+  (compiling source file 'private/main.cpp')
+  
+C:\Users\ttiig\source\repos\LOGIC\Libraries\003.IntMath\IntMath\public\src\IM_gf.h(56,2): warning C4984: 'if constexpr' is a C++17 language extension
+  (compiling source file 'private/main.cpp')
+  
+C:\Users\ttiig\source\repos\LOGIC\Libraries\003.IntMath\IntMath\public\src\IM_gf.h(82,2): warning C4984: 'if constexpr' is a C++17 language extension
+  (compiling source file 'private/main.cpp')
+  
+  IntMath.vcxproj -> C:\Users\ttiig\source\repos\LOGIC\Libraries\003.IntMath\IntMath\public\out\x64\Debug\IntMath.dll

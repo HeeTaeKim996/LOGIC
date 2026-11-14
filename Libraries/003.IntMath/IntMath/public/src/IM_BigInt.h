@@ -6,6 +6,7 @@
 using namespace std;
 
 #if UINTPTR_MAX == UINT64_MAX
+//#if false
 using word = uint64_t;
 using sword = int64_t;
 using half = uint32_t;
@@ -13,8 +14,18 @@ using half = uint32_t;
 // ※ LIMB : 벡터 요소의 단위(비트)
 #define MASK_LIMB 0x3F'FF'FF'FF	// 림브(블록) 마스크
 #define LIMB_SIZE 30			// 림브(블록) 크기
+
+#define CHUNK_VALUE 1'000'000'000
+#define CHUNK_DIGITS 9
+
 #else
-// 일단은 무시. 나중에 완성되면 여기도 처리
+using word = uint32_t;
+using sword = int32_t;
+using half = uint16_t;
+#define MASK_LIMB 0x3F'FF
+#define LIMB_SIZE 14
+#define CHUNK_VALUE 10'000
+#define CHUNK_DIGITS 4
 #endif
 
 
@@ -46,12 +57,12 @@ using half = uint32_t;
 */
 
 
-class BigInt
+class __declspec(dllexport) BigInt
 {
 public:
 	BigInt() = default;
 	BigInt(half* ptr, size_t size, bool isNeg = false);
-	BigInt(half num);
+	BigInt(sword num);
 	BigInt(const string& s);
 
 
@@ -59,27 +70,37 @@ public:
 	BigInt operator - () const;
 
 	bool operator < (const BigInt& other) const;
-	
+
 	bool operator > (const BigInt& other) const { return other < *this; }
-	
-	bool operator <= (const BigInt& other) const 
-	{return (*this > other) == false;}
-	
+
+	bool operator <= (const BigInt& other) const
+	{
+		return (*this > other) == false;
+	}
+
 	bool operator >=(const BigInt& other) const
-	{return (*this < other) == false;}
-	
+	{
+		return (*this < other) == false;
+	}
+
 	bool operator == (const BigInt& other) const
-	{return neg == other.neg && vec == other.vec;} 
+	{
+		return neg == other.neg && vec == other.vec;
+	}
 	// vec == 연산자는 주소가 아닌 내용 비교
-	
+
 	bool operator != (const BigInt& other) const
-	{return (*this == other) == false;}
+	{
+		return (*this == other) == false;
+	}
 
 
 	BigInt operator + (const BigInt& other) const;
 	BigInt operator - (const BigInt& other) const
-	{ return *this + (-other); }
-	
+	{
+		return *this + (-other);
+	}
+
 	BigInt operator * (const BigInt& other) const;
 
 	BigInt operator / (const BigInt& b) const;
@@ -90,6 +111,9 @@ public:
 
 	BigInt operator << (const size_t bits) const;
 	BigInt operator >> (const size_t bits) const;
+
+
+
 
 
 
@@ -111,8 +135,13 @@ public:
 	BigInt& operator >>= (size_t bits) { return *this = *this >> bits; }
 	BigInt& operator %= (const BigInt& other) { return *this = *this % other; }
 	BigInt& operator += (const BigInt& other) { return *this = *this + other; }
+	BigInt& operator -= (const BigInt& other) { return *this = *this - other; }
 	BigInt& operator &=(const BigInt& other) { return *this = *this & other; }
 	BigInt& operator |=(const BigInt & other) { return *this = *this | other; }
+
+	BigInt& operator -- ()
+	{return *this = *this - BigInt(1);}
+	BigInt operator -- (int);
 
 public:
 	void printNum();

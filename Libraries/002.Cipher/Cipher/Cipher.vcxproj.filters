@@ -61,9 +61,6 @@
     <ClCompile Include="private\AssymetricTest.cpp">
       <Filter>assymetric</Filter>
     </ClCompile>
-    <ClCompile Include="private\ECC.cpp">
-      <Filter>assymetric</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="private\Endian.h">
@@ -109,9 +106,6 @@
       <Filter>999.Libs</Filter>
     </ClInclude>
     <ClInclude Include="private\AssymetricTest.h">
-      <Filter>assymetric</Filter>
-    </ClInclude>
-    <ClInclude Include="private\ECC.h">
       <Filter>assymetric</Filter>
     </ClInclude>
   </ItemGroup>

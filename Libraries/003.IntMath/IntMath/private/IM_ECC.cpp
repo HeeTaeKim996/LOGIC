@@ -1,4 +1,4 @@
-#include "ECC.h"
+#include "src/IM_ECC.h"
 #include <cassert>
 
 
@@ -13,11 +13,11 @@ Point ECC::add(const Point& A, const Point& B)
 	if (A.inf) return B;
 	if (B.inf) return A;
 
-	int64 x1 = A.x;
-	int64 y1 = A.y;
+	BigInt x1 = A.x;
+	BigInt y1 = A.y;
 
-	int64 x2 = B.x;
-	int64 y2 = B.y;
+	BigInt x2 = B.x;
+	BigInt y2 = B.y;
 
 	// 위 아래 쌍 -> O 
 	if (x1 == x2 && add(y1, y2) == 0)
@@ -31,7 +31,7 @@ Point ECC::add(const Point& A, const Point& B)
 
 
 
-	int64 inc = A == B ?
+	BigInt inc = A == B ?
 		mul(
 			add(mul(3, mul(x1, x1)), a),
 			inv_mul(mul(2, y1))
@@ -39,18 +39,18 @@ Point ECC::add(const Point& A, const Point& B)
 		:
 		mul(sub(y1, y2), inv_mul(sub(x1, x2)));
 
-	int64 x3 = sub(mul(inc, inc), add(x1, x2));
+	BigInt x3 = sub(mul(inc, inc), add(x1, x2));
 
-	int64 y3 = sub(mul(inc, sub(x1, x3)), y1);
+	BigInt y3 = sub(mul(inc, sub(x1, x3)), y1);
 
 	return Point(x3, y3);
 }
 
-Point ECC::scalarMulNaively(const Point& A, int32 k)
+Point ECC::scalarMulNaively(const Point& A, BigInt k)
 {
 	Point out = Point::Infinity();
 
-	while (k-- > 0)
+	while (k-- > BigInt(0))
 	{
 		out = add(out, A);
 	}
@@ -58,7 +58,7 @@ Point ECC::scalarMulNaively(const Point& A, int32 k)
 	return out;
 }
 
-Point ECC::scalarMul(Point A, int k)
+Point ECC::scalarMul(Point A, BigInt k)
 {
 	Point out = Point::Infinity();
 
@@ -80,8 +80,8 @@ bool ECC::isOnCurve(const Point& A)
 {
 	if (A.inf) return true;
 
-	int64 x = A.x;
-	int64 y = A.y;
+	BigInt x = A.x;
+	BigInt y = A.y;
 
 	return mul(y, y) ==
 		(add(add(mul(x, mul(x, x)), mul(a, x)), b));
@@ -124,27 +124,27 @@ Point ECC::neg(const Point& A)
 
 
 
-int32 ECC::inv_mul(int32 a)
+BigInt ECC::inv_mul(BigInt a)
 {
 	assert(a != 0);
 	if (a == 1) return 1;
 
 
-	int32 r0 = p;
-	int32 r1 = a;
+	BigInt r0 = p;
+	BigInt r1 = a;
 
-	int32 t0 = 0;
-	int32 t1 = 1;
+	BigInt t0 = 0;
+	BigInt t1 = 1;
 
 	while (r1)
 	{
-		int32 q = r0 / r1;
+		BigInt q = r0 / r1;
 
-		int32 r2 = r0 - q * r1;
+		BigInt r2 = r0 - q * r1;
 		r0 = r1;
 		r1 = r2;
 
-		int32 t2 = t0 - q * t1;
+		BigInt t2 = t0 - q * t1;
 		t0 = t1;
 		t1 = t2;
 	}
@@ -153,12 +153,12 @@ int32 ECC::inv_mul(int32 a)
 	return t0;
 }
 
-int32 ECC::norm(int64 a)
+BigInt ECC::norm(BigInt a)
 {
 	a %= p; // a 가 음수여도 %= 처리됨
 
 	if (a < 0) a += p;
-	return (int32)a;
+	return (BigInt)a;
 }
 
 
@@ -169,7 +169,7 @@ int32 ECC::norm(int64 a)
 
 void ECC::test()
 {
-	if(0)
+	if (1)
 	{
 		ECC ecc(17, 0, 7);
 
@@ -180,7 +180,7 @@ void ECC::test()
 		ecc.add(Point(5, 8), Point::Infinity()).print();
 	}
 
-	if(1)
+	if (1)
 	{
 		ECC ecc(17, -3, 5);
 

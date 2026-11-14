@@ -6,14 +6,14 @@ class AssymetricTest
 public:
 	inline static void test()
 	{
-		DiffieHellman();
-		RSA();
-		EIGammal();
+		//DiffieHellman();
+		//RSA();
+		//EIGammal();
 
 
 		ECDH();
-		ECEIGammal();
-		ECDSA();
+		//ECEIGammal();
+		//ECDSA();
 	}
 
 private:

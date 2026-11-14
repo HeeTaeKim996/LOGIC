@@ -1,4 +1,4 @@
-#include "src//BigInt.h"
+#include "src/IM_BigInt.h"
 #include <cassert>
 
 BigInt::BigInt(half* ptr, size_t size, bool isNeg)
@@ -45,14 +45,19 @@ BigInt::BigInt(half* ptr, size_t size, bool isNeg)
 	}
 }
 
-BigInt::BigInt(half num)
+
+// ※ 암시형변환 방지 explicit 을 붙이지 않았으니, BigInt a = 3; 으로도 이게 호출됨
+BigInt::BigInt(sword num) 
 {
 	if (num == 0) return;
 
-	vec.push_back(num & MASK_LIMB);
-	if (num >> LIMB_SIZE)
+	neg = num < 0;
+	word n = neg ? (word)0 - (word)num : (word)num;
+
+	while (n)
 	{
-		vec.push_back(num >> LIMB_SIZE);
+		vec.push_back((half)n & MASK_LIMB);
+		n >>= LIMB_SIZE;
 	}
 }
 
@@ -233,7 +238,12 @@ BigInt BigInt::operator>>(const size_t bits) const
 
 
 
-
+BigInt BigInt::operator--(int)
+{
+	BigInt temp = *this;
+	*this -= BigInt(1);
+	return temp;
+}
 
 
 
@@ -261,7 +271,6 @@ string BigInt::toString() const
 {
 	if (vec.empty()) return "0";
 
-	const half CHUNK = 1'000'000'000;
 	// 10 ^ 9. 9자리씩 뽑기 위해
 	vector<half> q = vec;
 	vector<half> chunks;
@@ -269,7 +278,7 @@ string BigInt::toString() const
 	while (q.empty() == false)
 	{
 		half rem;
-		q = divModSmallMag(q, CHUNK, rem);
+		q = divModSmallMag(q, CHUNK_VALUE, rem);
 		// CHUNK 진수(?) 로 절사해서 출력하는 그 방식이네
 		chunks.push_back(rem);
 	}
@@ -280,7 +289,7 @@ string BigInt::toString() const
 	for (size_t i = chunks.size() - 1; i-- > 0;) // size - 2부터
 	{
 		string part = std::to_string(chunks[i]);
-		s += string(9 - part.size(), '0') + part;
+		s += string(CHUNK_DIGITS - part.size(), '0') + part;
 		// 9 자리 중 공백을 0으로 채움
 	}
 	return s;

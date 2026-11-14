@@ -1,14 +1,15 @@
 #pragma once
 #include <type_traits>
 
+#include "IM_BigInt.h"
+#include "IM_check.h"
 
 
 template<typename T>
 T euclidian(T a, T b) // 유클리드 알고리즘
 {
-	static_assert(std::is_integral_v<T>, "T must be Integer");
+	CHECK_INT(T);
 
-	if (a <= 1) return a;
 
 	T r0 = a;
 	T r1 = b;
@@ -31,13 +32,15 @@ T euclidian(T a, T b) // 유클리드 알고리즘
 template<typename T>
 T gcd(T a, T b)
 {
+	CHECK_INT(T);
+
 	return euclidian(a, b);
 }
 
 template<typename T>
 T lcm(T a, T b)
 {
-	static_assert(std::is_integral_v<T>, "T must be Integer");
+	CHECK_INT(T);
 
 	return a / gcd(a, b) * b; // 오버플로 대비 나누기 먼저
 }

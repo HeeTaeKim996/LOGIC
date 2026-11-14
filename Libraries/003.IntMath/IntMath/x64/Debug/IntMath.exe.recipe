@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Users\ttiig\source\repos\LOGIC\Libraries\003.IntMath\x64\Debug\IntMath.exe</FullPath>
+      <FullPath>C:\Users\ttiig\source\repos\LOGIC\Libraries\003.IntMath\IntMath\public\out\x64\Debug\IntMath.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

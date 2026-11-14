@@ -1,22 +1,13 @@
 #pragma once
 #include <type_traits>
 #include <stdio.h>
-#include "BigInt.h"
+#include "IM_BigInt.h"
+
+#include "IM_check.h"
 
 
 
 
-// if consexpr 을 쓰는 이유는, static_assert 는 실행 시점이 아닌 
-// 컴파일 시점에 실행되기에, BigInt를 인자로 쓴다면 컴파일 시점에 
-// static_assert 가 실행되어 에러가 난다. if constexpr 는 실행시점이 아닌
-// 컴파일 시점에 실행되기에, BigInt를 쓸 때 static_assert 가 발동하지 않음
-#define CHECK(T) do{													\
-		if constexpr(is_same_v<T, BigInt> == false)						\
-		{																\
-			static_assert(std::is_integral_v<T>, "T must be Integer");	\
-			static_assert(std::is_signed_v<T>, "T must be Signed");		\
-		}																\
-	} while(0)
 
 // ※ 모듈러면 signed 에서 처리해야하니, signed 정수로 전제
 
@@ -24,7 +15,7 @@ template<typename T>
 T extendedEuclidian(T k, T m) // 확장 유클리드 알고리즘(모듈러 곱 역원 도출)
 {
 
-	CHECK(T);
+	CHECK_SIGN_INT(T);
 	
 	if (k <= 1) return k;
 
@@ -55,7 +46,7 @@ T extendedEuclidian(T k, T m) // 확장 유클리드 알고리즘(모듈러 곱 역원 도출)
 template<typename T>
 T mpow(T g, T x, T p)
 {
-	CHECK(T);
+	CHECK_SIGN_INT(T);
 
 	// 키가 uint64 까지만 있다 가정했고, out * g 에서 오버플로도 배제함
 	// 이것도 고려하면 코드가 복잡해서 가장 단순한 버전으로 처리
@@ -90,14 +81,14 @@ static T norm(T a, T p)
 template<typename T>
 T madd(T a, T b, T p)
 {
-	CHECK(T);
+	CHECK_SIGN_INT(T);
 	return norm(a + b, p);
 }
 
 template<typename T>
 T msub(T a, T b, T p)
 {
-	CHECK(T);
+	CHECK_SIGN_INT(T);
 	return norm(a - b, p);
 }
 
@@ -105,7 +96,7 @@ T msub(T a, T b, T p)
 template<typename T>
 T mmul(T a, T b, T p)
 {
-	CHECK(T);
+	CHECK_SIGN_INT(T);
 	return norm(a * b, p);
 }
 

@@ -6,14 +6,16 @@
 #include "src/IM_int.h"
 #include "src/IM_mod.h"
 #include "src/IM_gf.h"
-#include "src/BigInt.h"
+#include "src/IM_BigInt.h"
+#include "src/IM_ECC.h"
 
 int main()
 {
-	//test_IM_int();
+	test_IM_int();
 	test_IM_mod();
-	//test_IM_gf();
+	test_IM_gf();
 
-	//BigInt::test();
+	BigInt::test();
+	ECC::test();
 }
 

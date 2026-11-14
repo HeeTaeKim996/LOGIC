@@ -9,24 +9,26 @@
 #include <functional>
 #include "src/IM_mod.h"
 #include "src/IM_int.h"
-#include "ECC.h"
+//#include "ECC.h"
 #include <cassert>
+#include "src/IM_BigInt.h"
+#include "src/IM_ECC.h"
 
 void AssymetricTest::DiffieHellman()
 {
 	// 디피 헬만 테스트
-	auto func = [](int64 m, int64 g, int64 a, int64 b)
+	auto func = [](BigInt m, BigInt g, BigInt a, BigInt b)
 		{
 			// m, g 를 공유. 
 			// 서로 g^a, g^b (%m) 를 각자 만든 후 서로에게 송신
 			// 서로 받은 값에 각자 ^b, ^a 하여,
 			// g^ab = g^ba (%m) 를 키로 사용
 
-			int64 x = mpow(g, a, m);
-			int64 y = mpow(g, b, m);
+			BigInt x = mpow(g, a, m);
+			BigInt y = mpow(g, b, m);
 
-			int64 ab = mpow(x, b, m);
-			int64 ba = mpow(y, a, m);
+			BigInt ab = mpow(x, b, m);
+			BigInt ba = mpow(y, a, m);
 
 			if (ab == ba)
 			{
@@ -39,27 +41,30 @@ void AssymetricTest::DiffieHellman()
 		};
 
 
-	int64 m1 = 23;
-	int64 g1 = 5;
+	BigInt m1 = 23;
+	BigInt g1 = 5;
 
-	int64 a1 = 6;
-	int64 b1 = 15;
+	BigInt a1 = 6;
+	BigInt b1 = 15;
 
 	func(m1, g1, a1, b1);
 
-	int64 m2 = 4294967087;
-	int64 g2 = 5;
 
-	int64 a2 = 1234567891;
-	int64 b2 = 987654321;
 
-	func(m2, g2, a2, b2);
+	// 255비트 소수 (2^255 - 19, Curve25519 의 소수)
+	BigInt m4("57896044618658097711785492504343953926634992332820282019728792003956564819949");
+	BigInt g4("5");
+	BigInt a4("90942894222941581070058735694432465663348344332098107489693037779484723616546");
+	BigInt b4("71563446777022297856526126342750658392501306254664949883333486863006233104021");
+
+	func(m4, g4, a4, b4);
+
 
 }
 
 void AssymetricTest::RSA()
 {
-	auto func = [](int64 p, int64 q, int64 E, int64 m) -> void
+	auto func = [](BigInt p, BigInt q, BigInt E, BigInt m) -> void
 		{
 			// ■ 개인키 사용자(생성자)의 키생성 과정
 			// 
@@ -76,12 +81,12 @@ void AssymetricTest::RSA()
 			//    변수로 받아 처리했다
 
 
-			int64 N = p * q;
-			int64 L = lcm(p - 1, q - 1);
-			int64 D = extendedEuclidian(E, L);
+			BigInt N = p * q;
+			BigInt L = lcm(p - 1, q - 1);
+			BigInt D = extendedEuclidian(E, L);
 
-			int64 c = mpow(m, E, N); // 공개키로 평문을 암호화
-			int64 d = mpow(c, D, N); // 개인키로 암호를 복호화
+			BigInt c = mpow(m, E, N); // 공개키로 평문을 암호화
+			BigInt d = mpow(c, D, N); // 개인키로 암호를 복호화
 
 			if (d == m)
 			{
@@ -94,38 +99,45 @@ void AssymetricTest::RSA()
 		};
 
 	// RSA 테스트
-	int64 p = 61;
-	int64 q = 53;
-	int64 E = 17;
-	int64 m = 1234;
+	BigInt p = 61;
+	BigInt q = 53;
+	BigInt E = 17;
+	BigInt m = 1234;
 	func(p, q, E, m);
+
+
+	BigInt p2("72701006939494238243595020906218961312501607072826208109892606521075242172797");
+	BigInt q2("104618889389031091741697867029934545270541378915302818511401062929801834355683");
+	BigInt E2("65537");   // 2^16 + 1, L 과 서로소임을 확인함
+	BigInt m2("46705349425275964047091750287422271149780248886835835895293305932645477301988");
+	func(p2, q2, E2, m2);
 }
 
 void AssymetricTest::EIGammal()
 {
-	auto func = [](int64 p, int64 g, int64 x, int64 y)
+	auto func = [](BigInt p, BigInt g, BigInt x, BigInt y)
 		{
 			// 수신자 p, g, x 에 기반해 h를 만든 후, 송신자에게 
 			// 공개키인 (h, g, p) 를 전송. (개인키는 x)
 
-			int64 h = mpow(g, x, p);
+			BigInt h = mpow(g, x, p);
 
 
 
 			// 송신자는 공개키를 받은 후, c1, c2(평문과 결합) 를 만들어, 
 			// 수신자에게 전송
-			int64 m = 10;
+			BigInt m = 10;
 			
 
 
-			int64 c1 = mpow(g, y, p);
-			int64 c2 = m * mpow(h, y, p) % p;
+			BigInt c1 = mpow(g, y, p);
+			BigInt c2 = m * mpow(h, y, p) % p;
 
 			// 수신자는 c1 에 ^(-x) 하여 t를 만든 후 C2 와 곱하여, 평문 m을 도출 
 			// (t 도출 실제 코드는 확장 유클리드로 invC1 구한후, mpow)
-			int64 invC1 = extendedEuclidian(c1, p);
-			int64 t = mpow(invC1, x, p);
-			int64 d5 = t * c2 % p;
+			BigInt invC1 = extendedEuclidian(c1, p);
+			BigInt t = mpow(invC1, x, p);
+			BigInt d5 = t * c2 % p;
 
 			if (m == d5)
 			{
@@ -138,13 +150,21 @@ void AssymetricTest::EIGammal()
 		};
 
 	
-	int64 p = 23;
-	int64 g = 5;
+	BigInt p = 23;
+	BigInt g = 5;
 
-	int64 x = 6;
-	int64 y = 8;
+	BigInt x = 6;
+	BigInt y = 8;
 	
 	func(p, g, x, y);
+
+
+
+	BigInt p2("115792089237316195423570985008687907853269984665640564039457584007913129639747");
+	BigInt g2("5");
+	BigInt x2("54402719445738542648830185211217922203494088715465318631540275427069301805885");
+	BigInt y2("42716311098472971311653471837678667036500068065288240843043180787528881192220");
+	func(p2, g2, x2, y2);
 }
 
 
@@ -176,7 +196,7 @@ void AssymetricTest::EIGammal()
 void AssymetricTest::ECDH()
 {
 	auto func = [](ECC ecc, Point G,
-		int32 n, int32 a, int32 b) -> void
+		BigInt n, BigInt a, BigInt b) -> void
 		{
 			// 각자 공개키 생성
 			Point A = ecc.scalarMul(G, a);
@@ -198,11 +218,23 @@ void AssymetricTest::ECDH()
 
 
 	func(ECC(17, 2, 2), Point(5, 1), 19, /*privA*/ 7, /*privB*/ 11);
+
+	// 계산하는데 1분 걸리더라. 조심.
+	string p2 = "115792089237316195423570985008687907853269984665640564039457584007908834671663";
+	string ca2 = "0";
+	string cb2 = "7";
+	string Gx2 = "55066263022277343669578718895168534326250603453777594175500187360389116729240";
+	string Gy2 = "32670510020758816978083085130507043184471273380659243275938904335757337482424";
+	string n2 = "115792089237316195423570985008687907852837564279074904382605163141518161494337";
+	string privA2 = "65610368078285743686530282514354855437166089147984718752267841475098511612777";
+	string privB2 = "98451540608157669946738156664573520625309719434949018445507184326091007808504";
+
+	func(ECC(p2, ca2, cb2), Point(Gx2, Gy2), n2, privA2, privB2);
 }
 
 void AssymetricTest::ECEIGammal()
 {
-	auto func = [](ECC ecc, Point G, int32 n, int32 e, int32 r,
+	auto func = [](ECC ecc, Point G, BigInt n, BigInt e, BigInt r,
 		Point M)-> void
 		{
 			assert(ecc.isOnCurve(M));
@@ -246,7 +278,7 @@ void AssymetricTest::ECEIGammal()
 void AssymetricTest::ECDSA()
 {
 	auto func = [](ECC ecc, Point G, 
-		int64 p, int64 e, int64 m, int64 r) -> void
+		BigInt p, BigInt e, BigInt m, BigInt r) -> void
 		{
 			
 			// 서명 (서명에 사용되는 e, r 는 비공개)
@@ -255,19 +287,19 @@ void AssymetricTest::ECDSA()
 			Point E = ecc.scalarMul(G, e);
 			Point R = ecc.scalarMul(G, r);
 
-			int64 Rx = R.x % p;
-			int64 inv_r = extendedEuclidian(r, p);
+			BigInt Rx = R.x % p;
+			BigInt inv_r = extendedEuclidian(r, p);
 			
-			int64 s = mmul(
+			BigInt s = mmul(
 				inv_r, madd(m, mmul(Rx, e, p), p), p);
 
 			
 			// 검증자에게 전달 
 			// (m(메세지), 서명(E, s, Rx) 이 전달)
 			// ( 원점 G, 모듈려 p는 사전 공유 )
-			int64 inv_s = extendedEuclidian<int64>(s, p);
-			int64 u1 = mmul(m, inv_s, p);
-			int64 u2 = mmul(Rx, inv_s, p);
+			BigInt inv_s = extendedEuclidian(s, p);
+			BigInt u1 = mmul(m, inv_s, p);
+			BigInt u2 = mmul(Rx, inv_s, p);
 
 			Point X = ecc.add(
 				ecc.scalarMul(G, u1),
@@ -292,6 +324,6 @@ void AssymetricTest::ECDSA()
 		};
 
 	func(ECC(17, 2, 2), Point(5, 1), 
-		19, 7, 10, 3);
+		BigInt(19), BigInt(7), BigInt(10), BigInt(3));
 }
 
