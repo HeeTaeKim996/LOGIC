@@ -14,8 +14,8 @@ public:
 		//DiffieHellman();
 		//RSA();
 		//EIGammal();
-		Rabin();
-	
+		//Rabin();
+		DSA();
 		
 		//ECDH();
 		//ECEIGammal();
@@ -27,6 +27,7 @@ private:
 	static void RSA();
 	static void EIGammal();
 	static void Rabin();
+	static void DSA();
 	
 	static void ECDH();
 	static void ECEIGammal();

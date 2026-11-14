@@ -239,6 +239,43 @@ void AssymetricTest::Rabin()
 #endif
 }
 
+void AssymetricTest::DSA()
+{
+	auto func = [](BigInt p, BigInt q, BigInt g,
+		BigInt e, BigInt r, BigInt m) -> void
+		{
+			// 서명자(개인키 보유자) 는 서명값 E, R, S 를 만들어 보낸다
+			BigInt E = mpow(g, e, p);
+			BigInt R = mpow(g, r, p) % q;
+
+			BigInt invR = extendedEuclidian(r, q);
+			BigInt s = mmul(invR,
+				madd(m, mmul(e, R, q), q), q) % q;
+
+
+			// 검증자
+			BigInt invS = extendedEuclidian(s, q);
+			BigInt u1 = mmul(m, invS, q);
+			BigInt u2 = mmul(R, invS, q);
+
+			BigInt v = mmul(
+				mpow(g, u1, p), mpow(E, u2, p), 
+				p) % q;
+
+			if (v == R)
+			{
+				printf("DSA 서명-검증 성공\n");
+			}
+			else
+			{
+				printf("DSA 서명-검증 실패\n");
+			}
+		};
+
+	func(BigInt(23), BigInt(11), BigInt(4),
+		BigInt(3), BigInt(4), BigInt(5));
+}
+
 
 
 
