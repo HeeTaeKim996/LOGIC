@@ -1,1 +1,9 @@
-﻿  Cipher.vcxproj -> C:\Users\ttiig\source\repos\LOGIC\Libraries\002.Cipher\Cipher\public\out\x64\Debug\Cipher.exe
+﻿  main.cpp
+  AssymetricTest.cpp
+C:\Users\ttiig\source\repos\LOGIC\Libraries\002.Cipher\Cipher\private\libs\003.IntMath\public\src\IM_BigInt.h(176,15): warning C4251: 'BigInt::vec': class 'std::vector<half,std::allocator<half>>' needs to have dll-interface to be used by clients of class 'BigInt'
+  (compiling source file 'private/AssymetricTest.cpp')
+      C:\Users\ttiig\source\repos\LOGIC\Libraries\002.Cipher\Cipher\private\libs\003.IntMath\public\src\IM_BigInt.h(154,26):
+      see declaration of 'std::vector<half,std::allocator<half>>'
+  
+  Generating Code...
+  Cipher.vcxproj -> C:\Users\ttiig\source\repos\LOGIC\Libraries\002.Cipher\Cipher\public\out\x64\Debug\Cipher.exe
