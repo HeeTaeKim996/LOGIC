@@ -11,12 +11,16 @@
       "RelativeMoniker": "D:0:0:{E1046CC1-BC20-46CC-B336-643C1BDA6F5C}|IntMath\\IntMath.vcxproj|solutionrelative:IntMath\\public\\src\\BigInt.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E1046CC1-BC20-46CC-B336-643C1BDA6F5C}|IntMath\\IntMath.vcxproj|C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\003.IntMath\\IntMath\\private\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{E1046CC1-BC20-46CC-B336-643C1BDA6F5C}|IntMath\\IntMath.vcxproj|solutionrelative:IntMath\\private\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:1:0:{E1046CC1-BC20-46CC-B336-643C1BDA6F5C}|IntMath\\IntMath.vcxproj|C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\003.IntMath\\IntMath\\public\\src\\IM_mod.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:1:0:{E1046CC1-BC20-46CC-B336-643C1BDA6F5C}|IntMath\\IntMath.vcxproj|solutionrelative:IntMath\\public\\src\\IM_mod.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E1046CC1-BC20-46CC-B336-643C1BDA6F5C}|IntMath\\IntMath.vcxproj|C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\003.IntMath\\IntMath\\public\\src\\IM_mod.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{E1046CC1-BC20-46CC-B336-643C1BDA6F5C}|IntMath\\IntMath.vcxproj|solutionrelative:IntMath\\public\\src\\IM_mod.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:2:0:{E1046CC1-BC20-46CC-B336-643C1BDA6F5C}|IntMath\\IntMath.vcxproj|C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\003.IntMath\\IntMath\\public\\src\\IM_mod.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:2:0:{E1046CC1-BC20-46CC-B336-643C1BDA6F5C}|IntMath\\IntMath.vcxproj|solutionrelative:IntMath\\public\\src\\IM_mod.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1046CC1-BC20-46CC-B336-643C1BDA6F5C}|IntMath\\IntMath.vcxproj|C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\003.IntMath\\IntMath\\private\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E1046CC1-BC20-46CC-B336-643C1BDA6F5C}|IntMath\\IntMath.vcxproj|solutionrelative:IntMath\\private\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E1046CC1-BC20-46CC-B336-643C1BDA6F5C}|IntMath\\IntMath.vcxproj|C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\003.IntMath\\IntMath\\public\\src\\IM_int.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -33,9 +37,22 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "DockedWidth": 209,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IM_mod.h",
+              "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\003.IntMath\\IntMath\\public\\src\\IM_mod.h",
+              "RelativeDocumentMoniker": "IntMath\\public\\src\\IM_mod.h",
+              "ToolTip": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\003.IntMath\\IntMath\\public\\src\\IM_mod.h",
+              "RelativeToolTip": "IntMath\\public\\src\\IM_mod.h",
+              "ViewState": "AgIAAGsAAAAAAAAAAAAAAIIAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-11-14T00:23:14.758Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -44,26 +61,27 @@
               "RelativeDocumentMoniker": "IntMath\\public\\src\\BigInt.h",
               "ToolTip": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\003.IntMath\\IntMath\\public\\src\\BigInt.h",
               "RelativeToolTip": "IntMath\\public\\src\\BigInt.h",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABUAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAD4vx4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2026-11-13T05:49:28.421Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\003.IntMath\\IntMath\\private\\main.cpp",
               "RelativeDocumentMoniker": "IntMath\\private\\main.cpp",
               "ToolTip": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\003.IntMath\\IntMath\\private\\main.cpp",
               "RelativeToolTip": "IntMath\\private\\main.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-11-12T04:35:13.653Z"
+              "WhenOpened": "2026-11-12T04:35:13.653Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "IM_int.h",
               "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\003.IntMath\\IntMath\\public\\src\\IM_int.h",
               "RelativeDocumentMoniker": "IntMath\\public\\src\\IM_int.h",
@@ -76,7 +94,7 @@
           ]
         },
         {
-          "DockedWidth": 200,
+          "DockedWidth": 191,
           "SelectedChildIndex": 0,
           "Children": [
             {
@@ -87,14 +105,14 @@
               "RelativeDocumentMoniker": "IntMath\\private\\BigInt.cpp",
               "ToolTip": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\003.IntMath\\IntMath\\private\\BigInt.cpp",
               "RelativeToolTip": "IntMath\\private\\BigInt.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAG0CAAAAAAAAAAD4v3QCAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-11-13T05:50:20.943Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "IM_gf.h",
               "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\003.IntMath\\IntMath\\public\\src\\IM_gf.h",
               "RelativeDocumentMoniker": "IntMath\\public\\src\\IM_gf.h",
@@ -106,15 +124,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "IM_mod.h",
               "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\003.IntMath\\IntMath\\public\\src\\IM_mod.h",
               "RelativeDocumentMoniker": "IntMath\\public\\src\\IM_mod.h",
               "ToolTip": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\003.IntMath\\IntMath\\public\\src\\IM_mod.h",
               "RelativeToolTip": "IntMath\\public\\src\\IM_mod.h",
-              "ViewState": "AgIAAEkAAAAAAAAAAAD4v14AAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAGsAAAAAAAAAAAD4v4AAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-11-12T04:50:05.926Z"
+              "WhenOpened": "2026-11-12T04:50:05.926Z",
+              "EditorCaption": ""
             }
           ]
         }

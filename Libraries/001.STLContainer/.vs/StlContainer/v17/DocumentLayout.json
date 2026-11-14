@@ -93,20 +93,21 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 248,
-          "SelectedChildIndex": 2,
+          "DockedWidth": 238,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Unordered_set.h",
-              "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\001.STLContainer\\StlContainer\\public\\src\\Unordered_set.h",
-              "RelativeDocumentMoniker": "StlContainer\\public\\src\\Unordered_set.h",
-              "ToolTip": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\001.STLContainer\\StlContainer\\public\\src\\Unordered_set.h",
-              "RelativeToolTip": "StlContainer\\public\\src\\Unordered_set.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-09-12T02:42:19.511Z"
+              "DocumentIndex": 1,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\001.STLContainer\\StlContainer\\private\\main.cpp",
+              "RelativeDocumentMoniker": "StlContainer\\private\\main.cpp",
+              "ToolTip": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\001.STLContainer\\StlContainer\\private\\main.cpp",
+              "RelativeToolTip": "StlContainer\\private\\main.cpp",
+              "ViewState": "AgIAAHoDAAAAAAAAAAAAAHoDAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-09-03T07:39:32.775Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -122,16 +123,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "main.cpp",
-              "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\001.STLContainer\\StlContainer\\private\\main.cpp",
-              "RelativeDocumentMoniker": "StlContainer\\private\\main.cpp",
-              "ToolTip": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\001.STLContainer\\StlContainer\\private\\main.cpp",
-              "RelativeToolTip": "StlContainer\\private\\main.cpp",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAAAHoDAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-09-03T07:39:32.775Z",
-              "EditorCaption": ""
+              "DocumentIndex": 11,
+              "Title": "Unordered_set.h",
+              "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\001.STLContainer\\StlContainer\\public\\src\\Unordered_set.h",
+              "RelativeDocumentMoniker": "StlContainer\\public\\src\\Unordered_set.h",
+              "ToolTip": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\001.STLContainer\\StlContainer\\public\\src\\Unordered_set.h",
+              "RelativeToolTip": "StlContainer\\public\\src\\Unordered_set.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-09-12T02:42:19.511Z"
             },
             {
               "$type": "Document",
@@ -148,7 +148,7 @@
           ]
         },
         {
-          "DockedWidth": 194,
+          "DockedWidth": 204,
           "SelectedChildIndex": 2,
           "Children": [
             {
@@ -183,7 +183,7 @@
               "RelativeDocumentMoniker": "StlContainer\\public\\src\\Vector.h",
               "ToolTip": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\001.STLContainer\\StlContainer\\public\\src\\Vector.h",
               "RelativeToolTip": "StlContainer\\public\\src\\Vector.h",
-              "ViewState": "AgIAAHYCAAAAAAAAAAD4v48BAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAABcAAAAAAAAAAAD4v48BAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2026-09-11T07:44:40.291Z",
               "EditorCaption": ""

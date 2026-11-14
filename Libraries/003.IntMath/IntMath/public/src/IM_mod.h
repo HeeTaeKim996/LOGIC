@@ -1,10 +1,21 @@
 #pragma once
 #include <type_traits>
 #include <stdio.h>
+#include "BigInt.h"
 
-#define CHECK(T) do{											\
-	static_assert(std::is_integral_v<T>, "T must be Integer");	\
-	static_assert(std::is_signed_v<T>, "T must be Signed");		\
+
+
+
+// if consexpr 을 쓰는 이유는, static_assert 는 실행 시점이 아닌 
+// 컴파일 시점에 실행되기에, BigInt를 인자로 쓴다면 컴파일 시점에 
+// static_assert 가 실행되어 에러가 난다. if constexpr 는 실행시점이 아닌
+// 컴파일 시점에 실행되기에, BigInt를 쓸 때 static_assert 가 발동하지 않음
+#define CHECK(T) do{													\
+		if constexpr(is_same_v<T, BigInt> == false)						\
+		{																\
+			static_assert(std::is_integral_v<T>, "T must be Integer");	\
+			static_assert(std::is_signed_v<T>, "T must be Signed");		\
+		}																\
 	} while(0)
 
 // ※ 모듈러면 signed 에서 처리해야하니, signed 정수로 전제
@@ -12,31 +23,31 @@
 template<typename T>
 T extendedEuclidian(T k, T m) // 확장 유클리드 알고리즘(모듈러 곱 역원 도출)
 {
-	CHECK(T);
-	using S = std::make_signed_t<T>;
 
+	CHECK(T);
+	
 	if (k <= 1) return k;
 
-	S r0 = m;
-	S r1 = k;
+	T r0 = m;
+	T r1 = k;
 
-	S t0 = 0;
-	S t1 = 1;
+	T t0 = 0;
+	T t1 = 1;
 
 	while (r1)
 	{
-		S q = r0 / r1;
+		T q = r0 / r1;
 
-		S r2 = r0 - q * r1;
+		T r2 = r0 - q * r1;
 		r0 = r1;
 		r1 = r2;
 
-		S t2 = t0 - q * t1;
+		T t2 = t0 - q * t1;
 		t0 = t1;
 		t1 = t2;
 	}
 
-	if (t0 < 0) t0 += static_cast<S>(m);
+	if (t0 < 0) t0 += static_cast<T>(m);
 	return static_cast<T>(t0);
 }
 
@@ -107,6 +118,18 @@ void test_IM_mod()
 		int invK = extendedEuclidian(k, m);
 
 		printf("%d, ", invK);
+
+
+		printf("\nBigIntTest\n");
+		BigInt a("5");
+		BigInt b("3");
+		BigInt p("13");
+
+		extendedEuclidian(a, p).printNum();
+		mpow(a, b, p).printNum();
+		madd(a, b, p).printNum();
+		msub(a, b, p).printNum();
+		mmul(a, b, p).printNum();
 	}
 
 
