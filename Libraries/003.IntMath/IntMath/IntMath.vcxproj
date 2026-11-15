@@ -28,6 +28,7 @@
     <ClInclude Include="public\src\IM_BigInt.h" />
     <ClInclude Include="public\src\IM_ECC.h" />
     <ClInclude Include="public\src\IM_gf.h" />
+    <ClInclude Include="public\src\IM_integer_interfaces.h" />
     <ClInclude Include="public\src\IM_int.h" />
     <ClInclude Include="public\src\IM_mod.h" />
   </ItemGroup>

@@ -36,5 +36,8 @@
     <ClInclude Include="public\src\IM_check.h">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="public\src\IM_integer_interfaces.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

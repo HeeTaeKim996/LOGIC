@@ -1,7 +1,7 @@
 ﻿  main.cpp
-C:\Users\ttiig\source\repos\LOGIC\Libraries\003.IntMath\IntMath\public\src\IM_BigInt.h(176,15): warning C4251: 'BigInt::vec': class 'std::vector<half,std::allocator<half>>' needs to have dll-interface to be used by clients of class 'BigInt'
+C:\Users\ttiig\source\repos\LOGIC\Libraries\003.IntMath\IntMath\public\src\IM_BigInt.h(177,15): warning C4251: 'BigInt::vec': class 'std::vector<half,std::allocator<half>>' needs to have dll-interface to be used by clients of class 'BigInt'
   (compiling source file 'private/main.cpp')
-      C:\Users\ttiig\source\repos\LOGIC\Libraries\003.IntMath\IntMath\public\src\IM_BigInt.h(154,26):
+      C:\Users\ttiig\source\repos\LOGIC\Libraries\003.IntMath\IntMath\public\src\IM_BigInt.h(155,26):
       see declaration of 'std::vector<half,std::allocator<half>>'
   
 C:\Users\ttiig\source\repos\LOGIC\Libraries\003.IntMath\IntMath\public\src\IM_int.h(11,2): warning C4984: 'if constexpr' is a C++17 language extension
