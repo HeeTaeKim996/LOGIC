@@ -9,7 +9,8 @@ public:
 	static uint32 loadTo32(const uint8* p);
 	static void storeFrom32(uint8* p, uint32 v);
 
-	
+	static uint64 loadTo64(const uint8* p);
+	static void storeFrom64(uint8* p, uint64 v);
 
 };
 

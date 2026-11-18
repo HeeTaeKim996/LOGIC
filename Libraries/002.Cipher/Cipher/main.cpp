@@ -33,6 +33,5 @@ int main()
 	//LEA::test();
 
 	AssymetricTest::test();
-	//ECC::test();
 }
 

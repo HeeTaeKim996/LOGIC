@@ -19,8 +19,29 @@ void LittleEndian::storeFrom32(uint8* p, uint32 v)
 	p[3] = (uint8)(v >> 24);
 }
 
+uint64 LittleEndian::loadTo64(const uint8* p)
+{
+	return (uint64)p[0]
+		| (uint64)p[1] << 8
+		| (uint64)p[2] << 16
+		| (uint64)p[3] << 24
+		| (uint64)p[4] << 32
+		| (uint64)p[5] << 40
+		| (uint64)p[6] << 48
+		| (uint64)p[7] << 56;
+}
 
-
+void LittleEndian::storeFrom64(uint8* p, uint64 v)
+{
+	p[0] = (uint8)v;
+	p[1] = (uint8)(v >> 8);
+	p[2] = (uint8)(v >> 16);
+	p[3] = (uint8)(v >> 24);
+	p[4] = (uint8)(v >> 32);
+	p[5] = (uint8)(v >> 40);
+	p[6] = (uint8)(v >> 48);
+	p[7] = (uint8)(v >> 56);
+}
 
 
 

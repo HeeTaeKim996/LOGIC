@@ -2,6 +2,7 @@
 #include <vector>
 #include <cstdint>
 #include <string>
+#include "IM_integer_interfaces.h"
 
 using namespace std;
 
@@ -57,7 +58,7 @@ using half = uint16_t;
 */
 
 
-class __declspec(dllexport) BigInt
+class __declspec(dllexport) BigInt : public IInteger
 {
 public:
 	BigInt() = default;

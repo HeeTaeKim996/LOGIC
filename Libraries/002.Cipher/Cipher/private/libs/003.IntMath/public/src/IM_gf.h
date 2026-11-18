@@ -101,7 +101,7 @@ T gres(T a, T b)
 
 
 
-
+#include <stdio.h>
 inline void test_IM_gf()
 {
 	using u8 = uint8_t;

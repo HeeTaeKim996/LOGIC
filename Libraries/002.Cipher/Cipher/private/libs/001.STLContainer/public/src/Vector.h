@@ -41,6 +41,9 @@ public:
 	Vector(Vector&& other);
 	Vector(const sizeType size, const T& value);
 
+
+	Vector(const T* start, const T* end);
+
 	template<typename FromIt>
 	Vector(FromIt begin, FromIt end);
 
@@ -93,7 +96,7 @@ public:
 	T& emplace_back(Args&&... args);
 
 	void insert(const_iterator itPos, const T& value);
-	void insert(const_iterator itPos, T* begin, T* end);
+	void insert(const_iterator itPos, const T* begin, const T* end);
 
 	inline void insert(const_iterator itPos, iterator begin, iterator end)
 	{ insert(itPos, begin.get(), end.get());}
@@ -158,6 +161,16 @@ inline Vector<T>::Vector(sizeType size, const T& value)
 	: _arr(m::allocate<T>(size)), _size(size), _capacity(size)
 {
 	m::constructRange<T>(_arr, _arr + _size, value);
+}
+
+template<typename T>
+inline Vector<T>::Vector(const T* start, const T* end)
+{
+	sizeType n = sizeType(end - start);
+	_arr = m::allocate<T>(n);
+	_capacity = n;
+	m::copyConstructRange<T>(_arr, start, end);
+	_size = n;
 }
 
 
@@ -389,15 +402,15 @@ inline void Vector<T>::insert(const_iterator itPos, const T& value)
 	}
 	else
 	{
-		T* begin = const_cast<T*>(&value);
-		T* end = begin + 1;
+		const T* begin = &value;
+		const T* end = begin + 1;
 
 		insert(itPos, begin, end);
 	}
 }
 
 template<typename T>
-inline void Vector<T>::insert(const_iterator itPos, T* srcBegin, T* srcEnd)
+inline void Vector<T>::insert(const_iterator itPos, const T* srcBegin, const T* srcEnd)
 {
 	sizeType insertingSize = sizeType(srcEnd - srcBegin);
 
@@ -465,6 +478,19 @@ inline void Vector<T>::insert(const_iterator itPos, T* srcBegin, T* srcEnd)
 
 	_size = newSize;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 template<typename T>
 template<typename ...Args>
