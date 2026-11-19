@@ -66,8 +66,7 @@
               "RelativeToolTip": "IntMath\\public\\src\\IM_integer_interfaces.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-11-15T08:29:11.93Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-15T08:29:11.93Z"
             },
             {
               "$type": "Document",
@@ -75,12 +74,12 @@
               "Title": "IM_check.h",
               "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\003.IntMath\\IntMath\\public\\src\\IM_check.h",
               "RelativeDocumentMoniker": "IntMath\\public\\src\\IM_check.h",
-              "ToolTip": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\003.IntMath\\IntMath\\public\\src\\IM_check.h",
-              "RelativeToolTip": "IntMath\\public\\src\\IM_check.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAUAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\003.IntMath\\IntMath\\public\\src\\IM_check.h [Read Only]",
+              "RelativeToolTip": "IntMath\\public\\src\\IM_check.h [Read Only]",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2026-11-14T03:04:33.751Z",
-              "EditorCaption": ""
+              "EditorCaption": " [Read Only]"
             },
             {
               "$type": "Document",
@@ -122,21 +121,8 @@
         },
         {
           "DockedWidth": 178,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IM_mod.h",
-              "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\003.IntMath\\IntMath\\public\\src\\IM_mod.h",
-              "RelativeDocumentMoniker": "IntMath\\public\\src\\IM_mod.h",
-              "ToolTip": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\003.IntMath\\IntMath\\public\\src\\IM_mod.h",
-              "RelativeToolTip": "IntMath\\public\\src\\IM_mod.h",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAIwFsAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-11-14T00:23:14.758Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 8,
@@ -179,12 +165,24 @@
               "Title": "IM_gf.h",
               "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\003.IntMath\\IntMath\\public\\src\\IM_gf.h",
               "RelativeDocumentMoniker": "IntMath\\public\\src\\IM_gf.h",
-              "ToolTip": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\003.IntMath\\IntMath\\public\\src\\IM_gf.h",
-              "RelativeToolTip": "IntMath\\public\\src\\IM_gf.h",
-              "ViewState": "AgIAAEkAAAAAAAAAAAAkwGcAAAASAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\003.IntMath\\IntMath\\public\\src\\IM_gf.h [Read Only]",
+              "RelativeToolTip": "IntMath\\public\\src\\IM_gf.h [Read Only]",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAkwFwAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2026-11-12T05:01:01.866Z",
-              "EditorCaption": ""
+              "EditorCaption": " [Read Only]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IM_mod.h",
+              "DocumentMoniker": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\003.IntMath\\IntMath\\public\\src\\IM_mod.h",
+              "RelativeDocumentMoniker": "IntMath\\public\\src\\IM_mod.h",
+              "ToolTip": "C:\\Users\\ttiig\\source\\repos\\LOGIC\\Libraries\\003.IntMath\\IntMath\\public\\src\\IM_mod.h",
+              "RelativeToolTip": "IntMath\\public\\src\\IM_mod.h",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAIwFsAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-11-14T00:23:14.758Z"
             },
             {
               "$type": "Document",

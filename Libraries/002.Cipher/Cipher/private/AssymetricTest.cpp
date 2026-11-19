@@ -407,7 +407,7 @@ void AssymetricTest::ECEIGammal()
 void AssymetricTest::ECDSA()
 {
 	auto func = [](ECC ecc, Point G, 
-		BigInt p, BigInt e, BigInt m, BigInt r) -> void
+		BigInt q, BigInt e, BigInt m, BigInt r) -> void
 		{
 			
 			// 서명 (서명에 사용되는 e, r 는 비공개)
@@ -416,19 +416,19 @@ void AssymetricTest::ECDSA()
 			Point E = ecc.scalarMul(G, e);
 			Point R = ecc.scalarMul(G, r);
 
-			BigInt Rx = R.x % p;
-			BigInt inv_r = extendedEuclidian(r, p);
+			BigInt Rx = R.x % q;
+			BigInt inv_r = extendedEuclidian(r, q);
 			
 			BigInt s = mmul(
-				inv_r, madd(m, mmul(Rx, e, p), p), p);
+				inv_r, madd(m, mmul(Rx, e, q), q), q);
 
 			
 			// 검증자에게 전달 
 			// (m(메세지), 서명(E, s, Rx) 이 전달)
 			// ( 원점 G, 모듈려 p는 사전 공유 )
-			BigInt inv_s = extendedEuclidian(s, p);
-			BigInt u1 = mmul(m, inv_s, p);
-			BigInt u2 = mmul(Rx, inv_s, p);
+			BigInt inv_s = extendedEuclidian(s, q);
+			BigInt u1 = mmul(m, inv_s, q);
+			BigInt u2 = mmul(Rx, inv_s, q);
 
 			Point X = ecc.add(
 				ecc.scalarMul(G, u1),
@@ -442,7 +442,7 @@ void AssymetricTest::ECDSA()
 			// 왜 X == -R 이어도 검증이 되는지는 이해가 안되지만, 이것도 
 			// 검증이라 함
 			// 아무튼 이렇게 해서 메세지 m이 유효함을 검증
-			if (X.inf == false && X.x % p == Rx)
+			if (X.inf == false && X.x % q == Rx)
 			{
 				printf("ECDSA 키 검증 성공\n");
 			}
@@ -457,16 +457,16 @@ void AssymetricTest::ECDSA()
 
 
 #ifdef HEAVY_256_TEST
-	string p2 = "115792089237316195423570985008687907853269984665640564039457584007908834671663";
-	string ca2 = "0";
-	string cb2 = "7";
-	string Gx2 = "55066263022277343669578718895168534326250603453777594175500187360389116729240";
-	string Gy2 = "32670510020758816978083085130507043184471273380659243275938904335757337482424";
-	string n2 = "115792089237316195423570985008687907852837564279074904382605163141518161494337";
-	string e2 = "79835748785261120864012942577833320715585386880370569440160598109098789671830";
-	string m2 = "59457825462496181976452791601234300875549676596185728411045724927123710946639";
-	string r2 = "85059200315112121403676589033912233601446069219626980267999507455413383352205";
+	string p = "115792089237316195423570985008687907853269984665640564039457584007908834671663";
+	string a = "0";
+	string b = "7";
+	string Gx = "55066263022277343669578718895168534326250603453777594175500187360389116729240";
+	string Gy = "32670510020758816978083085130507043184471273380659243275938904335757337482424";
+	string q = "115792089237316195423570985008687907852837564279074904382605163141518161494337";
+	string e = "79835748785261120864012942577833320715585386880370569440160598109098789671830";
+	string m = "59457825462496181976452791601234300875549676596185728411045724927123710946639";
+	string r = "85059200315112121403676589033912233601446069219626980267999507455413383352205";
 
-	func(ECC(p2, ca2, cb2), Point(Gx2, Gy2), n2, e2, m2, r2);
+	func(ECC(p, a, b), Point(Gx, Gy), q, e, m, r);
 #endif
 }

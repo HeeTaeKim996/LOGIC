@@ -13,7 +13,8 @@
 /*
 	■ 정리
 	- 해시함수는 std::hash<..> 사용
-	- 체이닝은 폐쇄(Separate, Closed) 체이닝. 단방향 LinkedList 로 구현하되, DummyHead 를 사용하여,
+	- 체이닝은 개방(Separate, Closed) 해싱. 
+	  단방향 LinkedList 로 구현하되, DummyHead 를 사용하여,
 	  A 버켓의 꼬리가 B버켓의 헤드가 되는 구조로, 모든 노드를 연결
 
 	※ 인덱스 구하는 방법
