@@ -5,227 +5,271 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="Source Files\04. 필수문법">
+    <Filter Include="Source Files\C++">
+      <UniqueIdentifier>{489c3c36-dc2e-4714-869b-2f55cfa06176}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\C++\04. 필수문법">
       <UniqueIdentifier>{55e2980c-e529-495b-9ff1-7798eee64a16}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\04. 필수문법\추가">
+    <Filter Include="Source Files\C++\04. 필수문법\추가">
       <UniqueIdentifier>{9adc5fc6-2bef-4585-aee6-8d0fb2de4f3e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\06.스택">
-      <UniqueIdentifier>{b5377a67-92d1-4ae0-8b30-be86e2e0d9ae}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\05.배열">
+    <Filter Include="Source Files\C++\05.배열">
       <UniqueIdentifier>{62ff63f6-c7ca-494d-ada8-13a47becca1f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\05.배열\실습">
+    <Filter Include="Source Files\C++\05.배열\실습">
       <UniqueIdentifier>{0ae925f9-8c99-4257-9140-f09e46c9b1ce}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\05.배열\알고리즘">
+    <Filter Include="Source Files\C++\05.배열\알고리즘">
       <UniqueIdentifier>{00d785e6-a861-43b7-b646-f15d79b05613}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\06.스택\실습">
+    <Filter Include="Source Files\C++\06.스택">
+      <UniqueIdentifier>{b5377a67-92d1-4ae0-8b30-be86e2e0d9ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\C++\06.스택\실습">
       <UniqueIdentifier>{c0480329-dcf7-4ff9-a7b9-0b832f72ddaa}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\07.큐">
+    <Filter Include="Source Files\C++\07.큐">
       <UniqueIdentifier>{8e682ea6-d6bb-4ca9-a8fb-3b5e64fdfecb}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\07.큐\실습">
+    <Filter Include="Source Files\C++\07.큐\실습">
       <UniqueIdentifier>{b15e609a-dbaa-4b64-bf05-75202eb63843}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\07.큐\필수문법">
+    <Filter Include="Source Files\C++\07.큐\필수문법">
       <UniqueIdentifier>{ca831bc7-e0db-4753-952c-3089c408dbbf}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\08.해시">
+    <Filter Include="Source Files\C++\08.해시">
       <UniqueIdentifier>{74d7cd2d-275a-4ad8-8436-0845ccfe68ba}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\08.해시\실습">
+    <Filter Include="Source Files\C++\08.해시\실습">
       <UniqueIdentifier>{f6140229-6b3f-48fb-89db-e74b68c5fb68}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\999.기타">
-      <UniqueIdentifier>{33ea5b35-c430-40a4-af7e-8b5248ca31ad}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\09.트리">
+    <Filter Include="Source Files\C++\09.트리">
       <UniqueIdentifier>{720caac8-9ec8-4e2c-b263-e65a47693ff4}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\10.집합">
+    <Filter Include="Source Files\C++\10.집합">
       <UniqueIdentifier>{6cef3cd2-f54b-484c-b9dd-c036b9c7cf33}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\11.그래프">
+    <Filter Include="Source Files\C++\11.그래프">
       <UniqueIdentifier>{3f1bbb4f-e5ae-479f-86dd-acbf62a50aa4}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\11.그래프\알고리즘">
+    <Filter Include="Source Files\C++\11.그래프\알고리즘">
       <UniqueIdentifier>{ff1d87eb-1833-45f1-a651-59532d41c357}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\12.정렬">
+    <Filter Include="Source Files\C++\12.정렬">
       <UniqueIdentifier>{2254e1e4-9842-4b19-8581-9893b6b11354}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\13.시뮬레이션">
+    <Filter Include="Source Files\C++\13.시뮬레이션">
       <UniqueIdentifier>{07a20915-ae4c-45f8-8649-509053da86b6}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\13.시뮬레이션\실습">
+    <Filter Include="Source Files\C++\13.시뮬레이션\실습">
       <UniqueIdentifier>{3bb40cc5-427e-4ee9-b803-3162e0d9c54c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\14_16%28백트래킹_DP_Greedy%29">
+    <Filter Include="Source Files\C++\14_16%28백트래킹_DP_Greedy%29">
       <UniqueIdentifier>{7d629fe7-b299-4886-a170-48ad2edf9e91}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\14_16%28백트래킹_DP_Greedy%29\14.백트래킹">
+    <Filter Include="Source Files\C++\14_16%28백트래킹_DP_Greedy%29\14.백트래킹">
       <UniqueIdentifier>{da57e56e-0350-4f61-9b16-3600962ea26e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\14_16%28백트래킹_DP_Greedy%29\15.DP">
+    <Filter Include="Source Files\C++\14_16%28백트래킹_DP_Greedy%29\15.DP">
       <UniqueIdentifier>{8f005f3b-47c6-4f72-a6e2-ae7187106e96}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\14_16%28백트래킹_DP_Greedy%29\16.Greedy">
+    <Filter Include="Source Files\C++\14_16%28백트래킹_DP_Greedy%29\16.Greedy">
       <UniqueIdentifier>{73c5f5d3-3d1b-4a6d-a34f-3183ea0aed3a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\C++\999.기타">
+      <UniqueIdentifier>{33ea5b35-c430-40a4-af7e-8b5248ca31ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\C">
+      <UniqueIdentifier>{3f19d979-3565-4737-848c-bae082119f0e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\C\1.stack">
+      <UniqueIdentifier>{ad118b16-b563-419b-8b6e-cbfbcb0ff895}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\C\2.queue">
+      <UniqueIdentifier>{0e11a5e3-d869-4636-8359-ac69dc78f73d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\C\3.vector">
+      <UniqueIdentifier>{2192e941-86f8-4aa4-a034-2c712f7861e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\C\4.set">
+      <UniqueIdentifier>{98b9ca0e-05a3-488b-a1f0-884eaf01dca2}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="04.필수문법_1_문자열_기본문법.cpp">
-      <Filter>Source Files\04. 필수문법</Filter>
+      <Filter>Source Files\C++\04. 필수문법</Filter>
     </ClCompile>
     <ClCompile Include="04.필수문법_2_이터레이터.cpp">
-      <Filter>Source Files\04. 필수문법</Filter>
+      <Filter>Source Files\C++\04. 필수문법</Filter>
     </ClCompile>
     <ClCompile Include="04.필수문법_3_벡터_셋_맵.cpp">
-      <Filter>Source Files\04. 필수문법</Filter>
+      <Filter>Source Files\C++\04. 필수문법</Filter>
     </ClCompile>
     <ClCompile Include="04.필수문법.추가_1_공백구분sstream.cpp">
-      <Filter>Source Files\04. 필수문법\추가</Filter>
+      <Filter>Source Files\C++\04. 필수문법\추가</Filter>
     </ClCompile>
     <ClCompile Include="04.필수문법_4_algorithm.cpp">
-      <Filter>Source Files\04. 필수문법</Filter>
+      <Filter>Source Files\C++\04. 필수문법</Filter>
     </ClCompile>
     <ClCompile Include="05.배열.실습_1_배열_정렬하기.cpp">
-      <Filter>Source Files\05.배열\실습</Filter>
+      <Filter>Source Files\C++\05.배열\실습</Filter>
     </ClCompile>
     <ClCompile Include="05.배열.실습_2_배열_제어하기.cpp">
-      <Filter>Source Files\05.배열\실습</Filter>
+      <Filter>Source Files\C++\05.배열\실습</Filter>
     </ClCompile>
     <ClCompile Include="05.배열.실습_3_두_수를_뽑아서_더하기.cpp">
-      <Filter>Source Files\05.배열\실습</Filter>
+      <Filter>Source Files\C++\05.배열\실습</Filter>
     </ClCompile>
     <ClCompile Include="05.배열.실습_4_모의고사.cpp">
-      <Filter>Source Files\05.배열\실습</Filter>
+      <Filter>Source Files\C++\05.배열\실습</Filter>
     </ClCompile>
     <ClCompile Include="05.배열.실습_5_행렬의_곱셈.cpp">
-      <Filter>Source Files\05.배열\실습</Filter>
+      <Filter>Source Files\C++\05.배열\실습</Filter>
     </ClCompile>
     <ClCompile Include="05.배열_배열알고리즘_기본_다루기.cpp">
-      <Filter>Source Files\05.배열\알고리즘</Filter>
+      <Filter>Source Files\C++\05.배열\알고리즘</Filter>
     </ClCompile>
     <ClCompile Include="05.배열.실습_5_실패율.cpp">
-      <Filter>Source Files\05.배열\실습</Filter>
+      <Filter>Source Files\C++\05.배열\실습</Filter>
     </ClCompile>
     <ClCompile Include="06.스택.실습_1_괄호_짝_맞추기.cpp">
-      <Filter>Source Files\06.스택\실습</Filter>
+      <Filter>Source Files\C++\06.스택\실습</Filter>
     </ClCompile>
     <ClCompile Include="06.스택_실습_2_10진수를_2진수로_변환하기.cpp">
-      <Filter>Source Files\06.스택\실습</Filter>
+      <Filter>Source Files\C++\06.스택\실습</Filter>
     </ClCompile>
     <ClCompile Include="07.큐.실습_1_요세푸스문제.cpp">
-      <Filter>Source Files\07.큐\실습</Filter>
+      <Filter>Source Files\C++\07.큐\실습</Filter>
     </ClCompile>
     <ClCompile Include="07.큐.필수문법.cpp">
-      <Filter>Source Files\07.큐\필수문법</Filter>
+      <Filter>Source Files\C++\07.큐\필수문법</Filter>
     </ClCompile>
     <ClCompile Include="11.그래프.알고리즘_기본.cpp">
-      <Filter>Source Files\11.그래프\알고리즘</Filter>
+      <Filter>Source Files\C++\11.그래프\알고리즘</Filter>
     </ClCompile>
     <ClCompile Include="11.그래프.알고리즘_다익스트라알고리즘.cpp">
-      <Filter>Source Files\11.그래프\알고리즘</Filter>
+      <Filter>Source Files\C++\11.그래프\알고리즘</Filter>
     </ClCompile>
     <ClCompile Include="11.그래프.알고리즘_밸만포드알고리즘.cpp">
-      <Filter>Source Files\11.그래프\알고리즘</Filter>
+      <Filter>Source Files\C++\11.그래프\알고리즘</Filter>
     </ClCompile>
     <ClCompile Include="11.그래프.알고리즘_최단거리_Bfs.cpp">
-      <Filter>Source Files\11.그래프\알고리즘</Filter>
+      <Filter>Source Files\C++\11.그래프\알고리즘</Filter>
     </ClCompile>
     <ClCompile Include="11.그래프.알고리즘_최단거리_Bfs_다차원.cpp">
-      <Filter>Source Files\11.그래프\알고리즘</Filter>
+      <Filter>Source Files\C++\11.그래프\알고리즘</Filter>
     </ClCompile>
     <ClCompile Include="999.기타_1_Combination.cpp">
-      <Filter>Source Files\999.기타</Filter>
+      <Filter>Source Files\C++\999.기타</Filter>
     </ClCompile>
     <ClCompile Include="999.기타_2_CombinationWithRepetition.cpp">
-      <Filter>Source Files\999.기타</Filter>
+      <Filter>Source Files\C++\999.기타</Filter>
     </ClCompile>
     <ClCompile Include="04.필수문법_5_priority_queue.cpp">
-      <Filter>Source Files\04. 필수문법</Filter>
+      <Filter>Source Files\C++\04. 필수문법</Filter>
     </ClCompile>
     <ClCompile Include="13.시뮬레이션.실습_1_행렬회전.cpp">
-      <Filter>Source Files\13.시뮬레이션\실습</Filter>
+      <Filter>Source Files\C++\13.시뮬레이션\실습</Filter>
     </ClCompile>
     <ClCompile Include="13.시뮬레이션.실습_2_행렬곱_행렬전치.cpp">
-      <Filter>Source Files\13.시뮬레이션\실습</Filter>
+      <Filter>Source Files\C++\13.시뮬레이션\실습</Filter>
     </ClCompile>
     <ClCompile Include="13.시뮬레이션.실습_3_달팽이수열.cpp">
-      <Filter>Source Files\13.시뮬레이션\실습</Filter>
+      <Filter>Source Files\C++\13.시뮬레이션\실습</Filter>
     </ClCompile>
     <ClCompile Include="999.기타_3_nCr_nHr.cpp">
-      <Filter>Source Files\999.기타</Filter>
+      <Filter>Source Files\C++\999.기타</Filter>
     </ClCompile>
     <ClCompile Include="999.기타_4_IsPrime.cpp">
-      <Filter>Source Files\999.기타</Filter>
+      <Filter>Source Files\C++\999.기타</Filter>
     </ClCompile>
     <ClCompile Include="09.트리.필요알고리즘.cpp">
-      <Filter>Source Files\09.트리</Filter>
+      <Filter>Source Files\C++\09.트리</Filter>
     </ClCompile>
     <ClCompile Include="999.기타_5_ImosMethod.cpp">
-      <Filter>Source Files\999.기타</Filter>
+      <Filter>Source Files\C++\999.기타</Filter>
     </ClCompile>
     <ClCompile Include="999.기타_6_엑셀컬럼넘버링.cpp">
-      <Filter>Source Files\999.기타</Filter>
+      <Filter>Source Files\C++\999.기타</Filter>
     </ClCompile>
     <ClCompile Include="999.기타_7_Calander.cpp">
-      <Filter>Source Files\999.기타</Filter>
-    </ClCompile>
-    <ClCompile Include="PracticeSheet.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\C++\999.기타</Filter>
     </ClCompile>
     <ClCompile Include="10.2_Kruskal_Algorithm.cpp">
-      <Filter>Source Files\10.집합</Filter>
+      <Filter>Source Files\C++\10.집합</Filter>
     </ClCompile>
     <ClCompile Include="10.1_집합_집합개요코드.cpp">
-      <Filter>Source Files\10.집합</Filter>
+      <Filter>Source Files\C++\10.집합</Filter>
+    </ClCompile>
+    <ClCompile Include="PracticeSheet.cpp">
+      <Filter>Source Files\C++</Filter>
+    </ClCompile>
+    <ClCompile Include="PracticeSheet.h">
+      <Filter>Source Files\C</Filter>
+    </ClCompile>
+    <ClCompile Include="main.c">
+      <Filter>Source Files\C</Filter>
+    </ClCompile>
+    <ClCompile Include="stack.c">
+      <Filter>Source Files\C\1.stack</Filter>
+    </ClCompile>
+    <ClCompile Include="queue.c">
+      <Filter>Source Files\C\2.queue</Filter>
+    </ClCompile>
+    <ClCompile Include="set.h">
+      <Filter>Source Files\C\4.set</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="실습정리_배열.txt">
-      <Filter>Source Files\05.배열\실습</Filter>
+      <Filter>Source Files\C++\05.배열\실습</Filter>
     </Text>
     <Text Include="실습정리_스택.txt">
-      <Filter>Source Files\06.스택\실습</Filter>
+      <Filter>Source Files\C++\06.스택\실습</Filter>
     </Text>
     <Text Include="트리_정리.txt">
-      <Filter>Source Files\09.트리</Filter>
+      <Filter>Source Files\C++\09.트리</Filter>
     </Text>
     <Text Include="집합_정리.txt">
-      <Filter>Source Files\10.집합</Filter>
+      <Filter>Source Files\C++\10.집합</Filter>
     </Text>
     <Text Include="12.정렬 정리.txt">
-      <Filter>Source Files\12.정렬</Filter>
+      <Filter>Source Files\C++\12.정렬</Filter>
     </Text>
     <Text Include="sto 시리즈 정리.txt">
-      <Filter>Source Files\04. 필수문법\추가</Filter>
+      <Filter>Source Files\C++\04. 필수문법\추가</Filter>
     </Text>
     <Text Include="13.시뮬레이션_정리.txt">
-      <Filter>Source Files\13.시뮬레이션</Filter>
+      <Filter>Source Files\C++\13.시뮬레이션</Filter>
     </Text>
     <Text Include="15.DP_정리.txt">
-      <Filter>Source Files\14_16%28백트래킹_DP_Greedy%29\15.DP</Filter>
+      <Filter>Source Files\C++\14_16%28백트래킹_DP_Greedy%29\15.DP</Filter>
     </Text>
     <Text Include="12.백트래킹_정리.txt">
-      <Filter>Source Files\14_16%28백트래킹_DP_Greedy%29\14.백트래킹</Filter>
+      <Filter>Source Files\C++\14_16%28백트래킹_DP_Greedy%29\14.백트래킹</Filter>
     </Text>
     <Text Include="16.Greedy정리.txt">
-      <Filter>Source Files\14_16%28백트래킹_DP_Greedy%29\16.Greedy</Filter>
+      <Filter>Source Files\C++\14_16%28백트래킹_DP_Greedy%29\16.Greedy</Filter>
     </Text>
     <Text Include="14_16정리.txt">
-      <Filter>Source Files\14_16%28백트래킹_DP_Greedy%29</Filter>
+      <Filter>Source Files\C++\14_16%28백트래킹_DP_Greedy%29</Filter>
+    </Text>
+    <Text Include="summary.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="set정리.txt">
+      <Filter>Source Files\C\4.set</Filter>
     </Text>
   </ItemGroup>
   <ItemGroup>
     <None Include="실습_큐.text">
-      <Filter>Source Files\07.큐\실습</Filter>
+      <Filter>Source Files\C++\07.큐\실습</Filter>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="vec.h">
+      <Filter>Source Files\C\3.vector</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

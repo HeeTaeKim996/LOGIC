@@ -1,0 +1,67 @@
+■ MSVC 설정
+#define _CRT_SECURE_NO_WARNINGS
+
+
+■ stdio.h
+printf, scanf
+
+sprintf(숫자 등을 char*로 변환 조립) 
+sscanf(char* 에서 숫자 등을 추출해서 변수에 할당)
+
+
+ ■ stdlib.h
+ malloc, 
+ realloc(이미 할당된 포인터에 새 메모리 할당) 
+ free
+
+ ※ qsort
+  -> qsort 는 (1) : offset, (2) : num, (3) : sizeof, (4) : cmp 함수
+  -> cmp 함수는 int cmp(const void* a, const void* b) 이다
+     ※ void* 는 요소의 주소를 의미함
+
+ abs, atoi, atol, 
+ strtol(여러 진법으로 쓰인 숫자str 을 int 로 반환)
+
+
+ ■ string.h
+ 
+ memset, memcpy, memcmp, memmove
+
+ strlen, strcpy, 
+ strncpy(문자열을 잘라 쓸 때 사용)
+
+ strcat(문자열 뒤에 다른 문자열을 이어붙임)
+ strncat(이어붙이되, 최대 n글자만 이어붙임)
+
+ strcmp, strncmp
+
+ strstr(문자열 검색), 
+ strchr(처음 char 검색), strrchr(마지막 char 검색)
+
+ strtok(c++ 의 sstream. 문자열을 구분자 기준으로 잘라서 토큰 단위로 하나씩 꺼내줌)
+
+ strdup(문자열을 메모리 할당 후 복사 (malloc + strcpy))
+
+
+
+ ■ math.h
+ sqrt, pow
+
+ floor, ceil, round
+
+ fabs(double 의 절대값)
+
+
+ ■ ctype.h
+ isdigit(숫자인지), 
+ isalpha(알파벳 대소문자인지), 
+ isalnum(알파벳 또는 숫자인지)
+
+ isupper, islower, isspace
+
+ toupper, tolower
+
+ ■ limits.h
+ INT_MAX, INT_MIN, LLOG_MAX
+
+ 

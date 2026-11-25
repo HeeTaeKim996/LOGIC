@@ -1,3 +1,4 @@
-﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(538,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (Algorithm.vcxproj, ALgorithms.vcxproj, Learning_Cote.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  PracticeSheet.cpp
-  Learning_Cote.vcxproj -> C:\Users\ttiig\source\repos\LOGIC\Algorithm\x64\Debug\Cote_ALgorithms.exe
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(538,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (Algorithm.vcxproj, ALgorithms.vcxproj, Cote_ALgorithms.vcxproj, Learning_Cote.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  set.h
+  main.c
+  Learning_Cote.vcxproj -> C:\Users\ttiig\source\repos\LOGIC\Algorithm\x64\Debug\Cote.exe

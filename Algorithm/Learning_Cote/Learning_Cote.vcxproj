@@ -165,7 +165,12 @@
     <ClCompile Include="999.기타_5_ImosMethod.cpp" />
     <ClCompile Include="999.기타_6_엑셀컬럼넘버링.cpp" />
     <ClCompile Include="999.기타_7_Calander.cpp" />
+    <ClCompile Include="main.c" />
     <ClCompile Include="PracticeSheet.cpp" />
+    <ClCompile Include="PracticeSheet.h" />
+    <ClCompile Include="queue.c" />
+    <ClCompile Include="set.h" />
+    <ClCompile Include="stack.c" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="12.백트래킹_정리.txt" />
@@ -174,7 +179,9 @@
     <Text Include="14_16정리.txt" />
     <Text Include="15.DP_정리.txt" />
     <Text Include="16.Greedy정리.txt" />
+    <Text Include="set정리.txt" />
     <Text Include="sto 시리즈 정리.txt" />
+    <Text Include="summary.txt" />
     <Text Include="집합_정리.txt" />
     <Text Include="실습정리_배열.txt" />
     <Text Include="실습정리_스택.txt" />
@@ -182,6 +189,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="실습_큐.text" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="vec.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,4 +1,17 @@
-﻿  main.cpp
+﻿  IM_BigInt.cpp
+C:\Users\ttiig\source\repos\LOGIC\Libraries\003.IntMath\IntMath\public\src\IM_BigInt.h(177,15): warning C4251: 'BigInt::vec': class 'std::vector<half,std::allocator<half>>' needs to have dll-interface to be used by clients of class 'BigInt'
+  (compiling source file 'private/IM_BigInt.cpp')
+      C:\Users\ttiig\source\repos\LOGIC\Libraries\003.IntMath\IntMath\public\src\IM_BigInt.h(155,26):
+      see declaration of 'std::vector<half,std::allocator<half>>'
+  
+C:\Users\ttiig\source\repos\LOGIC\Libraries\003.IntMath\IntMath\private\IM_BigInt.cpp(399,15): warning C4244: '=': conversion from 'word' to 'half', possible loss of data
+  IM_ECC.cpp
+C:\Users\ttiig\source\repos\LOGIC\Libraries\003.IntMath\IntMath\public\src\IM_BigInt.h(177,15): warning C4251: 'BigInt::vec': class 'std::vector<half,std::allocator<half>>' needs to have dll-interface to be used by clients of class 'BigInt'
+  (compiling source file 'private/IM_ECC.cpp')
+      C:\Users\ttiig\source\repos\LOGIC\Libraries\003.IntMath\IntMath\public\src\IM_BigInt.h(155,26):
+      see declaration of 'std::vector<half,std::allocator<half>>'
+  
+  main.cpp
 C:\Users\ttiig\source\repos\LOGIC\Libraries\003.IntMath\IntMath\public\src\IM_BigInt.h(177,15): warning C4251: 'BigInt::vec': class 'std::vector<half,std::allocator<half>>' needs to have dll-interface to be used by clients of class 'BigInt'
   (compiling source file 'private/main.cpp')
       C:\Users\ttiig\source\repos\LOGIC\Libraries\003.IntMath\IntMath\public\src\IM_BigInt.h(155,26):
@@ -37,4 +50,7 @@ C:\Users\ttiig\source\repos\LOGIC\Libraries\003.IntMath\IntMath\public\src\IM_gf
 C:\Users\ttiig\source\repos\LOGIC\Libraries\003.IntMath\IntMath\public\src\IM_gf.h(82,2): warning C4984: 'if constexpr' is a C++17 language extension
   (compiling source file 'private/main.cpp')
   
-  IntMath.vcxproj -> C:\Users\ttiig\source\repos\LOGIC\Libraries\003.IntMath\IntMath\public\out\x64\Debug\IntMath.dll
+  Generating Code...
+  LINK : C:\Users\ttiig\source\repos\LOGIC\Libraries\003.IntMath\IntMath\public\out\x64\Debug\IntMath.exe not found or not built by the last incremental link; performing full link
+     Creating library C:\Users\ttiig\source\repos\LOGIC\Libraries\003.IntMath\IntMath\public\out\x64\Debug\IntMath.lib and object C:\Users\ttiig\source\repos\LOGIC\Libraries\003.IntMath\IntMath\public\out\x64\Debug\IntMath.exp
+  IntMath.vcxproj -> C:\Users\ttiig\source\repos\LOGIC\Libraries\003.IntMath\IntMath\public\out\x64\Debug\IntMath.exe
