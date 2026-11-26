@@ -169,7 +169,7 @@
     <ClCompile Include="PracticeSheet.cpp" />
     <ClCompile Include="PracticeSheet.h" />
     <ClCompile Include="queue.c" />
-    <ClCompile Include="set.h" />
+    <ClCompile Include="set.c" />
     <ClCompile Include="stack.c" />
   </ItemGroup>
   <ItemGroup>
@@ -179,6 +179,7 @@
     <Text Include="14_16정리.txt" />
     <Text Include="15.DP_정리.txt" />
     <Text Include="16.Greedy정리.txt" />
+    <Text Include="map정리.txt" />
     <Text Include="set정리.txt" />
     <Text Include="sto 시리즈 정리.txt" />
     <Text Include="summary.txt" />
@@ -191,7 +192,8 @@
     <None Include="실습_큐.text" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="vec.h" />
+    <ClInclude Include="map.c" />
+    <ClInclude Include="vec.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

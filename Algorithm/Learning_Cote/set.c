@@ -136,10 +136,13 @@ void set_erase(Set* set, Type type)
         {
             prev->next = curr->next;
 
-            // 현 노드가 다른 인덱스의 머리였다면, prev를 다른 인덱스의 머리로
+            
             if (curr->next != NULL)
             {
                 int nextIndex = curr->next->index;
+
+                // 현 노드가 다른 인덱스의 머리였다면, 
+                // prev를 다른 인덱스의 머리로
                 if (nextIndex != index)
                 {
                     set->buckets[nextIndex] = prev;

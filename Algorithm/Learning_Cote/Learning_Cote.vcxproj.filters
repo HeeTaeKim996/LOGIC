@@ -95,6 +95,9 @@
     <Filter Include="Source Files\C\4.set">
       <UniqueIdentifier>{98b9ca0e-05a3-488b-a1f0-884eaf01dca2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\C\5.map">
+      <UniqueIdentifier>{b0740985-bf22-440f-8c92-b2cabc65b13f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="04.필수문법_1_문자열_기본문법.cpp">
@@ -217,7 +220,7 @@
     <ClCompile Include="queue.c">
       <Filter>Source Files\C\2.queue</Filter>
     </ClCompile>
-    <ClCompile Include="set.h">
+    <ClCompile Include="set.c">
       <Filter>Source Files\C\4.set</Filter>
     </ClCompile>
   </ItemGroup>
@@ -261,6 +264,9 @@
     <Text Include="set정리.txt">
       <Filter>Source Files\C\4.set</Filter>
     </Text>
+    <Text Include="map정리.txt">
+      <Filter>Source Files\C\5.map</Filter>
+    </Text>
   </ItemGroup>
   <ItemGroup>
     <None Include="실습_큐.text">
@@ -268,8 +274,11 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="vec.h">
+    <ClInclude Include="vec.c">
       <Filter>Source Files\C\3.vector</Filter>
+    </ClInclude>
+    <ClInclude Include="map.c">
+      <Filter>Source Files\C\5.map</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
