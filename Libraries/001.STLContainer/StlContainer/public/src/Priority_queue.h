@@ -142,13 +142,10 @@ inline void Priority_queue<T, Container, LessT>::sortVec()
 {
 	if (_vec.size() > 1)
 	{
-		sizeType parent = _vec.size() / 2 - 1;
 		// lastChild 는  n - 1. lastChild의 부모는 (n - 1 - 1 ) / 2 = n / 2 - 1
-		while (true)
+		for(sizeType parent = _vec.size() / 2; parent-- > 0; )
 		{
 			downHeap(parent);
-
-			if (parent-- == 0) break;
 		}
 	}
 }

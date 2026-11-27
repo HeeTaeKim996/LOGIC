@@ -83,20 +83,26 @@
     <Filter Include="Source Files\C">
       <UniqueIdentifier>{3f19d979-3565-4737-848c-bae082119f0e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\C\1.stack">
+    <Filter Include="Source Files\C\1.DataStructure">
+      <UniqueIdentifier>{447fdf0f-5fda-459b-9bbf-ba57c4805a95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\C\1.DataStructure\1.stack">
       <UniqueIdentifier>{ad118b16-b563-419b-8b6e-cbfbcb0ff895}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\C\2.queue">
+    <Filter Include="Source Files\C\1.DataStructure\2.queue">
       <UniqueIdentifier>{0e11a5e3-d869-4636-8359-ac69dc78f73d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\C\3.vector">
+    <Filter Include="Source Files\C\1.DataStructure\3.vector">
       <UniqueIdentifier>{2192e941-86f8-4aa4-a034-2c712f7861e2}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\C\4.set">
+    <Filter Include="Source Files\C\1.DataStructure\4.set">
       <UniqueIdentifier>{98b9ca0e-05a3-488b-a1f0-884eaf01dca2}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\C\5.map">
+    <Filter Include="Source Files\C\1.DataStructure\5.map">
       <UniqueIdentifier>{b0740985-bf22-440f-8c92-b2cabc65b13f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\C\1.DataStructure\6.prority_queue">
+      <UniqueIdentifier>{e299f432-8f81-4bea-a39b-9b571018f57a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -215,13 +221,13 @@
       <Filter>Source Files\C</Filter>
     </ClCompile>
     <ClCompile Include="stack.c">
-      <Filter>Source Files\C\1.stack</Filter>
+      <Filter>Source Files\C\1.DataStructure\1.stack</Filter>
     </ClCompile>
     <ClCompile Include="queue.c">
-      <Filter>Source Files\C\2.queue</Filter>
+      <Filter>Source Files\C\1.DataStructure\2.queue</Filter>
     </ClCompile>
     <ClCompile Include="set.c">
-      <Filter>Source Files\C\4.set</Filter>
+      <Filter>Source Files\C\1.DataStructure\4.set</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -262,10 +268,10 @@
       <Filter>Source Files</Filter>
     </Text>
     <Text Include="set정리.txt">
-      <Filter>Source Files\C\4.set</Filter>
+      <Filter>Source Files\C\1.DataStructure\4.set</Filter>
     </Text>
     <Text Include="map정리.txt">
-      <Filter>Source Files\C\5.map</Filter>
+      <Filter>Source Files\C\1.DataStructure\5.map</Filter>
     </Text>
   </ItemGroup>
   <ItemGroup>
@@ -275,10 +281,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="vec.c">
-      <Filter>Source Files\C\3.vector</Filter>
+      <Filter>Source Files\C\1.DataStructure\3.vector</Filter>
     </ClInclude>
     <ClInclude Include="map.c">
-      <Filter>Source Files\C\5.map</Filter>
+      <Filter>Source Files\C\1.DataStructure\5.map</Filter>
+    </ClInclude>
+    <ClInclude Include="priority_queue.c">
+      <Filter>Source Files\C\1.DataStructure\6.prority_queue</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

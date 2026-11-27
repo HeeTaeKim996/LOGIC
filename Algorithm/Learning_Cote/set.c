@@ -4,13 +4,13 @@
 
 #include <string.h>
 
-typedef int Type;
+typedef int T;
 
 typedef struct Node
 {
     int index;
     struct Node* next;
-    Type type;
+    T type;
 } Node;
 
 typedef struct Set
@@ -27,14 +27,14 @@ void set_init(Set* set, int cap)
     set->dummy.next = NULL;
 }
 
-int set_hash(Set* set, Type type)
+int set_hash(Set* set, T type)
 {
     // Type별로 다르게 처리 필요
     return type % set->n;
 }
 
 
-void set_insert(Set* set, Type type)
+void set_insert(Set* set, T type)
 {
     int index = set_hash(set, type);
 
@@ -83,7 +83,7 @@ void set_insert(Set* set, Type type)
 
 
 
-bool set_find(Set* set, Type type)
+bool set_find(Set* set, T type)
 {
     int index = set_hash(set, type);
 
@@ -108,7 +108,7 @@ bool set_find(Set* set, Type type)
 
 
 
-void set_getAll(Set* set, Type* offset, int* n)
+void set_getAll(Set* set, T* offset, int* n)
 {
     int i = 0;
 
@@ -122,7 +122,7 @@ void set_getAll(Set* set, Type* offset, int* n)
     *n = i;
 }
 
-void set_erase(Set* set, Type type)
+void set_erase(Set* set, T type)
 {
     int index = set_hash(set, type);
     if (set->buckets[index] == NULL) return;

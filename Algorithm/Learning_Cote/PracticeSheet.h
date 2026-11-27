@@ -1,172 +1,153 @@
 #include <stdio.h>
-#include <stdbool.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
 
 
-#include <string.h>
+typedef int T;
 
-typedef char Key;
-typedef int Val;
-
-typedef struct Node
+typedef struct Pq
 {
-	int index;
-	struct Node* next;
-	Key key;
-	Val val;
-} Node;
-
-typedef struct Map
-{
-	Node** buckets;
+	T* offset;
 	int n;
-	Node dummy;
-} Map;
+} Pq;
 
-void map_init(Map* map, int cap)
+
+void pq_init(Pq* pq, int cap)
 {
-	map->n = cap;
-	map->buckets = (Node**)calloc(cap, sizeof(Node*));
-	map->dummy.next = NULL;
-}
-
-int map_hash(Map* map, Key key)
-{
-	// Key 의 타입 별로 다르게 처리 필요
-	return (int)key % map->n;
-}
-
-void map_insert(Map* map, Key key, Val val)
-{
-	int index = map_hash(map, key);
-
-	if (map->buckets[index] != NULL)
-	{
-		Node* curr = map->buckets[index]->next;
-
-		while (curr != NULL && curr->index == index)
-		{
-			if (curr->key == key)
-			{
-				curr->val = val;
-				return;
-			}
-
-			curr = curr->next;
-		}
-	}
-
-	// 없다면, 새로 생성하여 삽입
-	Node* created = (Node*)malloc(sizeof(Node));
-	created->index = index;
-	created->next = NULL;
-	created->key = key;
-	created->val = val;
-
-	// 인덱스의 머리가 없다면, dummy를 머리로, created 는 목이자 꼬리로
-	if (map->buckets[index] == NULL)
-	{
-		created->next = map->dummy.next;
-		map->dummy.next = created;
-		map->buckets[index] = &map->dummy;
-
-		if (created->next != NULL)
-		{
-			map->buckets[created->next->index] = created;
-		}
-	}
-	// 인덱스의 머리가 이미 있다면, created를 목으로
-	else
-	{
-		created->next = map->buckets[index]->next;
-		map->buckets[index]->next = created;
-	}
-}
-
-Val* map_at(Map* map, Key key)
-{
-	int index = map_hash(map, key);
-
-	if (map->buckets[index] != NULL)
-	{
-		Node* curr = map->buckets[index]->next;
-
-		while (curr != NULL && curr->index == index)
-		{
-			if (curr->key == key)
-			{
-				return &curr->val;
-			}
-
-			curr = curr->next;
-		}
-	}
-
-	return NULL;
+	pq->offset = (T*)malloc(sizeof(T) * cap);
+	pq->n = 0;
 }
 
 
+static int less(T* a, T* b)
+{
+	// type 및 정렬 기준따라 내용 다름
+	return *a > *b;
+}
 
 
+void pq_downHeap(Pq* pq, int parent)
+{
+	T mover = pq->offset[parent];
 
-
-
-
-
-int* solution(const char* keymap[], size_t keymap_len, 
-    const char* targets[], size_t targets_len) {
-
-	Map* map = (Map*)malloc(sizeof(Map));
-	map_init(map, 26);
-
-	for (size_t i = 0; i < keymap_len; ++i)
+	int lastChild = pq->n - 1;
+	int child;
+	for (; parent * 2 + 1 <= lastChild; parent = child)
 	{
-		const char* c = keymap[i];
-		int rep = 1;
-		while(*c)
-		{
-			int* val = map_at(map, *c);
-			if (val == NULL)
-			{
-				map_insert(map, *c, rep);
-			}
-			else
-			{
-				if (rep < *val)
-				{
-					*val = rep;
-				}
-			}
+		int cl = parent * 2 + 1;
+		int cr = cl + 1;
 
-			c++;
-			rep++;
-		}
+		child = (cr <= lastChild
+			&& less(&pq->offset[cl], &pq->offset[cr])) ? cr : cl;
+
+		if (less(&mover, &pq->offset[child]) == false) break;
+
+		pq->offset[parent] = pq->offset[child];
 	}
 
+	pq->offset[parent] = mover;
+}
 
 
+void pq_upHeap(Pq* pq, int child)
+{
+	T mover = pq->offset[child];
 
-    int* answer = (int*)malloc(sizeof(int) * targets_len);
-	for (size_t i = 0; i < targets_len; ++i)
+	int parent;
+	for (; child > 0; child = parent)
 	{
-		int total = 0;
-		const char* c = targets[i];
-		while (*c)
-		{
-			int* val = map_at(map, *c);
-			if (val == NULL)
-			{
-				total = -1;
-				break;
-			}
+		parent = (child - 1) / 2;
 
-			total += *val;
+		if (less(&pq->offset[parent], &mover) == false) break;
 
-			c++;
-		}
+		pq->offset[child] = pq->offset[parent];
+	}
 
-		answer[i] = total;
+	pq->offset[child] = mover;
+}
+
+void pq_push(Pq* pq, T t)
+{
+	pq->offset[pq->n++] = t;
+
+	pq_upHeap(pq, pq->n - 1);
+}
+
+void pq_pop(Pq* pq)
+{
+	pq->offset[0] = pq->offset[--pq->n];
+
+	if (pq->n > 0)
+	{
+		pq_downHeap(pq, 0);
+	}
+}
+
+T pq_top(Pq* pq)
+{
+	return pq->offset[0];
+}
+
+bool pq_empty(Pq* pq)
+{
+	return pq->n <= 0;
+}
+#include <string.h>
+void pq_initWithArr(Pq* pq, T* offset, int n, int cap)
+{
+	pq->n = n;
+	pq->offset = (T*)malloc(sizeof(T) * cap);
+	memcpy(pq->offset, offset, sizeof(T) * n);
+
+	// 끝자식 = n-1. 끝자식의 부모 = ((n - 1) - 1) / 2 = n / 2 - 1
+	for (int parent = n / 2; parent-- > 0; )
+	{
+		pq_downHeap(pq, parent);
+	}
+}
+
+
+
+
+
+
+
+
+#include <string>
+#include <vector>
+
+using namespace std;
+
+int solution(vector<int> scoville, int K) 
+{
+	// to C
+	int n = scoville.size();
+	int* scov = (int*)malloc(sizeof(int) * n);
+	memcpy(scov, &scoville[0], sizeof(int) * n);
+	
+		
+	Pq* pq = (Pq*)malloc(sizeof(Pq));
+	pq_initWithArr(pq, scov, n, n + 1);
+	
+    int answer = 0;
+
+
+	while (pq_empty(pq) == false && pq_top(pq) < K)
+	{
+		int first = pq_top(pq);
+		pq_pop(pq);
+
+		if (pq_empty(pq)) return -1;
+
+		int second = pq_top(pq);
+		pq_pop(pq);
+
+		int shake = first + 2 * second;
+		pq_push(pq, shake);
+
+		answer++;
+
 	}
 
 
