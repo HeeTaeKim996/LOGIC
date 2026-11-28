@@ -192,9 +192,11 @@
     <None Include="실습_큐.text" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="2.bsearch.h" />
+    <ClInclude Include="3.gcd_lcm.h" />
     <ClInclude Include="map.c" />
     <ClInclude Include="priority_queue.c" />
-    <ClInclude Include="sort.h" />
+    <ClInclude Include="1.sort.h" />
     <ClInclude Include="vec.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

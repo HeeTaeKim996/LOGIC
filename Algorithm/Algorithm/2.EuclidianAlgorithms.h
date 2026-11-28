@@ -1,46 +1,40 @@
 #pragma once
 
 
+typedef int T;
 
-int euclidianAlgorithm(int x, int m)
+T euclidianAlgorithm(T big, T small)
 {
-	if (x <= 1) return x;
-
-	int r0 = m;
-	int r1 = x;
-		
-	while (r1)
+	while (small)
 	{
-		int q = r0 / r1;
-		
-		int r2 = r0 - q * r1;
-		r0 = r1;
-		r1 = r2;
+		T nextSmall = big % small;
+		big = small;
+		small = nextSmall;
 	}
 
-	return r0;
+	return big;
 }
 
 
-int extendedEuclidianAlgorithm(int x, int m)
+T extendedEuclidianAlgorithm(T x, T m)
 {
 	if (x <= 1) return x;
 
-	int r0 = m;
-	int r1 = x;
+	T r0 = m;
+	T r1 = x;
 
-	int t0 = 0;
-	int t1 = 1;
+	T t0 = 0;
+	T t1 = 1;
 
 	while (r1)
 	{
-		int q = r0 / r1;
+		T q = r0 / r1;
 
-		int r2 = r0 - q * r1;
+		T r2 = r0 - q * r1;
 		r0 = r1;
 		r1 = r2;
 
-		int t2 = t0 - q * t1;
+		T t2 = t0 - q * t1;
 		t0 = t1;
 		t1 = t2;
 	}
@@ -48,3 +42,4 @@ int extendedEuclidianAlgorithm(int x, int m)
 	if (t0 < 0) t0 += m;
 	return t0;
 }
+

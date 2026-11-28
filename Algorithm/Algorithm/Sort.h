@@ -367,17 +367,17 @@ inline void Sort::mergeSort(Array<T>& arrs, function<int(const T& a, const T& b)
 			merge(mid + 1, right);
 
 
-			int bufferCount = mid - left + 1;
-			// bufferCount 를 mid - left 로 하면, {1, 0} 로 size 2 를 생각해봐라. mid = 0, left = 0 이니, 
-			// bufferCount = 0 이 된다. 좌측 파티션이 없고 우측 파티션만 {1, 0} 으로 그대로니, 진행이 안된다.
-			// 따라서 bufferCount = mid - left + 1 이어야 한다
 
+			// 이후로 mid 는 우측 파티션의 포인터 역할을 하며, 
+			// 아래 bufferCount 설정에 의해, left 부터 mid 까지 모두 좌측 파티션이 된다. 
+			// [위 merge(left, mid) 에 의해 left ~ mid(포함) 까지 정렬됐으므로, L 을 통째로 버퍼로 옮겨야 함]
+			++mid;
+			
+			int bufferCount = mid - left;
 			memcpy(&buffer[0], &arrs[left], bufferCount * sizeof(T)); // 좌측 파티션 할당
 
-			mid++;
-			// 이후로 mid 는 우측 파티션의 포인터 역할을 한다. 위 bufferCount 설정에 의해, 
-			// left 부터 mid 까지 모두 좌측 파티션이 된다. 
-			// 따라서 우측 포인터 역할을 하는 mid 를 ++ 한다
+
+
 
 			// 이후로 left는 left ~ right 까지의 배열의 포인터 역할을 한다
 

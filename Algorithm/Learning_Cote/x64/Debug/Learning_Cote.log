@@ -1,5 +1,6 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(538,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (Algorithm.vcxproj, ALgorithms.vcxproj, Cote_ALgorithms.vcxproj, Learning_Cote.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  PracticeSheet.cpp
   PracticeSheet.h
-C:\Users\ttiig\source\repos\LOGIC\Algorithm\Learning_Cote\PracticeSheet.h(121,11): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\ttiig\source\repos\LOGIC\Algorithm\Learning_Cote\PracticeSheet.h(127,15): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Generating Code...
+x64\Debug\PracticeSheet.obj : warning LNK4042: object specified more than once; extras ignored
   Learning_Cote.vcxproj -> C:\Users\ttiig\source\repos\LOGIC\Algorithm\x64\Debug\Cote.exe

@@ -109,10 +109,12 @@ void merge(T* offset, int left, int right)
 	merge(offset, left, mid);
 	merge(offset, mid + 1, right);
 
-	int bufferCount = mid - left + 1;
+
+	++mid; // 이후 mid 는 right 의 포인터로 사용됨
+	int bufferCount = mid - left;
 	memcpy(PS, &offset[left], bufferCount * sizeof(T));
 
-	mid++; // 이후 mid 는 right 의 포인터로 사용됨
+
 
 	int bufferPointer = 0; // left 의 포인터
 

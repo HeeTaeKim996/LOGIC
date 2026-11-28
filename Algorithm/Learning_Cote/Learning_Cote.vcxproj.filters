@@ -104,7 +104,7 @@
     <Filter Include="Source Files\C\1.DataStructure\6.prority_queue">
       <UniqueIdentifier>{e299f432-8f81-4bea-a39b-9b571018f57a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\C\2.Sort">
+    <Filter Include="Source Files\C\2.includes">
       <UniqueIdentifier>{139ef370-7a29-4f72-b9bb-8cea34de2a0c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -292,8 +292,14 @@
     <ClInclude Include="priority_queue.c">
       <Filter>Source Files\C\1.DataStructure\6.prority_queue</Filter>
     </ClInclude>
-    <ClInclude Include="sort.h">
-      <Filter>Source Files\C\2.Sort</Filter>
+    <ClInclude Include="1.sort.h">
+      <Filter>Source Files\C\2.includes</Filter>
+    </ClInclude>
+    <ClInclude Include="2.bsearch.h">
+      <Filter>Source Files\C\2.includes</Filter>
+    </ClInclude>
+    <ClInclude Include="3.gcd_lcm.h">
+      <Filter>Source Files\C\2.includes</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
