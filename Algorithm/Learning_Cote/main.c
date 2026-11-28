@@ -4,6 +4,8 @@
 //#include "set.h"
 //#include "map.h"
 //#include "priority_queue.h"
+#include "sort.h"
+
 
 int main()
 {
@@ -11,6 +13,7 @@ int main()
 	//test_set();
 	//test_map();
 	//test_pq();
+	test_sort();
 
 	return 1;
 }

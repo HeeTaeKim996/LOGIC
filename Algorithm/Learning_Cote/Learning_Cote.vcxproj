@@ -194,6 +194,7 @@
   <ItemGroup>
     <ClInclude Include="map.c" />
     <ClInclude Include="priority_queue.c" />
+    <ClInclude Include="sort.h" />
     <ClInclude Include="vec.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
